@@ -1,58 +1,94 @@
-# create-svelte
+# MLJR Components
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+A collection of Svelte components based on DaisyUI, organized for easy reference and implementation tracking.
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+## Form Controls
+- [x] Button - Actions and choices
+- [ ] Checkbox - Select/deselect values
+- [ ] File Input - File upload field
+- [ ] Text Input - Basic text input field
+- [ ] Radio - Single option selection
+- [ ] Range slider - Value selection via sliding
+- [ ] Rating - Star-based rating input
+- [ ] Select - Dropdown option picker
+- [ ] Textarea - Multi-line text input
+- [ ] Toggle - Switch-style checkbox
+- [ ] Fieldset - Form element grouping
+- [ ] Validator - Form validation styling
 
-## Creating a project
+## Navigation & Structure
+- [ ] Accordion - Collapsible content panels
+- [ ] Breadcrumbs - Navigation path indicator
+- [ ] Drawer - Side panel navigation
+- [ ] Dropdown - Click-triggered menus
+- [ ] Menu - Vertical/horizontal link lists
+- [ ] Navbar - Top navigation bar
+- [ ] Pagination - Page navigation controls
+- [ ] Steps - Process step indicators
+- [ ] Tabs - Tabbed content navigation
+- [ ] Timeline - Chronological event display
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Layout & Containers
+- [x] Card - Content grouping boxes
+- [ ] Collapse - Expandable content
+- [ ] Divider - Content separator
+- [ ] Dock - Bottom navigation bar
+- [ ] Footer - Page footer content
+- [ ] Hero - Featured content display
+- [ ] Join - Element grouping container
+- [ ] Stack - Z-axis element stacking
+- [ ] Table - Data grid display
+
+## Feedback & Status
+- [ ] Alert - Important event notifications
+- [ ] Badge - Status indicators
+- [ ] Loading - Loading state animations
+- [ ] Modal - Dialog boxes
+- [ ] Progress - Linear progress indicator
+- [ ] Radial progress - Circular progress
+- [ ] Skeleton - Loading state placeholder
+- [ ] Stat - Data/numbers display
+- [ ] Status - Small status indicators
+- [ ] Toast - Corner notifications
+- [ ] Tooltip - Hover information
+
+## Display & Media
+- [ ] Avatar - User thumbnails
+- [ ] Calendar - Date display/selection
+- [ ] Carousel - Scrollable content
+- [ ] Chat bubble - Conversation bubbles
+- [ ] Diff - Side-by-side comparison
+- [ ] Indicator - Corner element placement
+- [ ] Mask - Shape-based content cropping
+- [ ] Swap - Element toggle visibility
+
+## Mockups
+- [ ] Browser mockup - Browser window simulation
+- [ ] Code mockup - Code editor simulation
+- [ ] Phone mockup - iPhone device simulation
+- [ ] Window mockup - OS window simulation
+
+## Utilities
+- [ ] Countdown - Number transition effects
+- [ ] Filter - Radio button filtering
+- [ ] Kbd - Keyboard shortcut display
+- [ ] Label - Input field labels
+- [ ] Link - Styled anchor tags
+- [ ] List - Vertical information rows
+- [ ] Theme Controller - Theme switching control
+
+## Getting Started
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+npm install mljr-components
 ```
 
-## Developing
+## Usage
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```svelte
+<script>
+  import { Button } from 'mljr-components';
+</script>
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```bash
-npm run package
-```
-
-To create a production version of your showcase app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
+<Button>Click me!</Button>
 ```

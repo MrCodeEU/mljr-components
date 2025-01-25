@@ -23,7 +23,7 @@
         ...rest
     } = $props<{
         color?: 'neutral' | 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error';
-        style?: 'outline' | 'soft' | 'ghost' | 'link';
+        style?: 'outline' | 'soft' | 'ghost' | 'link' | 'dash';
         size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
         modifier?: 'wide' | 'block' | 'square' | 'circle';
         active?: boolean;
