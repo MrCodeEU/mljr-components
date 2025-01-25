@@ -2,6 +2,7 @@
     import Button from '$lib/comps/Button.svelte';
     import Checkbox from '$lib/comps/Checkbox.svelte';
     import { Card, CardBody, CardTitle } from '$lib/comps/card/index.js';
+    import FileInput from '$lib/comps/FileInput.svelte';
 
     // Color selections state
     let colorSelections = $state({
@@ -223,6 +224,49 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </CardBody>
+    </Card>
+
+    <!-- File Input Examples -->
+    <Card>
+        <CardBody>
+            <CardTitle>File Input</CardTitle>
+            <div class="space-y-4">
+                <FileInput 
+                    label="Choose a file"
+                    placeholder="Select file..." 
+                />
+                
+                <fieldset class="fieldset">
+                    <legend class="fieldset-legend">Upload Document</legend>
+                    <FileInput 
+                        label="Max size 2MB"
+                        labelPosition="after"
+                        accept=".pdf,.doc,.docx"
+                    />
+                </fieldset>
+
+                <div class="space-y-2">
+                    <FileInput size="xs" label="Extra Small" />
+                    <FileInput size="sm" label="Small" />
+                    <FileInput size="md" label="Medium" />
+                    <FileInput size="lg" label="Large" />
+                    <FileInput size="xl" label="Extra Large" />
+                </div>
+
+                <div class="space-y-2">
+                    <FileInput color="primary" label="Primary" />
+                    <FileInput color="secondary" label="Secondary" />
+                    <FileInput color="accent" label="Accent" />
+                    <FileInput ghost label="Ghost style" />
+                </div>
+
+                <FileInput 
+                    disabled 
+                    label="Disabled input"
+                    placeholder="You can't touch this" 
+                />
             </div>
         </CardBody>
     </Card>
