@@ -25,7 +25,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [ ] Navbar - Top navigation bar
 - [ ] Pagination - Page navigation controls
 - [ ] Steps - Process step indicators
-- [ ] Tabs - Tabbed content navigation
+- [X] Tabs - Tabbed content navigation
 - [ ] Timeline - Chronological event display
 
 ## Layout & Containers
