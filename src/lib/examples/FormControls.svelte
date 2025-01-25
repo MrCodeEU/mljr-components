@@ -3,6 +3,7 @@
     import Checkbox from '$lib/comps/Checkbox.svelte';
     import { Card, CardBody, CardTitle } from '$lib/comps/card/index.js';
     import FileInput from '$lib/comps/FileInput.svelte';
+    import InputExamples from '$lib/examples/InputExamples.svelte';
 
     // Color selections state
     let colorSelections = $state({
@@ -64,6 +65,10 @@
     function handleColorChange(color: string, checked: boolean) {
         colorSelections[color as keyof typeof colorSelections] = checked;
     }
+
+    // Add colors array for inputs
+    const colors = ['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'];
+    const sizes = ['xs', 'sm', 'md', 'lg', 'xl'];
 </script>
 
 <div class="space-y-4">
@@ -142,8 +147,8 @@
     <!-- Other Form Controls -->
     <Card>
         <CardBody>
-            <CardTitle>Other Form Controls</CardTitle>
-            <p class="text-base-content/70">More form controls coming soon...</p>
+            <CardTitle>Inputs</CardTitle>
+            <InputExamples />
         </CardBody>
     </Card>
 
