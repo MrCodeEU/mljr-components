@@ -4,7 +4,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 
 ## Form Controls
 - [x] Button - Actions and choices
-- [ ] Checkbox - Select/deselect values
+- [x] Checkbox - Select/deselect values
 - [ ] File Input - File upload field
 - [ ] Text Input - Basic text input field
 - [ ] Radio - Single option selection
@@ -92,3 +92,4 @@ npm install mljr-components
 
 <Button>Click me!</Button>
 ```
+````
