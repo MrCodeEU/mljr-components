@@ -1,6 +1,7 @@
 <script lang="ts">
     import { Card, CardBody, CardTitle } from '$lib/comps/card/index.js';
     import { Tabs, TabContent } from '$lib/comps/navs/tabs/index.js';
+    import { Accordion, AccordionItem } from '$lib/comps/navs/accordion/index.js';
 </script>
 
 <div class="space-y-4">
@@ -42,6 +43,58 @@
                     </Tabs>
                 </div>
             </div>
+        </CardBody>
+    </Card>
+
+    <!-- Accordion Examples -->
+    <Card>
+        <CardBody>
+            <CardTitle>Basic Accordion</CardTitle>
+            <Accordion>
+                <AccordionItem name="basic-demo" title="How do I create an account?" checked>
+                    Click the "Sign Up" button in the top right corner and follow the registration process.
+                </AccordionItem>
+                <AccordionItem name="basic-demo" title="I forgot my password. What should I do?">
+                    Click on "Forgot Password" on the login page and follow the instructions sent to your email.
+                </AccordionItem>
+                <AccordionItem name="basic-demo" title="How do I update my profile information?">
+                    Go to "My Account" settings and select "Edit Profile" to make changes.
+                </AccordionItem>
+            </Accordion>
+        </CardBody>
+    </Card>
+
+    <Card>
+        <CardBody>
+            <CardTitle>Accordion with Arrow Icons</CardTitle>
+            <Accordion>
+                <AccordionItem name="arrow-demo" variant="arrow" title="How do I create an account?" checked>
+                    Click the "Sign Up" button in the top right corner and follow the registration process.
+                </AccordionItem>
+                <AccordionItem name="arrow-demo" variant="arrow" title="I forgot my password. What should I do?">
+                    Click on "Forgot Password" on the login page and follow the instructions sent to your email.
+                </AccordionItem>
+                <AccordionItem name="arrow-demo" variant="arrow" title="How do I update my profile information?">
+                    Go to "My Account" settings and select "Edit Profile" to make changes.
+                </AccordionItem>
+            </Accordion>
+        </CardBody>
+    </Card>
+
+    <Card>
+        <CardBody>
+            <CardTitle>Joined Accordion with Plus Icons</CardTitle>
+            <Accordion joined>
+                <AccordionItem name="plus-demo" variant="plus" title="How do I create an account?" checked class="join-item">
+                    Click the "Sign Up" button in the top right corner and follow the registration process.
+                </AccordionItem>
+                <AccordionItem name="plus-demo" variant="plus" title="I forgot my password. What should I do?" class="join-item">
+                    Click on "Forgot Password" on the login page and follow the instructions sent to your email.
+                </AccordionItem>
+                <AccordionItem name="plus-demo" variant="plus" title="How do I update my profile information?" class="join-item">
+                    Go to "My Account" settings and select "Edit Profile" to make changes.
+                </AccordionItem>
+            </Accordion>
         </CardBody>
     </Card>
 

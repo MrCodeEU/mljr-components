@@ -17,7 +17,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] Validator - Form validation styling
 
 ## Navigation & Structure
-- [ ] Accordion - Collapsible content panels
+- [x] Accordion - Collapsible content panels
 - [ ] Breadcrumbs - Navigation path indicator
 - [ ] Drawer - Side panel navigation
 - [ ] Dropdown - Click-triggered menus
@@ -92,4 +92,3 @@ npm install mljr-components
 
 <Button>Click me!</Button>
 ```
-````
