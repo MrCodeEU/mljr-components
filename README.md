@@ -6,8 +6,8 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] Button - Actions and choices
 - [x] Checkbox - Select/deselect values
 - [x] File Input - File upload field
-- [ ] Text Input - Basic text input field
-- [ ] Radio - Single option selection
+- [X] Text Input - Basic text input field
+- [x] Radio - Single option selection
 - [ ] Range slider - Value selection via sliding
 - [ ] Rating - Star-based rating input
 - [ ] Select - Dropdown option picker

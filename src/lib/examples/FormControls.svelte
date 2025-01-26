@@ -4,6 +4,7 @@
     import { Card, CardBody, CardTitle } from '$lib/comps/card/index.js';
     import FileInput from '$lib/comps/FileInput.svelte';
     import InputExamples from '$lib/examples/InputExamples.svelte';
+    import Radio from '$lib/comps/Radio.svelte';
 
     // Color selections state
     let colorSelections = $state({
@@ -69,6 +70,11 @@
     // Add colors array for inputs
     const colors = ['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'];
     const sizes = ['xs', 'sm', 'md', 'lg', 'xl'];
+
+    // Add radio state
+    let selectedSize = $state('md');
+    let selectedColor = $state('primary');
+    let favoriteTopping = $state('');
 </script>
 
 <div class="space-y-4">
@@ -228,6 +234,82 @@
                             Completed: {completedTodos} of {todoList.length}
                         </p>
                     </div>
+                </div>
+            </div>
+        </CardBody>
+    </Card>
+
+    <!-- Radio Showcase -->
+    <Card>
+        <CardBody>
+            <CardTitle>Radio Components</CardTitle>
+            <div class="space-y-8">
+                <!-- Colors -->
+                <div>
+                    <h3 class="font-semibold mb-2">Colors</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <Radio name="colors" value="default" checked={selectedColor === 'default'} onCheckedChange={() => selectedColor = 'default'} />
+                        <Radio name="colors" value="neutral" color="neutral" checked={selectedColor === 'neutral'} onCheckedChange={() => selectedColor = 'neutral'} />
+                        <Radio name="colors" value="primary" color="primary" checked={selectedColor === 'primary'} onCheckedChange={() => selectedColor = 'primary'} />
+                        <Radio name="colors" value="secondary" color="secondary" checked={selectedColor === 'secondary'} onCheckedChange={() => selectedColor = 'secondary'} />
+                        <Radio name="colors" value="accent" color="accent" checked={selectedColor === 'accent'} onCheckedChange={() => selectedColor = 'accent'} />
+                        <Radio name="colors" value="info" color="info" checked={selectedColor === 'info'} onCheckedChange={() => selectedColor = 'info'} />
+                        <Radio name="colors" value="success" color="success" checked={selectedColor === 'success'} onCheckedChange={() => selectedColor = 'success'} />
+                        <Radio name="colors" value="warning" color="warning" checked={selectedColor === 'warning'} onCheckedChange={() => selectedColor = 'warning'} />
+                        <Radio name="colors" value="error" color="error" checked={selectedColor === 'error'} onCheckedChange={() => selectedColor = 'error'} />
+                    </div>
+                    {#if selectedColor}
+                        <p class="mt-2 text-sm">Selected color: {selectedColor}</p>
+                    {/if}
+                </div>
+
+                <!-- Sizes -->
+                <div>
+                    <h3 class="font-semibold mb-2">Sizes</h3>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        {#each sizes as size}
+                            <Radio
+                                name="sizes"
+                                value={size}
+                                size={size}
+                                checked={selectedSize === size}
+                                onCheckedChange={() => selectedSize = size}
+                            />
+                        {/each}
+                    </div>
+                    <p class="mt-2 text-sm">Selected size: {selectedSize}</p>
+                </div>
+
+                <!-- States -->
+                <div>
+                    <h3 class="font-semibold mb-2">States</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <Radio disabled name="states1" />
+                        <Radio disabled checked name="states2" />
+                    </div>
+                </div>
+
+                <!-- With Labels -->
+                <div>
+                    <h3 class="font-semibold mb-2">Pizza Toppings</h3>
+                    <fieldset class="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
+                        <legend class="fieldset-legend">Choose one topping</legend>
+                        {#each toppings as topping}
+                            <label class="fieldset-label flex gap-2 cursor-pointer mb-2">
+                                <Radio
+                                    name="toppings"
+                                    value={topping}
+                                    color="primary"
+                                    checked={favoriteTopping === topping}
+                                    onCheckedChange={() => favoriteTopping = topping}
+                                />
+                                {topping}
+                            </label>
+                        {/each}
+                        {#if favoriteTopping}
+                            <p class="text-sm mt-4">Your choice: {favoriteTopping}</p>
+                        {/if}
+                    </fieldset>
                 </div>
             </div>
         </CardBody>
