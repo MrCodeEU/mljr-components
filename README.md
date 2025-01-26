@@ -12,7 +12,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] Rating - Star-based rating input
 - [x] Select - Dropdown option picker
 - [x] Textarea - Multi-line text input
-- [ ] Toggle - Switch-style checkbox
+- [x] Toggle - Switch-style checkbox
 - [ ] Fieldset - Form element grouping
 - [ ] Validator - Form validation styling
 

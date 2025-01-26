@@ -9,6 +9,8 @@
     import Rating from '$lib/comps/Rating.svelte';
     import Select from '$lib/comps/Select.svelte';
     import Textarea from '$lib/comps/Textarea.svelte';
+    import Toggle from '$lib/comps/Toggle.svelte';
+    import { Bell, BellOff, Moon, Sun, Wifi, WifiOff } from 'lucide-svelte';
 
     // Color selections state
     let colorSelections = $state({
@@ -116,6 +118,11 @@
     // Add textarea state
     let bioText = $state('');
     let feedbackText = $state('');
+
+    // Add toggle state
+    let themeToggle = $state(false);
+    let notificationsEnabled = $state(true);
+    let wifiEnabled = $state(true);
 </script>
 
 <div class="space-y-4">
@@ -696,6 +703,102 @@
                         value="This textarea is disabled"
                         rows={2}
                     />
+                </div>
+            </div>
+        </CardBody>
+    </Card>
+
+    <!-- Toggle Showcase -->
+    <Card>
+        <CardBody>
+            <CardTitle>Toggle Components</CardTitle>
+            <div class="space-y-8">
+                <!-- Basic -->
+                <div>
+                    <h3 class="font-semibold mb-2">Basic Toggle</h3>
+                    <Toggle checked />
+                </div>
+
+                <!-- With Fieldset -->
+                <div>
+                    <h3 class="font-semibold mb-2">With Fieldset</h3>
+                    <fieldset class="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
+                        <legend class="fieldset-legend">Theme Settings</legend>
+                        <label class="fieldset-label flex items-center gap-2 cursor-pointer">
+                            <Toggle
+                                bind:checked={themeToggle}
+                                color="primary"
+                            />
+                            Dark mode
+                        </label>
+                    </fieldset>
+                </div>
+
+                <!-- Sizes -->
+                <div>
+                    <h3 class="font-semibold mb-2">Sizes</h3>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        {#each sizes as size}
+                            <Toggle {size} checked />
+                        {/each}
+                    </div>
+                </div>
+
+                <!-- Colors -->
+                <div>
+                    <h3 class="font-semibold mb-2">Colors</h3>
+                    <div class="flex flex-wrap gap-4">
+                        {#each colors as color}
+                            <Toggle {color} checked />
+                        {/each}
+                    </div>
+                </div>
+
+                <!-- With Icons -->
+                <div>
+                    <h3 class="font-semibold mb-2">With Icons</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <Toggle
+                                showIcons
+                                bind:checked={notificationsEnabled}
+                                color="primary"
+                                iconOn={Bell}
+                                iconOff={BellOff}
+                            />
+                            <span>Notifications: {notificationsEnabled ? 'On' : 'Off'}</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <Toggle
+                                showIcons
+                                bind:checked={wifiEnabled}
+                                color="success"
+                                iconOn={Wifi}
+                                iconOff={WifiOff}
+                            />
+                            <span>WiFi: {wifiEnabled ? 'Connected' : 'Disconnected'}</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <Toggle
+                                showIcons
+                                bind:checked={themeToggle}
+                                color="warning"
+                                iconOn={Sun}
+                                iconOff={Moon}
+                            />
+                            <span>Theme: {themeToggle ? 'Dark' : 'Light'}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- States -->
+                <div>
+                    <h3 class="font-semibold mb-2">States</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <Toggle disabled />
+                        <Toggle disabled checked />
+                        <Toggle indeterminate />
+                    </div>
                 </div>
             </div>
         </CardBody>
