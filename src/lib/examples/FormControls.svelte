@@ -6,6 +6,7 @@
     import InputExamples from '$lib/examples/InputExamples.svelte';
     import Radio from '$lib/comps/Radio.svelte';
     import Range from '$lib/comps/Range.svelte';
+    import Rating from '$lib/comps/Rating.svelte';
 
     // Color selections state
     let colorSelections = $state({
@@ -80,6 +81,11 @@
     // Add range state
     let rangeValue = $state(40);
     let steppedValue = $state(25);
+
+    // Add rating state
+    let basicRating = $state(2.5);
+    let colorRating = $state(3);
+    let heartRating = $state(4);
 </script>
 
 <div class="space-y-4">
@@ -385,6 +391,75 @@
                 <div>
                     <h3 class="font-semibold mb-2">States</h3>
                     <Range value={40} disabled />
+                </div>
+            </div>
+        </CardBody>
+    </Card>
+
+    <!-- Rating Showcase -->
+    <Card>
+        <CardBody>
+            <CardTitle>Rating Components</CardTitle>
+            <div class="space-y-8">
+                <!-- Basic -->
+                <div>
+                    <h3 class="font-semibold mb-2">Basic Rating with Half Stars</h3>
+                    <Rating 
+                        value={basicRating}
+                        onValueChange={(v) => basicRating = v}
+                        allowHalf
+                        allowClear
+                    />
+                    <p class="text-sm mt-2">Value: {basicRating}</p>
+                </div>
+
+                <!-- Sizes -->
+                <div>
+                    <h3 class="font-semibold mb-2">Sizes</h3>
+                    <div class="space-y-4">
+                        {#each sizes as size}
+                            <Rating size={size} value={3} />
+                        {/each}
+                    </div>
+                </div>
+
+                <!-- Colors -->
+                <div>
+                    <h3 class="font-semibold mb-2">Colored Stars</h3>
+                    <Rating 
+                        value={colorRating}
+                        onValueChange={(v) => colorRating = v}
+                        color="bg-orange-400"
+                        shape="star-2"
+                    />
+                </div>
+
+                <!-- Hearts with multiple colors -->
+                <div>
+                    <h3 class="font-semibold mb-2">Hearts with Multiple Colors</h3>
+                    <Rating 
+                        value={heartRating}
+                        onValueChange={(v) => heartRating = v}
+                        shape="heart"
+                        colors={[
+                            'bg-red-400',
+                            'bg-orange-400',
+                            'bg-yellow-400',
+                            'bg-lime-400',
+                            'bg-green-400'
+                        ]}
+                    />
+                </div>
+
+                <!-- Read-only -->
+                <div>
+                    <h3 class="font-semibold mb-2">Read-only Display</h3>
+                    <Rating 
+                        value={3.5}
+                        readonly
+                        allowHalf
+                        color="bg-green-500"
+                    />
                 </div>
             </div>
         </CardBody>
