@@ -7,6 +7,7 @@
     import Radio from '$lib/comps/Radio.svelte';
     import Range from '$lib/comps/Range.svelte';
     import Rating from '$lib/comps/Rating.svelte';
+    import Select from '$lib/comps/Select.svelte';
 
     // Color selections state
     let colorSelections = $state({
@@ -86,6 +87,30 @@
     let basicRating = $state(2.5);
     let colorRating = $state(3);
     let heartRating = $state(4);
+
+    // Add select state
+    let selectedFramework = $state('');
+    let selectedFont = $state('');
+    let selectedBrowser = $state('');
+
+    // Add select options data
+    const frameworks = $state(['Svelte', 'React', 'Vue', 'Angular', 'Solid']);
+    const browsers = $state([
+        { value: '', label: 'Popular', disabled: true },
+        { value: 'Chrome', label: 'Chrome' },
+        { value: 'Firefox', label: 'Firefox' },
+        { value: 'Safari', label: 'Safari' },
+        { value: 'Edge', label: 'Edge' },
+        { value: '', label: 'Legacy', disabled: true },
+        { value: 'Internet Explorer', label: 'Internet Explorer' },
+        { value: 'Opera', label: 'Opera' },
+        { value: 'Netscape', label: 'Netscape' }
+    ]);
+    const fonts = $state([
+        { value: 'inter', label: 'Inter UI', disabled: false },
+        { value: 'roboto', label: 'Roboto', disabled: false },
+        { value: 'comic', label: 'Comic Sans', disabled: true }
+    ]);
 </script>
 
 <div class="space-y-4">
@@ -459,6 +484,96 @@
                         readonly
                         allowHalf
                         color="bg-green-500"
+                    />
+                </div>
+            </div>
+        </CardBody>
+    </Card>
+
+    <!-- Select Showcase -->
+    <Card>
+        <CardBody>
+            <CardTitle>Select Components</CardTitle>
+            <div class="space-y-8">
+                <!-- Basic with simple array -->
+                <div>
+                    <h3 class="font-semibold mb-2">Basic Select with Array</h3>
+                    <Select 
+                        options={frameworks}
+                        placeholder="Pick a framework"
+                        value={selectedFramework}
+                        onchange={(e) => selectedFramework = (e.currentTarget as HTMLSelectElement).value}
+                    />
+                    {#if selectedFramework}
+                        <p class="text-sm mt-2">Selected: {selectedFramework}</p>
+                    {/if}
+                </div>
+
+                <!-- With option objects -->
+                <div>
+                    <h3 class="font-semibold mb-2">With Option Objects</h3>
+                    <Select 
+                        ghost
+                        options={fonts}
+                        placeholder="Pick a font"
+                        value={selectedFont}
+                        onchange={(e) => selectedFont = (e.currentTarget as HTMLSelectElement).value}
+                    />
+                    {#if selectedFont}
+                        <p class="text-sm mt-2">Selected font: {selectedFont}</p>
+                    {/if}
+                </div>
+
+                <!-- With option groups -->
+                <div>
+                    <h3 class="font-semibold mb-2">With Option Groups</h3>
+                    <fieldset class="fieldset p-4 bg-base-100 border border-base-300 rounded-box">
+                        <legend class="fieldset-legend">Browsers</legend>
+                        <Select 
+                            options={browsers}
+                            placeholder="Pick a browser"
+                            value={selectedBrowser}
+                            onchange={(e) => selectedBrowser = (e.currentTarget as HTMLSelectElement).value}
+                        />
+                        <span class="fieldset-label text-sm mt-1">Optional</span>
+                    </fieldset>
+                </div>
+
+                <!-- Colors -->
+                <div>
+                    <h3 class="font-semibold mb-2">Colors</h3>
+                    <div class="grid gap-4 md:grid-cols-2">
+                        {#each colors as color}
+                            <Select
+                                {color}
+                                options={['Option 1', 'Option 2', 'Option 3']}
+                                placeholder={`${color} select`}
+                            />
+                        {/each}
+                    </div>
+                </div>
+
+                <!-- Sizes -->
+                <div>
+                    <h3 class="font-semibold mb-2">Sizes</h3>
+                    <div class="space-y-4">
+                        {#each sizes as size}
+                            <Select
+                                {size}
+                                options={['Small Option', 'Medium Option', 'Large Option']}
+                                placeholder={`${size} size`}
+                            />
+                        {/each}
+                    </div>
+                </div>
+
+                <!-- Disabled state -->
+                <div>
+                    <h3 class="font-semibold mb-2">Disabled State</h3>
+                    <Select 
+                        disabled
+                        options={['You', "can't", 'touch', 'this']}
+                        value="You"
                     />
                 </div>
             </div>
