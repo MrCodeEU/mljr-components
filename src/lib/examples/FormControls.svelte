@@ -8,6 +8,7 @@
     import Range from '$lib/comps/Range.svelte';
     import Rating from '$lib/comps/Rating.svelte';
     import Select from '$lib/comps/Select.svelte';
+    import Textarea from '$lib/comps/Textarea.svelte';
 
     // Color selections state
     let colorSelections = $state({
@@ -111,6 +112,10 @@
         { value: 'roboto', label: 'Roboto', disabled: false },
         { value: 'comic', label: 'Comic Sans', disabled: true }
     ]);
+
+    // Add textarea state
+    let bioText = $state('');
+    let feedbackText = $state('');
 </script>
 
 <div class="space-y-4">
@@ -619,6 +624,79 @@
                     label="Disabled input"
                     placeholder="You can't touch this" 
                 />
+            </div>
+        </CardBody>
+    </Card>
+
+    <!-- Textarea Examples -->
+    <Card>
+        <CardBody>
+            <CardTitle>Textarea Components</CardTitle>
+            <div class="space-y-8">
+                <!-- Basic -->
+                <div>
+                    <h3 class="font-semibold mb-2">Basic Textarea</h3>
+                    <Textarea
+                        placeholder="Enter your bio..."
+                        bind:value={bioText}
+                        rows={4}
+                    />
+                    {#if bioText}
+                        <p class="text-sm mt-2">Characters: {bioText.length}</p>
+                    {/if}
+                </div>
+
+                <!-- With Fieldset -->
+                <div>
+                    <h3 class="font-semibold mb-2">With Fieldset</h3>
+                    <fieldset class="fieldset p-4 bg-base-100 border border-base-300 rounded-box">
+                        <legend class="fieldset-legend">Feedback</legend>
+                        <Textarea
+                            ghost
+                            placeholder="Your feedback is important..."
+                            bind:value={feedbackText}
+                            rows={3}
+                        />
+                        <span class="fieldset-label text-sm mt-1">Optional</span>
+                    </fieldset>
+                </div>
+
+                <!-- Colors -->
+                <div>
+                    <h3 class="font-semibold mb-2">Colors</h3>
+                    <div class="grid gap-4 md:grid-cols-2">
+                        {#each colors as color}
+                            <Textarea
+                                {color}
+                                placeholder={`${color} textarea`}
+                                rows={2}
+                            />
+                        {/each}
+                    </div>
+                </div>
+
+                <!-- Sizes -->
+                <div>
+                    <h3 class="font-semibold mb-2">Sizes</h3>
+                    <div class="space-y-4">
+                        {#each sizes as size}
+                            <Textarea
+                                {size}
+                                placeholder={`${size} size textarea`}
+                            />
+                        {/each}
+                    </div>
+                </div>
+
+                <!-- Disabled state -->
+                <div>
+                    <h3 class="font-semibold mb-2">Disabled State</h3>
+                    <Textarea
+                        disabled
+                        value="This textarea is disabled"
+                        rows={2}
+                    />
+                </div>
             </div>
         </CardBody>
     </Card>

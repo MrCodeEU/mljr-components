@@ -11,7 +11,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] Range slider - Value selection via sliding (Future make it actual range with two handles)
 - [x] Rating - Star-based rating input
 - [x] Select - Dropdown option picker
-- [ ] Textarea - Multi-line text input
+- [x] Textarea - Multi-line text input
 - [ ] Toggle - Switch-style checkbox
 - [ ] Fieldset - Form element grouping
 - [ ] Validator - Form validation styling
