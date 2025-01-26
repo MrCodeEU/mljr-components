@@ -14,7 +14,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] Textarea - Multi-line text input
 - [x] Toggle - Switch-style checkbox
 - [x] Fieldset - Form element grouping
-- [ ] Validator - Form validation styling
+- [x] Validator - Form validation styling
 
 ## Navigation & Structure
 - [ ] Accordion - Collapsible content panels

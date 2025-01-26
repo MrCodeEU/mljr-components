@@ -1,16 +1,21 @@
 <script lang="ts">
-    import Button from '$lib/comps/Button.svelte';
-    import Checkbox from '$lib/comps/Checkbox.svelte';
+    import Button from '$lib/comps/forms/Button.svelte';
+    import Checkbox from '$lib/comps/forms/Checkbox.svelte';
     import { Card, CardBody, CardTitle } from '$lib/comps/card/index.js';
-    import FileInput from '$lib/comps/FileInput.svelte';
+    import FileInput from '$lib/comps/forms/FileInput.svelte';
     import InputExamples from '$lib/examples/InputExamples.svelte';
-    import Radio from '$lib/comps/Radio.svelte';
-    import Range from '$lib/comps/Range.svelte';
-    import Rating from '$lib/comps/Rating.svelte';
-    import Select from '$lib/comps/Select.svelte';
-    import Textarea from '$lib/comps/Textarea.svelte';
-    import Toggle from '$lib/comps/Toggle.svelte';
-    import { Bell, BellOff, Moon, Sun, Wifi, WifiOff } from 'lucide-svelte';
+    import Radio from '$lib/comps/forms/Radio.svelte';
+    import Range from '$lib/comps/forms/Range.svelte';
+    import Rating from '$lib/comps/forms/Rating.svelte';
+    import Select from '$lib/comps/forms/Select.svelte';
+    import Textarea from '$lib/comps/forms/Textarea.svelte';
+    import Toggle from '$lib/comps/forms/Toggle.svelte';
+    import Bell from 'lucide-svelte/icons/bell';
+    import BellOff from 'lucide-svelte/icons/bell-off';
+    import Moon from 'lucide-svelte/icons/moon';
+    import Sun from 'lucide-svelte/icons/sun';
+    import Wifi from 'lucide-svelte/icons/wifi';
+    import WifiOff from 'lucide-svelte/icons/wifi-off';
 
     // Color selections state
     let colorSelections = $state({

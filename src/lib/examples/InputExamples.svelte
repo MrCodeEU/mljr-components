@@ -1,10 +1,10 @@
 <script lang="ts">
     import { Card, CardBody, CardTitle } from '$lib/comps/card/index.js';
-    import TextInput from '$lib/comps/input/TextInput.svelte';
-    import SearchInput from '$lib/comps/input/SearchInput.svelte';
-    import NumberInput from '$lib/comps/input/NumberInput.svelte';
-    import DateTimeInput from '$lib/comps/input/DateTimeInput.svelte';
-    import ComposedInput from '$lib/comps/input/ComposedInput.svelte';
+    import TextInput from '$lib/comps/forms/input/TextInput.svelte';
+    import SearchInput from '$lib/comps/forms/input/SearchInput.svelte';
+    import NumberInput from '$lib/comps/forms/input/NumberInput.svelte';
+    import DateTimeInput from '$lib/comps/forms/input/DateTimeInput.svelte';
+    import ComposedInput from '$lib/comps/forms/input/ComposedInput.svelte';
     import Mail from 'lucide-svelte/icons/mail';
     import File from 'lucide-svelte/icons/file';
     import User from 'lucide-svelte/icons/user';
