@@ -18,7 +18,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 
 ## Navigation & Structure
 - [x] Accordion - Collapsible content panels
-- [ ] Breadcrumbs - Navigation path indicator
+- [x] Breadcrumbs - Navigation path indicator
 - [ ] Drawer - Side panel navigation
 - [ ] Dropdown - Click-triggered menus
 - [ ] Menu - Vertical/horizontal link lists

@@ -2,6 +2,17 @@
     import { Card, CardBody, CardTitle } from '$lib/comps/card/index.js';
     import { Tabs, TabContent } from '$lib/comps/navs/tabs/index.js';
     import { Accordion, AccordionItem } from '$lib/comps/navs/accordion/index.js';
+    import { Breadcrumbs, BreadcrumbItem } from '$lib/comps/navs/breadcrumbs/index.js';
+    import fileplus from 'lucide-svelte/icons/file-plus';
+    import folder from 'lucide-svelte/icons/folder';
+
+    const folderIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-4 w-4 stroke-current">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+    </svg>`;
+
+    const addDocIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-4 w-4 stroke-current">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+    </svg>`;
 </script>
 
 <div class="space-y-4">
@@ -95,6 +106,46 @@
                     Go to "My Account" settings and select "Edit Profile" to make changes.
                 </AccordionItem>
             </Accordion>
+        </CardBody>
+    </Card>
+
+    <!-- Add before the "Other Navigation" card -->
+    <Card>
+        <CardBody>
+            <CardTitle>Breadcrumbs</CardTitle>
+            <div class="space-y-4">
+                <!-- Basic -->
+                <div>
+                    <h3 class="font-semibold mb-2">Basic Breadcrumbs</h3>
+                    <Breadcrumbs>
+                        <BreadcrumbItem href="home">Home</BreadcrumbItem>
+                        <BreadcrumbItem href="home/documents">Documents</BreadcrumbItem>
+                        <BreadcrumbItem>Add Document</BreadcrumbItem>
+                    </Breadcrumbs>
+                </div>
+
+                <!-- With Icons -->
+                <div>
+                    <h3 class="font-semibold mb-2">Breadcrumbs with Icons</h3>
+                    <Breadcrumbs>
+                        <BreadcrumbItem href="home" icon={folder}>Home</BreadcrumbItem>
+                        <BreadcrumbItem href="home/documents" icon={folder}>Documents</BreadcrumbItem>
+                        <BreadcrumbItem icon={fileplus}>Add Document</BreadcrumbItem>
+                    </Breadcrumbs>
+                </div>
+
+                <!-- Max Width -->
+                <div>
+                    <h3 class="font-semibold mb-2">Breadcrumbs with Max Width</h3>
+                    <Breadcrumbs maxWidth>
+                        <BreadcrumbItem href="section1">Long text 1</BreadcrumbItem>
+                        <BreadcrumbItem href="section1/section2">Long text 2</BreadcrumbItem>
+                        <BreadcrumbItem href="section1/section2/section3">Long text 3</BreadcrumbItem>
+                        <BreadcrumbItem href="section1/section2/section3/section4">Long text 4</BreadcrumbItem>
+                        <BreadcrumbItem>Long text 5</BreadcrumbItem>
+                    </Breadcrumbs>
+                </div>
+            </div>
         </CardBody>
     </Card>
 
