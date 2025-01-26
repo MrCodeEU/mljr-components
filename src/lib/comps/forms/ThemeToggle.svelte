@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Toggle from './Toggle.svelte';
+    import Toggle from '$lib/comps/forms/Toggle.svelte';
     import Sun from 'lucide-svelte/icons/sun';
     import Moon from 'lucide-svelte/icons/moon';
     

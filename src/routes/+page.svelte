@@ -1,7 +1,7 @@
 <script lang="ts">
-    import ThemeToggle from '$lib/comps/ThemeToggle.svelte';
+    import ThemeToggle from '$lib/comps/forms/ThemeToggle.svelte';
     import { Card, CardBody, CardTitle } from '$lib/comps/card/index.js';
-    import { Tabs, TabContent } from '$lib/comps/tabs/index.js';
+    import { Tabs, TabContent } from '$lib/comps/navs/tabs/index.js';
     import FormControls from '$lib/examples/FormControls.svelte';
     import Navigation from '$lib/examples/Navigation.svelte';
     import Layout from '$lib/examples/Layout.svelte';

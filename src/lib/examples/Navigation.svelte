@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Card, CardBody, CardTitle } from '$lib/comps/card/index.js';
-    import { Tabs, TabContent } from '$lib/comps/tabs/index.js';
+    import { Tabs, TabContent } from '$lib/comps/navs/tabs/index.js';
 </script>
 
 <div class="space-y-4">
