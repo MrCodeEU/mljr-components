@@ -8,7 +8,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] File Input - File upload field
 - [X] Text Input - Basic text input field
 - [x] Radio - Single option selection
-- [ ] Range slider - Value selection via sliding
+- [x] Range slider - Value selection via sliding (Future make it actual range with two handles)
 - [ ] Rating - Star-based rating input
 - [ ] Select - Dropdown option picker
 - [ ] Textarea - Multi-line text input

@@ -5,6 +5,7 @@
     import FileInput from '$lib/comps/FileInput.svelte';
     import InputExamples from '$lib/examples/InputExamples.svelte';
     import Radio from '$lib/comps/Radio.svelte';
+    import Range from '$lib/comps/Range.svelte';
 
     // Color selections state
     let colorSelections = $state({
@@ -68,13 +69,17 @@
     }
 
     // Add colors array for inputs
-    const colors = ['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'];
-    const sizes = ['xs', 'sm', 'md', 'lg', 'xl'];
+    const colors = ['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'] as const;
+    const sizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
 
     // Add radio state
     let selectedSize = $state('md');
     let selectedColor = $state('primary');
     let favoriteTopping = $state('');
+
+    // Add range state
+    let rangeValue = $state(40);
+    let steppedValue = $state(25);
 </script>
 
 <div class="space-y-4">
@@ -310,6 +315,76 @@
                             <p class="text-sm mt-4">Your choice: {favoriteTopping}</p>
                         {/if}
                     </fieldset>
+                </div>
+            </div>
+        </CardBody>
+    </Card>
+
+    <!-- Range Showcase -->
+    <Card>
+        <CardBody>
+            <CardTitle>Range Components</CardTitle>
+            <div class="space-y-8">
+                <!-- Basic -->
+                <div>
+                    <h3 class="font-semibold mb-2">Basic Range</h3>
+                    <Range 
+                        value={rangeValue} 
+                        onValueChange={(v) => rangeValue = v}
+                        showFloatingLabel
+                    />
+                    <p class="text-sm mt-2">Value: {rangeValue}</p>
+                </div>
+
+                <!-- With Steps -->
+                <div>
+                    <h3 class="font-semibold mb-2">With Steps and Labels</h3>
+                    <Range 
+                        value={steppedValue}
+                        step={25}
+                        showSteps
+                        showLabels
+                        onValueChange={(v) => steppedValue = v}
+                    />
+                </div>
+
+                <!-- Colors -->
+                <div>
+                    <h3 class="font-semibold mb-2">Colors</h3>
+                    <div class="space-y-4">
+                        {#each colors as color}
+                            <Range value={40} color={color} />
+                        {/each}
+                    </div>
+                </div>
+
+                <!-- Sizes -->
+                <div>
+                    <h3 class="font-semibold mb-2">Sizes</h3>
+                    <div class="space-y-4">
+                        {#each sizes as size}
+                            <Range value={40} size={size} />
+                        {/each}
+                    </div>
+                </div>
+
+                <!-- Custom Labels -->
+                <div>
+                    <h3 class="font-semibold mb-2">Custom Labels</h3>
+                    <Range
+                        min={1}
+                        max={5}
+                        step={1}
+                        value={3}
+                        showLabels
+                        labels={['Very Poor', 'Poor', 'Average', 'Good', 'Excellent']}
+                    />
+                </div>
+
+                <!-- States -->
+                <div>
+                    <h3 class="font-semibold mb-2">States</h3>
+                    <Range value={40} disabled />
                 </div>
             </div>
         </CardBody>
