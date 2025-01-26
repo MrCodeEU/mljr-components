@@ -23,7 +23,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] Dropdown - Click-triggered menus
 - [ ] Menu - Vertical/horizontal link lists
 - [x] Navbar - Top navigation bar
-- [ ] Pagination - Page navigation controls
+- [x] Pagination - Page navigation controls
 - [ ] Steps - Process step indicators
 - [X] Tabs - Tabbed content navigation
 - [ ] Timeline - Chronological event display

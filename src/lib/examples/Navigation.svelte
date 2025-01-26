@@ -6,15 +6,19 @@
     import { Drawer, DrawerContent, DrawerSide, DrawerToggle } from '$lib/comps/navs/drawer/index.js';
     import { Dropdown, DropdownContent } from '$lib/comps/navs/dropdown/index.js';
     import { Navbar, NavbarSection } from '$lib/comps/navs/navbar/index.js';
+    import Pagination from '$lib/comps/navs/Pagination.svelte';
     import Button from '$lib/comps/forms/Button.svelte';
     import fileplus from 'lucide-svelte/icons/file-plus';
     import folder from 'lucide-svelte/icons/folder';
     import menu from 'lucide-svelte/icons/menu';
 
     // Add state for drawers
-    let basicDrawerOpen = false;
-    let responsiveDrawerOpen = false;
-    let endDrawerOpen = false;
+    let basicDrawerOpen = $state(false);
+    let responsiveDrawerOpen = $state(false);
+    let endDrawerOpen = $state(false);
+
+    // Add state for pagination
+    let currentPage = $state(1);
 </script>
 
 <div class="space-y-4">
@@ -328,6 +332,45 @@
                             <a class="btn btn-ghost text-xl">Neutral</a>
                         </NavbarSection>
                     </Navbar>
+                </div>
+            </div>
+        </CardBody>
+    </Card>
+
+    <!-- Add before "Other Navigation" -->
+    <Card>
+        <CardBody>
+            <CardTitle>Pagination</CardTitle>
+            <div class="space-y-4">
+                <!-- Basic -->
+                <div>
+                    <h3 class="font-semibold mb-2">Basic Pagination</h3>
+                    <Pagination totalPages={5} bind:currentPage />
+                    <p>Currently on page {currentPage}</p>
+                </div>
+
+                <!-- With Next/Prev -->
+                <div>
+                    <h3 class="font-semibold mb-2">With Next/Prev Buttons</h3>
+                    <Pagination totalPages={5} showNextPrev />
+                </div>
+
+                <!-- Sizes -->
+                <div>
+                    <h3 class="font-semibold mb-2">Pagination Sizes</h3>
+                    <div class="space-y-2">
+                        <Pagination totalPages={3} size="xs" />
+                        <Pagination totalPages={3} size="sm" />
+                        <Pagination totalPages={3} />
+                        <Pagination totalPages={3} size="lg" />
+                        <Pagination totalPages={3} size="xl" />
+                    </div>
+                </div>
+
+                <!-- Many Pages -->
+                <div>
+                    <h3 class="font-semibold mb-2">Many Pages</h3>
+                    <Pagination totalPages={100} showNextPrev maxVisible={7} />
                 </div>
             </div>
         </CardBody>
