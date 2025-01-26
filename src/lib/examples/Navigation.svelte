@@ -4,6 +4,8 @@
     import { Accordion, AccordionItem } from '$lib/comps/navs/accordion/index.js';
     import { Breadcrumbs, BreadcrumbItem } from '$lib/comps/navs/breadcrumbs/index.js';
     import { Drawer, DrawerContent, DrawerSide, DrawerToggle } from '$lib/comps/navs/drawer/index.js';
+    import { Dropdown, DropdownContent } from '$lib/comps/navs/dropdown/index.js';
+    import { Navbar, NavbarSection } from '$lib/comps/navs/navbar/index.js';
     import Button from '$lib/comps/forms/Button.svelte';
     import fileplus from 'lucide-svelte/icons/file-plus';
     import folder from 'lucide-svelte/icons/folder';
@@ -212,6 +214,120 @@
                             </DrawerSide>
                         </Drawer>
                     </div>
+                </div>
+            </div>
+        </CardBody>
+    </Card>
+
+    <!-- Add before "Other Navigation" -->
+    <Card>
+        <CardBody>
+            <CardTitle>Dropdowns</CardTitle>
+            <div class="space-y-4">
+                <!-- Basic Dropdown -->
+                <div>
+                    <h3 class="font-semibold mb-2">Basic Dropdown</h3>
+                    <Dropdown>
+                        <div tabindex="0" role="button" class="btn m-1">Click</div>
+                        <DropdownContent>
+                            <ul class="menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                                <li><a>Item 1</a></li>
+                                <li><a>Item 2</a></li>
+                            </ul>
+                        </DropdownContent>
+                    </Dropdown>
+                </div>
+
+                <!-- Hover Dropdown -->
+                <div>
+                    <h3 class="font-semibold mb-2">Hover Dropdown</h3>
+                    <Dropdown hover>
+                        <div tabindex="0" role="button" class="btn m-1">Hover</div>
+                        <DropdownContent>
+                            <ul class="menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                                <li><a>Item 1</a></li>
+                                <li><a>Item 2</a></li>
+                            </ul>
+                        </DropdownContent>
+                    </Dropdown>
+                </div>
+
+                <!-- Positioned Dropdowns -->
+                <div>
+                    <h3 class="font-semibold mb-2">Positioned Dropdowns</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <Dropdown position="top" align="start">
+                            <div tabindex="0" role="button" class="btn">Top Start</div>
+                            <DropdownContent>
+                                <ul class="menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                                    <li><a>Item 1</a></li>
+                                    <li><a>Item 2</a></li>
+                                </ul>
+                            </DropdownContent>
+                        </Dropdown>
+                        
+                        <Dropdown position="bottom" align="end">
+                            <div tabindex="0" role="button" class="btn">Bottom End</div>
+                            <DropdownContent>
+                                <ul class="menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                                    <li><a>Item 1</a></li>
+                                    <li><a>Item 2</a></li>
+                                </ul>
+                            </DropdownContent>
+                        </Dropdown>
+                    </div>
+                </div>
+            </div>
+        </CardBody>
+    </Card>
+
+    <!-- Add before "Other Navigation" -->
+    <Card>
+        <CardBody>
+            <CardTitle>Navbar Examples</CardTitle>
+            <div class="space-y-4">
+                <!-- Basic Navbar -->
+                <div>
+                    <h3 class="font-semibold mb-2">Basic Navbar</h3>
+                    <Navbar>
+                        <NavbarSection>
+                            <a class="btn btn-ghost text-xl">daisyUI</a>
+                        </NavbarSection>
+                    </Navbar>
+                </div>
+
+                <!-- Navbar with Sections -->
+                <div>
+                    <h3 class="font-semibold mb-2">Navbar with Sections</h3>
+                    <Navbar>
+                        <NavbarSection>
+                            <a class="btn btn-ghost text-xl">Brand</a>
+                        </NavbarSection>
+                        <NavbarSection position="center">
+                            <ul class="menu menu-horizontal px-1">
+                                <li><a>Link 1</a></li>
+                                <li><a>Link 2</a></li>
+                            </ul>
+                        </NavbarSection>
+                        <NavbarSection position="end">
+                            <button class="btn">Login</button>
+                        </NavbarSection>
+                    </Navbar>
+                </div>
+
+                <!-- Colored Navbar -->
+                <div>
+                    <h3 class="font-semibold mb-2">Colored Navbar</h3>
+                    <Navbar background="primary" class="mb-2">
+                        <NavbarSection>
+                            <a class="btn btn-ghost text-xl">Primary</a>
+                        </NavbarSection>
+                    </Navbar>
+                    <Navbar background="neutral">
+                        <NavbarSection>
+                            <a class="btn btn-ghost text-xl">Neutral</a>
+                        </NavbarSection>
+                    </Navbar>
                 </div>
             </div>
         </CardBody>
