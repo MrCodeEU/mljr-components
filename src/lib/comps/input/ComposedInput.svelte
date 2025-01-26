@@ -62,29 +62,31 @@
     ].filter(Boolean).join(' '));
 </script>
 
-<label class={classes}>
-    {#if icon}
-        {@const Icon = icon}
-        <Icon class="h-4 w-4 shrink-0 opacity-50" />
-    {/if}
+<fieldset class="fieldset">
     {#if label}
-        <span class="shrink-0">{label}</span>
+        <legend class="fieldset-legend">{label}</legend>
     {/if}
-    <input
-        {type}
-        class={inputClasses}
-        {disabled}
-        {placeholder}
-        {required}
-        {value}
-        oninput={onInput}
-        onchange={onChange}
-        {...rest}
-    />
-    {#if badge}
-        <span class="badge badge-neutral badge-xs">{badge}</span>
+    <label class={classes}>
+        {#if icon}
+            {@const Icon = icon}
+            <Icon class="h-4 w-4 shrink-0 opacity-50" />
+        {/if}
+        <input
+            {type}
+            class={inputClasses}
+            {disabled}
+            {placeholder}
+            {required}
+            {value}
+            oninput={onInput}
+            onchange={onChange}
+            {...rest}
+        />
+        {#if badge}
+            <span class="badge badge-neutral badge-xs">{badge}</span>
+        {/if}
+    </label>
+    {#if hint}
+        <p class="fieldset-label">{hint}</p>
     {/if}
-</label>
-{#if hint}
-    <p class="validator-hint">{hint}</p>
-{/if}
+</fieldset>

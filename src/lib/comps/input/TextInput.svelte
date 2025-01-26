@@ -5,6 +5,8 @@
         'input-ghost'];
 
     let {
+        label = '',
+        hint = '',
         color = undefined,
         size = undefined,
         ghost = false,
@@ -20,6 +22,8 @@
         onChange = undefined,
         ...rest
     } = $props<{
+        label?: string;
+        hint?: string;
         color?: 'neutral' | 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error';
         size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
         ghost?: boolean;
@@ -44,17 +48,42 @@
     ].filter(Boolean).join(' '));
 </script>
 
-<input
-    type="text"
-    class={classes}
-    {disabled}
-    {placeholder}
-    {required}
-    {value}
-    {maxLength}
-    {minLength}
-    {pattern}
-    oninput={onInput}
-    onchange={onChange}
-    {...rest}
-/>
+{#if label || hint}
+    <fieldset class="fieldset">
+        {#if label}
+            <legend class="fieldset-legend">{label}</legend>
+        {/if}
+        <input
+            type="text"
+            class={classes}
+            {disabled}
+            {placeholder}
+            {required}
+            {value}
+            {maxLength}
+            {minLength}
+            {pattern}
+            oninput={onInput}
+            onchange={onChange}
+            {...rest}
+        />
+        {#if hint}
+            <p class="fieldset-label">{hint}</p>
+        {/if}
+    </fieldset>
+{:else}
+    <input
+        type="text"
+        class={classes}
+        {disabled}
+        {placeholder}
+        {required}
+        {value}
+        {maxLength}
+        {minLength}
+        {pattern}
+        oninput={onInput}
+        onchange={onChange}
+        {...rest}
+    />
+{/if}

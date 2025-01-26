@@ -6,6 +6,8 @@
         'input-ghost'];
 
     let {
+        label = '',
+        hint = '',
         withIcon = true,
         showShortcut = false,
         color = undefined,
@@ -20,6 +22,8 @@
         onChange = undefined,
         ...rest
     } = $props<{
+        label?: string;
+        hint?: string;
         withIcon?: boolean;
         showShortcut?: boolean;
         color?: 'neutral' | 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error';
@@ -43,12 +47,71 @@
     ].filter(Boolean).join(' '));
 </script>
 
-{#if withIcon}
-    <label class={classes}>
-        <Search class="h-4 w-4 shrink-0 opacity-50" />
+{#if label || hint}
+    <fieldset class="fieldset">
+        {#if label}
+            <legend class="fieldset-legend">{label}</legend>
+        {/if}
+        {#if withIcon}
+            <label class={classes}>
+                <Search class="h-4 w-4 shrink-0 opacity-50" />
+                <input
+                    type="search"
+                    class="grow"
+                    {disabled}
+                    {placeholder}
+                    {required}
+                    {value}
+                    oninput={onInput}
+                    onchange={onChange}
+                    {...rest}
+                />
+                {#if showShortcut}
+                    <kbd class="kbd kbd-sm">⌘</kbd>
+                    <kbd class="kbd kbd-sm">K</kbd>
+                {/if}
+            </label>
+        {:else}
+            <input
+                type="search"
+                class={classes}
+                {disabled}
+                {placeholder}
+                {required}
+                {value}
+                oninput={onInput}
+                onchange={onChange}
+                {...rest}
+            />
+        {/if}
+        {#if hint}
+            <p class="fieldset-label">{hint}</p>
+        {/if}
+    </fieldset>
+{:else}
+    {#if withIcon}
+        <label class={classes}>
+            <Search class="h-4 w-4 shrink-0 opacity-50" />
+            <input
+                type="search"
+                class="grow"
+                {disabled}
+                {placeholder}
+                {required}
+                {value}
+                oninput={onInput}
+                onchange={onChange}
+                {...rest}
+            />
+            {#if showShortcut}
+                <kbd class="kbd kbd-sm">⌘</kbd>
+                <kbd class="kbd kbd-sm">K</kbd>
+            {/if}
+        </label>
+    {:else}
         <input
             type="search"
-            class="grow"
+            class={classes}
             {disabled}
             {placeholder}
             {required}
@@ -57,21 +120,5 @@
             onchange={onChange}
             {...rest}
         />
-        {#if showShortcut}
-            <kbd class="kbd kbd-sm">⌘</kbd>
-            <kbd class="kbd kbd-sm">K</kbd>
-        {/if}
-    </label>
-{:else}
-    <input
-        type="search"
-        class={classes}
-        {disabled}
-        {placeholder}
-        {required}
-        {value}
-        oninput={onInput}
-        onchange={onChange}
-        {...rest}
-    />
+    {/if}
 {/if}

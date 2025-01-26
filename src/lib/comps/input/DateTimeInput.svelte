@@ -6,6 +6,8 @@
         'input-ghost'];;
 
     let {
+        label = '',
+        hint = '',
         type = 'date',
         min = undefined,
         max = undefined,
@@ -21,6 +23,8 @@
         onChange = undefined,
         ...rest
     } = $props<{
+        label?: string;
+        hint?: string;
         type?: 'date' | 'time' | 'datetime-local' | 'week' | 'month';
         min?: string;
         max?: string;
@@ -45,16 +49,40 @@
     ].filter(Boolean).join(' '));
 </script>
 
-<input
-    {type}
-    class={classes}
-    {min}
-    {max}
-    {disabled}
-    {placeholder}
-    {required}
-    {value}
-    oninput={onInput}
-    onchange={onChange}
-    {...rest}
-/>
+{#if label || hint}
+    <fieldset class="fieldset">
+        {#if label}
+            <legend class="fieldset-legend">{label}</legend>
+        {/if}
+        <input
+            {type}
+            class={classes}
+            {min}
+            {max}
+            {disabled}
+            {placeholder}
+            {required}
+            {value}
+            oninput={onInput}
+            onchange={onChange}
+            {...rest}
+        />
+        {#if hint}
+            <p class="fieldset-label">{hint}</p>
+        {/if}
+    </fieldset>
+{:else}
+    <input
+        {type}
+        class={classes}
+        {min}
+        {max}
+        {disabled}
+        {placeholder}
+        {required}
+        {value}
+        oninput={onInput}
+        onchange={onChange}
+        {...rest}
+    />
+{/if}

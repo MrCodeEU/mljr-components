@@ -5,6 +5,8 @@
         'input-ghost'];
 
     let {
+        label = '',
+        hint = '',
         min = undefined,
         max = undefined,
         step = undefined,
@@ -20,6 +22,8 @@
         onChange = undefined,
         ...rest
     } = $props<{
+        label?: string;
+        hint?: string;
         min?: number;
         max?: number;
         step?: number;
@@ -62,9 +66,45 @@
     }
 </script>
 
-<div class={classes}>
+{#if label || hint}
+    <fieldset class="fieldset">
+        {#if label}
+            <legend class="fieldset-legend">{label}</legend>
+        {/if}
+        <input
+            type="number"
+            class={classes}
+            {min}
+            {max}
+            {step}
+            {disabled}
+            {placeholder}
+            {required}
+            {value}
+            oninput={handleInput}
+            onchange={onChange}
+            {...rest}
+        />
+        {#if hint || (min !== undefined || max !== undefined)}
+            <p class="fieldset-label">
+                {hint || ''}
+                {#if min !== undefined || max !== undefined}
+                    {#if hint} • {/if}
+                    {#if min !== undefined && max !== undefined}
+                        Must be between {min} and {max}
+                    {:else if min !== undefined}
+                        Must be at least {min}
+                    {:else if max !== undefined}
+                        Must be at most {max}
+                    {/if}
+                {/if}
+            </p>
+        {/if}
+    </fieldset>
+{:else}
     <input
         type="number"
+        class={classes}
         {min}
         {max}
         {step}
@@ -76,15 +116,4 @@
         onchange={onChange}
         {...rest}
     />
-    {#if min !== undefined || max !== undefined}
-        <p class="validator-hint">
-            {#if min !== undefined && max !== undefined}
-                Must be between {min} and {max}
-            {:else if min !== undefined}
-                Must be at least {min}
-            {:else if max !== undefined}
-                Must be at most {max}
-            {/if}
-        </p>
-    {/if}
-</div>
+{/if}
