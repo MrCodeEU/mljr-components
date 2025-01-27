@@ -40,12 +40,12 @@
 	</li>
 {:else}
 	<li>
-        <span class="inline-flex items-center gap-2">
-            {#if icon}
-                {@const Icon = icon}
-                <Icon aria-label="enabled" class="h-4 w-4 shrink-0" />
-            {/if}
-            {@render children?.()}
-        </span>
+		<span class="inline-flex items-center gap-2">
+			{#if icon}
+				{@const Icon = icon}
+				<Icon aria-label="enabled" class="h-4 w-4 shrink-0" />
+			{/if}
+			{@render children?.()}
+		</span>
 	</li>
 {/if}

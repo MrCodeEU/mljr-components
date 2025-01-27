@@ -3,10 +3,11 @@
 A collection of Svelte components based on DaisyUI, organized for easy reference and implementation tracking.
 
 ## Form Controls
+
 - [x] Button - Actions and choices
 - [x] Checkbox - Select/deselect values
 - [x] File Input - File upload field
-- [X] Text Input - Basic text input field
+- [x] Text Input - Basic text input field
 - [x] Radio - Single option selection
 - [x] Range slider - Value selection via sliding (Future make it actual range with two handles)
 - [x] Rating - Star-based rating input
@@ -17,6 +18,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] Validator - Form validation styling
 
 ## Navigation & Structure
+
 - [x] Accordion - Collapsible content panels
 - [x] Breadcrumbs - Navigation path indicator
 - [x] Drawer - Side panel navigation
@@ -25,10 +27,11 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] Navbar - Top navigation bar
 - [x] Pagination - Page navigation controls
 - [ ] Steps - Process step indicators
-- [X] Tabs - Tabbed content navigation
+- [x] Tabs - Tabbed content navigation
 - [ ] Timeline - Chronological event display
 
 ## Layout & Containers
+
 - [x] Card - Content grouping boxes
 - [ ] Collapse - Expandable content
 - [ ] Divider - Content separator
@@ -40,6 +43,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [ ] Table - Data grid display
 
 ## Feedback & Status
+
 - [ ] Alert - Important event notifications
 - [ ] Badge - Status indicators
 - [ ] Loading - Loading state animations
@@ -53,6 +57,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [ ] Tooltip - Hover information
 
 ## Display & Media
+
 - [ ] Avatar - User thumbnails
 - [ ] Calendar - Date display/selection
 - [ ] Carousel - Scrollable content
@@ -63,12 +68,14 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [ ] Swap - Element toggle visibility
 
 ## Mockups
+
 - [ ] Browser mockup - Browser window simulation
 - [ ] Code mockup - Code editor simulation
 - [ ] Phone mockup - iPhone device simulation
 - [ ] Window mockup - OS window simulation
 
 ## Utilities
+
 - [ ] Countdown - Number transition effects
 - [ ] Filter - Radio button filtering
 - [ ] Kbd - Keyboard shortcut display
@@ -87,7 +94,7 @@ npm install mljr-components
 
 ```svelte
 <script>
-  import { Button } from 'mljr-components';
+	import { Button } from 'mljr-components';
 </script>
 
 <Button>Click me!</Button>
