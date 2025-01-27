@@ -34,9 +34,9 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 
 - [x] Card - Content grouping boxes
 - [x] Collapse - Expandable content
-- [ ] Divider - Content separator
-- [ ] Dock - Bottom navigation bar
-- [ ] Footer - Page footer content
+- [x] Divider - Content separator
+- [ ] Dock - Bottom navigation bar (Not needed maybe implement later)
+- [x] Footer - Page footer content
 - [ ] Hero - Featured content display
 - [ ] Join - Element grouping container
 - [ ] Stack - Z-axis element stacking
