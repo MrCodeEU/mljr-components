@@ -26,14 +26,14 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [ ] Menu - Vertical/horizontal link lists
 - [x] Navbar - Top navigation bar
 - [x] Pagination - Page navigation controls
-- [ ] Steps - Process step indicators
+- [x] Steps - Process step indicators
 - [x] Tabs - Tabbed content navigation
-- [ ] Timeline - Chronological event display
+- [x] Timeline - Chronological event display
 
 ## Layout & Containers
 
 - [x] Card - Content grouping boxes
-- [ ] Collapse - Expandable content
+- [x] Collapse - Expandable content
 - [ ] Divider - Content separator
 - [ ] Dock - Bottom navigation bar
 - [ ] Footer - Page footer content

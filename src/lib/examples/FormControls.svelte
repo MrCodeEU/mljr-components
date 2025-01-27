@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Button from '$lib/comps/forms/Button.svelte';
 	import Checkbox from '$lib/comps/forms/Checkbox.svelte';
-	import { Card, CardBody, CardTitle } from '$lib/comps/card/index.js';
+	import { Card, CardBody, CardTitle } from '$lib/comps/layout/card/index.js';
 	import FileInput from '$lib/comps/forms/FileInput.svelte';
 	import InputExamples from '$lib/examples/InputExamples.svelte';
 	import Radio from '$lib/comps/forms/Radio.svelte';

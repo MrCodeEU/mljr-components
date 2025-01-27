@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card, CardBody, CardTitle } from '$lib/comps/card/index.js';
+	import { Card, CardBody, CardTitle } from '$lib/comps/layout/card/index.js';
 	import { Tabs, TabContent } from '$lib/comps/navs/tabs/index.js';
 	import { Accordion, AccordionItem } from '$lib/comps/navs/accordion/index.js';
 	import { Breadcrumbs, BreadcrumbItem } from '$lib/comps/navs/breadcrumbs/index.js';
@@ -12,6 +12,11 @@
 	import folder from 'lucide-svelte/icons/folder';
 	import menu from 'lucide-svelte/icons/menu';
 	import { Steps, Step } from '$lib/comps/navs/steps/index.js';
+	import { Timeline, TimelineItem, TimelineSlot } from '$lib/comps/navs/timeline/index.js';
+	import check from 'lucide-svelte/icons/check-circle-2';
+	import star from 'lucide-svelte/icons/star';
+	import heart from 'lucide-svelte/icons/heart';
+	import bell from 'lucide-svelte/icons/bell';
 
 	// Add state for drawers
 	let basicDrawerOpen = $state(false);
@@ -205,8 +210,8 @@
 							</DrawerContent>
 							<DrawerSide drawerId="basic-drawer">
 								<ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-									<li><a href="#top">Sidebar Item 1</a></li>
-									<li><a href="#top">Sidebar Item 2</a></li>
+									<li><a href="#foo">Sidebar Item 1</a></li>
+									<li><a href="#foo">Sidebar Item 2</a></li>
 								</ul>
 							</DrawerSide>
 						</Drawer>
@@ -228,8 +233,8 @@
 							</DrawerContent>
 							<DrawerSide drawerId="responsive-drawer">
 								<ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-									<li><a href="#top">Sidebar Item 1</a></li>
-									<li><a href="#top">Sidebar Item 2</a></li>
+									<li><a href="#foo">Sidebar Item 1</a></li>
+									<li><a href="#foo">Sidebar Item 2</a></li>
 								</ul>
 							</DrawerSide>
 						</Drawer>
@@ -246,8 +251,8 @@
 							</DrawerContent>
 							<DrawerSide drawerId="end-drawer">
 								<ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-									<li><a href="#top">Sidebar Item 1</a></li>
-									<li><a href="#top">Sidebar Item 2</a></li>
+									<li><a href="#foo">Sidebar Item 1</a></li>
+									<li><a href="#foo">Sidebar Item 2</a></li>
 								</ul>
 							</DrawerSide>
 						</Drawer>
@@ -269,8 +274,8 @@
 						<div tabindex="0" role="button" class="btn m-1">Click</div>
 						<DropdownContent>
 							<ul class="menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-								<li><a>Item 1</a></li>
-								<li><a>Item 2</a></li>
+								<li><a href="#foo">Item 1</a></li>
+								<li><a href="#foo">Item 2</a></li>
 							</ul>
 						</DropdownContent>
 					</Dropdown>
@@ -283,8 +288,8 @@
 						<div tabindex="0" role="button" class="btn m-1">Hover</div>
 						<DropdownContent>
 							<ul class="menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-								<li><a>Item 1</a></li>
-								<li><a>Item 2</a></li>
+								<li><a href="#foo">Item 1</a></li>
+								<li><a href="#foo">Item 2</a></li>
 							</ul>
 						</DropdownContent>
 					</Dropdown>
@@ -298,8 +303,8 @@
 							<div tabindex="0" role="button" class="btn">Top Start</div>
 							<DropdownContent>
 								<ul class="menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-									<li><a>Item 1</a></li>
-									<li><a>Item 2</a></li>
+									<li><a href="#foo">Item 1</a></li>
+									<li><a href="#foo">Item 2</a></li>
 								</ul>
 							</DropdownContent>
 						</Dropdown>
@@ -308,8 +313,8 @@
 							<div tabindex="0" role="button" class="btn">Bottom End</div>
 							<DropdownContent>
 								<ul class="menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-									<li><a>Item 1</a></li>
-									<li><a>Item 2</a></li>
+									<li><a href="#foo">Item 1</a></li>
+									<li><a href="#foo">Item 2</a></li>
 								</ul>
 							</DropdownContent>
 						</Dropdown>
@@ -329,7 +334,7 @@
 					<h3 class="font-semibold mb-2">Basic Navbar</h3>
 					<Navbar>
 						<NavbarSection>
-							<a class="btn btn-ghost text-xl">daisyUI</a>
+							<a href="#foo" class="btn btn-ghost text-xl">daisyUI</a>
 						</NavbarSection>
 					</Navbar>
 				</div>
@@ -339,12 +344,12 @@
 					<h3 class="font-semibold mb-2">Navbar with Sections</h3>
 					<Navbar>
 						<NavbarSection>
-							<a class="btn btn-ghost text-xl">Brand</a>
+							<a href="#foo" class="btn btn-ghost text-xl">Brand</a>
 						</NavbarSection>
 						<NavbarSection position="center">
 							<ul class="menu menu-horizontal px-1">
-								<li><a>Link 1</a></li>
-								<li><a>Link 2</a></li>
+								<li><a href="#foo">Link 1</a></li>
+								<li><a href="#foo">Link 2</a></li>
 							</ul>
 						</NavbarSection>
 						<NavbarSection position="end">
@@ -358,12 +363,12 @@
 					<h3 class="font-semibold mb-2">Colored Navbar</h3>
 					<Navbar background="primary" class="mb-2">
 						<NavbarSection>
-							<a class="btn btn-ghost text-xl">Primary</a>
+							<a href="#foo" class="btn btn-ghost text-xl">Primary</a>
 						</NavbarSection>
 					</Navbar>
 					<Navbar background="neutral">
 						<NavbarSection>
-							<a class="btn btn-ghost text-xl">Neutral</a>
+							<a href="#foo" class="btn btn-ghost text-xl">Neutral</a>
 						</NavbarSection>
 					</Navbar>
 				</div>
@@ -477,6 +482,187 @@
 						<Step color="warning">Step 3</Step>
 						<Step color="error">Step 4</Step>
 					</Steps>
+				</div>
+			</div>
+		</CardBody>
+	</Card>
+
+	<!-- Add before "Other Navigation" -->
+	<Card>
+		<CardBody>
+			<CardTitle>Timeline</CardTitle>
+			<div class="space-y-4">
+				<!-- Basic Timeline -->
+				<div>
+					<h3 class="font-semibold mb-2">Basic Timeline</h3>
+					<Timeline>
+						<TimelineItem>
+							<TimelineSlot position="start">1984</TimelineSlot>
+							<TimelineSlot position="middle" icon={check} color="primary" />
+							<TimelineSlot position="end" box>First Macintosh computer</TimelineSlot>
+						</TimelineItem>
+						<TimelineItem>
+							<TimelineSlot position="start">1998</TimelineSlot>
+							<TimelineSlot position="middle" icon={check} color="primary" />
+							<TimelineSlot position="end" box>iMac</TimelineSlot>
+						</TimelineItem>
+						<TimelineItem>
+							<TimelineSlot position="start">2001</TimelineSlot>
+							<TimelineSlot position="middle" icon={check} />
+							<TimelineSlot position="end" box>iPod</TimelineSlot>
+						</TimelineItem>
+					</Timeline>
+				</div>
+
+				<!-- Horizontal Timeline -->
+				<div>
+					<h3 class="font-semibold mb-2">Horizontal Timeline</h3>
+					<Timeline direction="horizontal">
+						<TimelineItem>
+							<TimelineSlot position="start" box>Register</TimelineSlot>
+							<TimelineSlot position="middle" icon={check} color="primary" />
+						</TimelineItem>
+						<TimelineItem>
+							<TimelineSlot position="start" box>Choose plan</TimelineSlot>
+							<TimelineSlot position="middle" icon={check} color="primary" />
+						</TimelineItem>
+						<TimelineItem>
+							<TimelineSlot position="start" box>Purchase</TimelineSlot>
+							<TimelineSlot position="middle" icon={check} />
+						</TimelineItem>
+					</Timeline>
+				</div>
+
+				<!-- Responsive Timeline -->
+				<div>
+					<h3 class="font-semibold mb-2">Responsive Timeline</h3>
+					<Timeline responsive>
+						<TimelineItem>
+							<TimelineSlot position="start">2021</TimelineSlot>
+							<TimelineSlot position="middle" icon={check} color="primary" />
+							<TimelineSlot position="end" box>Phase 1</TimelineSlot>
+						</TimelineItem>
+						<TimelineItem>
+							<TimelineSlot position="start">2022</TimelineSlot>
+							<TimelineSlot position="middle" icon={check} color="primary" />
+							<TimelineSlot position="end" box>Phase 2</TimelineSlot>
+						</TimelineItem>
+						<TimelineItem>
+							<TimelineSlot position="start">2023</TimelineSlot>
+							<TimelineSlot position="middle" icon={check} />
+							<TimelineSlot position="end" box>Phase 3</TimelineSlot>
+						</TimelineItem>
+					</Timeline>
+				</div>
+
+				<!-- Compact Timeline -->
+				<div>
+					<h3 class="font-semibold mb-2">Compact Timeline</h3>
+					<Timeline compact>
+						<TimelineItem>
+							<TimelineSlot position="middle" icon={check} color="primary" />
+							<TimelineSlot position="end" box>First step</TimelineSlot>
+						</TimelineItem>
+						<TimelineItem>
+							<TimelineSlot position="middle" icon={check} color="primary" />
+							<TimelineSlot position="end" box>Second step</TimelineSlot>
+						</TimelineItem>
+						<TimelineItem>
+							<TimelineSlot position="middle" icon={check} />
+							<TimelineSlot position="end" box>Final step</TimelineSlot>
+						</TimelineItem>
+					</Timeline>
+				</div>
+
+				<!-- Timeline with Colors -->
+				<div>
+					<h3 class="font-semibold mb-2">Timeline with Colors</h3>
+					<Timeline>
+						<TimelineItem>
+							<TimelineSlot position="start">Step 1</TimelineSlot>
+							<TimelineSlot position="middle" icon={check} color="primary" />
+							<TimelineSlot position="end" box>Primary Icon</TimelineSlot>
+						</TimelineItem>
+						<TimelineItem>
+							<TimelineSlot position="start">Step 2</TimelineSlot>
+							<TimelineSlot position="middle" icon={star} color="secondary" />
+							<TimelineSlot position="end" box>Secondary Icon</TimelineSlot>
+						</TimelineItem>
+						<TimelineItem>
+							<TimelineSlot position="start">Step 3</TimelineSlot>
+							<TimelineSlot position="middle" icon={heart} color="accent" />
+							<TimelineSlot position="end" box>Accent Icon</TimelineSlot>
+						</TimelineItem>
+						<TimelineItem>
+							<TimelineSlot position="start">Step 4</TimelineSlot>
+							<TimelineSlot position="middle" icon={bell} color="error" />
+							<TimelineSlot position="end" box>Error Icon</TimelineSlot>
+						</TimelineItem>
+					</Timeline>
+				</div>
+
+				<!-- Timeline with Snap Icon to Start -->
+				<div>
+					<h3 class="font-semibold mb-2">Timeline with Snap Icon to Start</h3>
+					<Timeline snapIconToStart>
+						<TimelineItem>
+							<TimelineSlot position="middle" icon={check} color="success" />
+							<TimelineSlot position="end" box>
+								<time class="font-mono">2024</time>
+								<div class="text-lg font-bold">Project Launch</div>
+								<p class="text-sm opacity-70">Successfully launched the new platform</p>
+							</TimelineSlot>
+						</TimelineItem>
+						<TimelineItem>
+							<TimelineSlot position="middle" icon={star} color="warning" />
+							<TimelineSlot position="end" box>
+								<time class="font-mono">2025</time>
+								<div class="text-lg font-bold">Major Update</div>
+								<p class="text-sm opacity-70">Released version 2.0 with new features</p>
+							</TimelineSlot>
+						</TimelineItem>
+					</Timeline>
+				</div>
+
+				<!-- Timeline with Rich Content -->
+				<div>
+					<h3 class="font-semibold mb-2">Timeline with Rich Content</h3>
+					<Timeline>
+						<TimelineItem>
+							<TimelineSlot position="start">
+								<div class="text-sm opacity-60">Phase 1</div>
+								<div class="text-lg font-bold">Planning</div>
+							</TimelineSlot>
+							<TimelineSlot position="middle" icon={check} color="info" />
+							<TimelineSlot position="end" box>
+								<div class="p-4">
+									<h4 class="font-bold">Project Initialization</h4>
+									<ul class="list-disc list-inside text-sm opacity-70">
+										<li>Requirements gathering</li>
+										<li>Team assembly</li>
+										<li>Resource allocation</li>
+									</ul>
+								</div>
+							</TimelineSlot>
+						</TimelineItem>
+						<TimelineItem>
+							<TimelineSlot position="start">
+								<div class="text-sm opacity-60">Phase 2</div>
+								<div class="text-lg font-bold">Development</div>
+							</TimelineSlot>
+							<TimelineSlot position="middle" icon={check} color="success" />
+							<TimelineSlot position="end" box>
+								<div class="p-4">
+									<h4 class="font-bold">Implementation</h4>
+									<div class="mt-2 flex gap-2">
+										<span class="badge badge-primary">Frontend</span>
+										<span class="badge badge-secondary">Backend</span>
+										<span class="badge badge-accent">Testing</span>
+									</div>
+								</div>
+							</TimelineSlot>
+						</TimelineItem>
+					</Timeline>
 				</div>
 			</div>
 		</CardBody>

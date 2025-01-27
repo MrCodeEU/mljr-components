@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card, CardBody, CardTitle } from '$lib/comps/card/index.js';
+	import { Card, CardBody, CardTitle } from '$lib/comps/layout/card/index.js';
 </script>
 
 <Card>

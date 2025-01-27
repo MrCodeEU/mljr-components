@@ -8,6 +8,7 @@
 		| 'warning'
 		| 'error'
 		| 'neutral';
+	import type { Icon as IconType } from 'lucide-svelte';
 
 	let {
 		color = undefined,
@@ -19,7 +20,7 @@
 	} = $props<{
 		color?: StepColor;
 		content?: string;
-		icon?: any;
+		icon?: typeof IconType;
 		class?: string;
 		children?: () => any;
 	}>();
