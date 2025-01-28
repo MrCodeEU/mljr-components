@@ -37,18 +37,18 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] Divider - Content separator
 - [ ] Dock - Bottom navigation bar (Not needed maybe implement later)
 - [x] Footer - Page footer content
-- [ ] Hero - Featured content display
-- [ ] Join - Element grouping container
-- [ ] Stack - Z-axis element stacking
-- [ ] Table - Data grid display
+- [x] Hero - Featured content display
+- [x] Join - Element grouping container
+- [x] Stack - Z-axis element stacking
+- [x] Table - Data grid display
 
 ## Feedback & Status
 
-- [ ] Alert - Important event notifications
-- [ ] Badge - Status indicators
-- [ ] Loading - Loading state animations
-- [ ] Modal - Dialog boxes
-- [ ] Progress - Linear progress indicator
+- [x] Alert - Important event notifications
+- [x] Badge - Status indicators
+- [x] Loading - Loading state animations
+- [x] Modal - Dialog boxes
+- [x] Progress - Linear progress indicator
 - [ ] Radial progress - Circular progress
 - [ ] Skeleton - Loading state placeholder
 - [ ] Stat - Data/numbers display

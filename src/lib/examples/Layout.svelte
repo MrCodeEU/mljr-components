@@ -1,8 +1,14 @@
 <script lang="ts">
-	import { Card, CardBody, CardTitle } from '$lib/comps/layout/card/index.js';
-	import { Collapse, CollapseTitle, CollapseContent } from '$lib/comps/layout/collapse/index.js';
-	import { Divider } from '$lib/comps/layout/divider/index.js';
-	import { Footer, FooterTitle, FooterCompanySection } from '$lib/comps/layout/footer/index.js';
+    // Layout imports
+    import { Card, CardBody, CardTitle } from '$lib/comps/layout/card/index.js';
+    import { Collapse, CollapseTitle, CollapseContent } from '$lib/comps/layout/collapse/index.js';
+    import { Divider } from '$lib/comps/layout/divider/index.js';
+    import { Footer, FooterTitle, FooterCompanySection } from '$lib/comps/layout/footer/index.js';
+    import { Hero, HeroContent, HeroOverlay } from '$lib/comps/layout/hero/index.js';
+	import Button from '$lib/comps/forms/Button.svelte';
+    import Join from '$lib/comps/layout/Join.svelte';
+    import Stack from '$lib/comps/layout/Stack.svelte';
+    import Table from '$lib/comps/layout/Table.svelte';
 </script>
 
 <div class="space-y-4">
@@ -176,4 +182,263 @@
 			</div>
 		</CardBody>
 	</Card>
+
+	<Card>
+		<CardBody>
+			<CardTitle>Hero Components</CardTitle>
+			<div class="space-y-4">
+				<Hero background="base-200" minHeight>
+					<HeroContent center>
+						<div class="max-w-md">
+							<h1 class="text-5xl font-bold">Hello there</h1>
+							<p class="py-6">Provident cupiditate voluptatem et in.</p>
+							<Button color="primary">Get Started</Button>
+						</div>
+					</HeroContent>
+				</Hero>
+
+				<Hero background="base-200" minHeight>
+					<HeroContent layout="row">
+						<img
+							src="https://picsum.photos/400/300"
+							class="max-w-sm rounded-lg shadow-2xl"
+							alt="Hero"
+						/>
+						<div>
+							<h1 class="text-5xl font-bold">Box Office News!</h1>
+							<p class="py-6">Provident cupiditate voluptatem et in.</p>
+							<Button color="primary">Get Started</Button>
+						</div>
+					</HeroContent>
+				</Hero>
+
+				<Hero
+					backgroundImage="https://picsum.photos/1200/600"
+					minHeight
+				>
+					<HeroOverlay />
+					<HeroContent center>
+						<div class="max-w-md text-neutral-content">
+							<h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+							<p class="mb-5">Provident cupiditate voluptatem et in.</p>
+							<Button color="primary">Get Started</Button>
+						</div>
+					</HeroContent>
+				</Hero>
+			</div>
+		</CardBody>
+	</Card>
+
+	<Card>
+		<CardBody>
+			<CardTitle>Join Components</CardTitle>
+			<div class="space-y-4">
+				<Join>
+					<Button class="join-item">Button</Button>
+					<Button class="join-item">Button</Button>
+					<Button class="join-item">Button</Button>
+				</Join>
+
+				<Join direction="vertical">
+					<Button class="join-item">Button</Button>
+					<Button class="join-item">Button</Button>
+					<Button class="join-item">Button</Button>
+				</Join>
+
+				<Join direction="vertical" responsive="lg">
+					<Button class="join-item">Button</Button>
+					<input class="input input-bordered join-item" placeholder="Email" />
+					<Button class="join-item rounded-r-full">Subscribe</Button>
+				</Join>
+
+				<Join>
+					<input type="radio" name="options" class="join-item btn" aria-label="Radio 1" />
+					<input type="radio" name="options" class="join-item btn" aria-label="Radio 2" />
+					<input type="radio" name="options" class="join-item btn" aria-label="Radio 3" />
+				</Join>
+			</div>
+		</CardBody>
+	</Card>
+
+	<Card>
+		<CardBody>
+			<CardTitle>Stack Components</CardTitle>
+			<div class="space-y-4">
+				<Stack class="h-20 w-32">
+					<div class="bg-primary text-primary-content grid place-content-center rounded-box">1</div>
+					<div class="bg-accent text-accent-content grid place-content-center rounded-box">2</div>
+					<div class="bg-secondary text-secondary-content grid place-content-center rounded-box">3</div>
+				</Stack>
+
+				<Stack class="w-48">
+					<img src="https://picsum.photos/200/100" alt="1" class="rounded-box" />
+					<img src="https://picsum.photos/200/100" alt="2" class="rounded-box" />
+					<img src="https://picsum.photos/200/100" alt="3" class="rounded-box" />
+				</Stack>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+					<Stack align="bottom" class="size-28">
+						<div class="border-base-content card bg-base-100 border text-center">
+							<div class="card-body">Bottom</div>
+						</div>
+						<div class="border-base-content card bg-base-100 border text-center">
+							<div class="card-body">Default</div>
+						</div>
+					</Stack>
+
+					<Stack align="top" class="size-28">
+						<div class="border-base-content card bg-base-100 border text-center">
+							<div class="card-body">Top</div>
+						</div>
+						<div class="border-base-content card bg-base-100 border text-center">
+							<div class="card-body">Align</div>
+						</div>
+					</Stack>
+
+					<Stack align="start" class="size-28">
+						<div class="border-base-content card bg-base-100 border text-center">
+							<div class="card-body">Start</div>
+						</div>
+						<div class="border-base-content card bg-base-100 border text-center">
+							<div class="card-body">Align</div>
+						</div>
+					</Stack>
+				</div>
+
+				<Stack>
+					<div class="card shadow-md bg-base-100">
+						<div class="card-body">
+							<h2 class="card-title">Notification 1</h2>
+							<p>You have 3 unread messages. Tap here to see.</p>
+						</div>
+					</div>
+					<div class="card shadow bg-base-100">
+						<div class="card-body">
+							<h2 class="card-title">Notification 2</h2>
+							<p>You have 3 unread messages. Tap here to see.</p>
+						</div>
+					</div>
+				</Stack>
+			</div>
+		</CardBody>
+	</Card>
+
+    <Card>
+        <CardBody>
+            <CardTitle>Table Components</CardTitle>
+            <div class="space-y-4">
+                <!-- Basic Table -->
+                <div class="overflow-x-auto">
+                    <Table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Job</th>
+                                <th>Favorite Color</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>Cy Ganderton</td>
+                                <td>Quality Control Specialist</td>
+                                <td>Blue</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>Hart Hagerty</td>
+                                <td>Desktop Support Technician</td>
+                                <td>Purple</td>
+                            </tr>
+                        </tbody>
+                    </Table>
+                </div>
+
+                <!-- Zebra Table -->
+                <div class="overflow-x-auto">
+                    <Table zebra>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Job</th>
+                                <th>Favorite Color</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>Cy Ganderton</td>
+                                <td>Quality Control Specialist</td>
+                                <td>Blue</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>Hart Hagerty</td>
+                                <td>Desktop Support Technician</td>
+                                <td>Purple</td>
+                            </tr>
+                        </tbody>
+                    </Table>
+                </div>
+
+                <!-- Pinned Rows and Columns -->
+                <div class="overflow-x-auto h-48">
+                    <Table pinRows pinCols size="xs">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <td>Name</td>
+                                <td>Job</td>
+                                <td>Company</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {#each Array(10) as _, i}
+                            <tr>
+                                <th>{i + 1}</th>
+                                <td>John Doe</td>
+                                <td>Software Engineer</td>
+                                <td>Tech Corp</td>
+                            </tr>
+                            {/each}
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>ID</th>
+                                <td>Name</td>
+                                <td>Job</td>
+                                <td>Company</td>
+                            </tr>
+                        </tfoot>
+                    </Table>
+                </div>
+
+                <!-- Table Sizes -->
+                <div class="grid grid-cols-1 gap-4">
+					{#each ['xs', 'sm', 'md', 'lg', 'xl'] as size, i (i)}
+						<div class="overflow-x-auto">
+							<Table size={size as 'xs' | 'sm' | 'md' | 'lg' | 'xl'} >
+                            <thead>
+                                <tr>
+                                    <th>Size: {size}</th>
+                                    <th>Name</th>
+                                    <th>Job</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <td>Cy Ganderton</td>
+                                    <td>Quality Control Specialist</td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                    </div>
+                    {/each}
+                </div>
+            </div>
+        </CardBody>
+    </Card>
 </div>
