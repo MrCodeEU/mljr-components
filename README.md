@@ -51,7 +51,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] Progress - Linear progress indicator
 - [x] Radial progress - Circular progress
 - [x] Skeleton - Loading state placeholder
-- [ ] Stat - Data/numbers display
+- [x] Stat - Data/numbers display
 - [ ] Status - Small status indicators
 - [ ] Toast - Corner notifications
 - [ ] Tooltip - Hover information

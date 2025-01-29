@@ -77,6 +77,8 @@
 			<div class="skeleton h-4 w-2/3"></div>
 		</div>
 	{:else}
-		<div class={classes} style={style} {...rest} />
+		<div class={classes} style={style} {...rest}>
+            <div class="skeleton h-4 w-full"></div>
+        </div>
 	{/if}
 {/if}

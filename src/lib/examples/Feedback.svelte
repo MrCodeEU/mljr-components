@@ -10,6 +10,11 @@
 	import Progress from '$lib/comps/feedback/Progress.svelte';
 	import RadialProgress from '$lib/comps/feedback/RadialProgress.svelte';
 	import Skeleton from '$lib/comps/feedback/Skeleton.svelte';
+	import Stats from '$lib/comps/feedback/Stats.svelte';
+	import Stat from '$lib/comps/feedback/Stat.svelte';
+	import Heart from 'lucide-svelte/icons/heart';
+	import Zap from 'lucide-svelte/icons/zap';
+	import Settings from 'lucide-svelte/icons/settings';
 
 	let basicModalOpen = $state(false);
 	let cornerCloseModalOpen = $state(false);
@@ -357,9 +362,7 @@
 		<div class="space-y-4">
 			<div>
 				<h3 class="font-bold mb-2">Basic Skeleton</h3>
-				<Skeleton width="8rem" height="8rem">
-					<div class="skeleton h-full w-full"></div>
-				</Skeleton>
+				<Skeleton width="8rem" height="8rem" />
 			</div>
 
 			<div>
@@ -404,6 +407,98 @@
 						<Skeleton type="article" />
 					</div>
 				</div>
+			</div>
+		</div>
+
+		<!-- Stats examples section -->
+		<div class="space-y-4">
+			<div>
+				<h3 class="font-bold mb-2">Basic Stats</h3>
+				<Stats>
+					<Stat
+						title="Total Page Views"
+						value="89,400"
+						description="21% more than last month"
+					/>
+				</Stats>
+			</div>
+
+			<div>
+				<h3 class="font-bold mb-2">Stats with Icons</h3>
+				<Stats shadow>
+					<Stat
+						icon={Heart}
+						iconColor="primary"
+						title="Total Likes"
+						value="25.6K"
+						valueColor="accent"
+						description="21% more than last month"
+					/>
+					<Stat
+						icon={Zap}
+						iconColor="warning"
+						title="Page Views"
+						value="2.6M"
+						valueColor="secondary"
+						description="21% more than last month"
+					/>
+				</Stats>
+			</div>
+
+			<div>
+				<h3 class="font-bold mb-2">Vertical Stats</h3>
+				<Stats direction="vertical" shadow>
+					<Stat
+						title="Downloads"
+						value="31K"
+						description="Jan 1st - Feb 1st"
+					/>
+					<Stat
+						title="New Users"
+						value="4,200"
+						description="↗︎ 400 (22%)"
+					/>
+				</Stats>
+			</div>
+
+			<div>
+				<h3 class="font-bold mb-2">Stats with Actions</h3>
+				<Stats border>
+					<Stat
+						title="Account balance"
+						value="$89,400"
+					>
+						<Button size="xs" color="success">Add funds</Button>
+					</Stat>
+					<Stat
+						title="Current balance"
+						value="$89,400"
+					>
+						<Button size="xs">Withdrawal</Button>
+						<Button size="xs">Deposit</Button>
+					</Stat>
+				</Stats>
+			</div>
+
+			<div>
+				<h3 class="font-bold mb-2">Responsive Stats</h3>
+				<Stats responsive shadow>
+					<Stat
+						title="Downloads"
+						value="31K"
+						description="Jan 1st - Feb 1st"
+					/>
+					<Stat
+						title="New Users"
+						value="4,200"
+						description="↗︎ 400 (22%)"
+					/>
+					<Stat
+						title="New Registers"
+						value="1,200"
+						description="↘︎ 90 (14%)"
+					/>
+				</Stats>
 			</div>
 		</div>
 	</CardBody>
