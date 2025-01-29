@@ -8,6 +8,7 @@
 	import Info from 'lucide-svelte/icons/info';
 	import Loading from '$lib/comps/feedback/Loading.svelte';
 	import Progress from '$lib/comps/feedback/Progress.svelte';
+	import RadialProgress from '$lib/comps/feedback/RadialProgress.svelte';
 
 	let basicModalOpen = $state(false);
 	let cornerCloseModalOpen = $state(false);
@@ -275,13 +276,12 @@
 		<!-- Progress examples section -->
 		<div class="space-y-4">
 			<div>
-				<h3 class="font-bold mb-2">Basic Progress</h3>
-				<div class="flex flex-col gap-2">
-					<Progress value={0} width="14rem" />
-					<Progress value={25} width="14rem" />
-					<Progress value={50} width="14rem" />
-					<Progress value={75} width="14rem" />
-					<Progress value={100} width="14rem" />
+				<h3 class="font-bold mb-2">Progress with Labels</h3>
+				<div class="flex flex-col gap-8 mb-8">
+					<Progress value={25} width="14rem" showLabel labelPosition="left" />
+					<Progress value={50} width="14rem" showLabel labelPosition="right" />
+					<Progress value={75} width="14rem" showLabel labelPosition="top" />
+					<Progress value={100} width="14rem" showLabel labelPosition="bottom" />
 				</div>
 			</div>
 
@@ -316,6 +316,39 @@
 			<div>
 				<h3 class="font-bold mb-2">Indeterminate Progress</h3>
 				<Progress width="14rem" />
+			</div>
+
+			<div>
+				<h3 class="font-bold mb-2">Radial Progress</h3>
+				<div class="flex gap-4 flex-wrap">
+					<RadialProgress value={0} />
+					<RadialProgress value={25} />
+					<RadialProgress value={50} />
+					<RadialProgress value={75} />
+					<RadialProgress value={100} />
+				</div>
+			</div>
+
+			<div>
+				<h3 class="font-bold mb-2">Radial Progress Colors</h3>
+				<div class="flex gap-4 flex-wrap">
+					<RadialProgress value={70} color="primary" />
+					<RadialProgress value={70} color="primary" background border>
+						70%
+					</RadialProgress>
+				</div>
+			</div>
+
+			<div>
+				<h3 class="font-bold mb-2">Custom Radial Progress</h3>
+				<div class="flex gap-4 flex-wrap items-end">
+					<RadialProgress value={70} size="12rem" thickness="2px">
+						Thin
+					</RadialProgress>
+					<RadialProgress value={70} size="8rem" thickness="1rem">
+						Thick
+					</RadialProgress>
+				</div>
 			</div>
 		</div>
 	</CardBody>

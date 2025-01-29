@@ -49,7 +49,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] Loading - Loading state animations
 - [x] Modal - Dialog boxes
 - [x] Progress - Linear progress indicator
-- [ ] Radial progress - Circular progress
+- [x] Radial progress - Circular progress
 - [ ] Skeleton - Loading state placeholder
 - [ ] Stat - Data/numbers display
 - [ ] Status - Small status indicators
