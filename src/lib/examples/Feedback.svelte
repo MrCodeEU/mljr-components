@@ -12,6 +12,7 @@
 	import Skeleton from '$lib/comps/feedback/Skeleton.svelte';
 	import Stats from '$lib/comps/feedback/Stats.svelte';
 	import Stat from '$lib/comps/feedback/Stat.svelte';
+	import Status from '$lib/comps/feedback/Status.svelte';
 	import Heart from 'lucide-svelte/icons/heart';
 	import Zap from 'lucide-svelte/icons/zap';
 	import Settings from 'lucide-svelte/icons/settings';
@@ -499,6 +500,52 @@
 						description="↘︎ 90 (14%)"
 					/>
 				</Stats>
+			</div>
+		</div>
+
+		<!-- Status examples section -->
+		<div class="space-y-4">
+			<div>
+				<h3 class="font-bold mb-2">Status Sizes</h3>
+				<div class="flex items-center gap-4">
+					<Status size="xs" label="status" />
+					<Status size="sm" label="status" />
+					<Status size="md" label="status" />
+					<Status size="lg" label="status" />
+					<Status size="xl" label="status" />
+				</div>
+			</div>
+
+			<div>
+				<h3 class="font-bold mb-2">Status Colors</h3>
+				<div class="flex flex-col gap-4">
+					<div class="flex items-center gap-4">
+						<Status color="primary" label="primary" />
+						<Status color="secondary" label="secondary" />
+						<Status color="accent" label="accent" />
+						<Status color="neutral" label="neutral" />
+					</div>
+					<div class="flex items-center gap-4">
+						<Status color="info" label="info" />
+						<Status color="success" label="success" />
+						<Status color="warning" label="warning" />
+						<Status color="error" label="error" />
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<h3 class="font-bold mb-2">Status with Animations</h3>
+				<div class="flex items-center gap-8">
+					<div class="flex items-center gap-2">
+						<Status color="error" animation="ping" label="error" />
+						<span>Server is down</span>
+					</div>
+					<div class="flex items-center gap-2">
+						<Status color="info" animation="bounce" label="info" />
+						<span>Unread messages</span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</CardBody>
