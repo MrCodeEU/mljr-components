@@ -53,7 +53,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] Skeleton - Loading state placeholder
 - [x] Stat - Data/numbers display
 - [x] Status - Small status indicators
-- [ ] Toast - Corner notifications
+- [x] Toast - Corner notifications (Close Button alignment broken!)
 
 ## Display & Media
 

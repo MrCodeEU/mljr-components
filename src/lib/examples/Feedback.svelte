@@ -16,6 +16,8 @@
 	import Heart from 'lucide-svelte/icons/heart';
 	import Zap from 'lucide-svelte/icons/zap';
 	import Settings from 'lucide-svelte/icons/settings';
+	import { toast } from '$lib/comps/feedback/toast/toast.service.js';
+	import ToastContainer from '$lib/comps/feedback/toast/ToastContainer.svelte';
 
 	let basicModalOpen = $state(false);
 	let cornerCloseModalOpen = $state(false);
@@ -548,5 +550,125 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- Toast examples section -->
+		<div class="space-y-4">
+			<div>
+				<h3 class="font-bold mb-2">Basic Toasts</h3>
+				<div class="flex gap-2">
+					<Button onclick={() => toast.info({ message: 'New message arrived' ,title: 'Info' })}>
+						Info Toast
+					</Button>
+					<Button onclick={() => toast.success({ message: 'Successfully saved!' })}>
+						Success Toast
+					</Button>
+					<Button onclick={() => toast.warning({ message: 'Network connection is unstable' })}>
+						Warning Toast
+					</Button>
+					<Button onclick={() => toast.error({ message: 'Failed to save changes' })}>
+						Error Toast
+					</Button>
+				</div>
+			</div>
+
+			<div>
+				<h3 class="font-bold mb-2">Toast Positions</h3>
+				<div class="flex gap-2 flex-wrap">
+					<Button onclick={() => toast.info({ message: 'Top Start', position: 'top-start', duration: 100000 })}>
+						Top Start
+					</Button>
+					<Button onclick={() => toast.info({ message: 'Top Center', position: 'top-center', duration: 100000  })}>
+						Top Center
+					</Button>
+					<Button onclick={() => toast.info({ message: 'Middle End', position: 'middle-end', duration: 100000  })}>
+						Middle End
+					</Button>
+					<Button onclick={() => toast.info({ message: 'Bottom Start', position: 'bottom-start', duration: 100000  })}>
+						Bottom Start
+					</Button>
+				</div>
+			</div>
+
+			<div>
+				<h3 class="font-bold mb-2">Custom Toasts</h3>
+				<div class="flex gap-2">
+					<Button
+						onclick={() => {
+							toast.custom({
+								message: 'Visit documentation?',
+								duration: Infinity,
+								title: 'New Version Available',
+								action: {
+									label: 'Open Docs',
+									onClick: () => window.open('https://example.com', '_blank')
+								}
+							});
+						}}
+					>
+						With Action
+					</Button>
+					<Button onclick={() => toast.clear()}>
+						Clear All
+					</Button>
+				</div>
+			</div>
+
+			<div>
+				<h3 class="font-bold mb-2">Toast with Progress</h3>
+				<div class="flex gap-2">
+					<Button
+						onclick={() => {
+							toast.info({
+								message: 'This toast has a progress bar',
+								duration: 5000,
+								showProgress: true
+							});
+						}}
+					>
+						With Progress
+					</Button>
+					<Button
+						onclick={() => {
+							toast.success({
+								message: 'This toast has no progress bar',
+								duration: 3000,
+								showProgress: false
+							});
+						}}
+					>
+						Without Progress
+					</Button>
+				</div>
+			</div>
+
+			<div>
+				<h3 class="font-bold mb-2">Toast Duration</h3>
+				<div class="flex gap-2">
+					<Button
+						onclick={() => {
+							toast.info({
+								message: 'This toast stays for 2 seconds',
+								duration: 2000
+							});
+						}}
+					>
+						Short Duration
+					</Button>
+					<Button
+						onclick={() => {
+							toast.info({
+								message: 'This toast stays until dismissed',
+								duration: Infinity,
+								showProgress: false
+							});
+						}}
+					>
+						Infinite Duration
+					</Button>
+				</div>
+			</div>
+		</div>
+
+		<ToastContainer />
 	</CardBody>
 </Card>
