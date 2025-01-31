@@ -1,2 +1,12 @@
 @import 'tailwindcss';
 @plugin "daisyui";
+
+/* Calendar styles */
+calendar-date {
+    --cally-border: none;
+    --cally-padding: 1rem;
+}
+
+calendar-month {
+    --cally-cell-size: 2.5rem;
+}

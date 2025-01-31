@@ -58,7 +58,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 ## Display & Media
 
 - [x] Avatar - User thumbnails (online indicator on placeholder variant not circular???)
-- [ ] Calendar - Date display/selection
+- [ ] Calendar - Date display/selection (in the future hopefully? For now only Browser date picker)
 - [ ] Carousel - Scrollable content
 - [ ] Chat bubble - Conversation bubbles
 - [ ] Diff - Side-by-side comparison
