@@ -1,8 +1,8 @@
 <script lang="ts">
     import Avatar from '$lib/comps/media/Avatar.svelte';
     import { Carousel, CarouselItem } from '$lib/comps/media/carousel/index.js';
-    import Button from '$lib/comps/forms/Button.svelte';
     import { Card, CardBody, CardTitle } from '$lib/comps/layout/card/index.js';
+    import ChatBubble from '$lib/comps/media/ChatBubble.svelte';
 
     const imgSrc = "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp";
     
@@ -207,6 +207,55 @@
                             </CarouselItem>
                         {/each}
                     </Carousel>
+                </div>
+            </div>
+        </CardBody>
+    </Card>
+
+    <Card>
+        <CardBody>
+            <CardTitle>Chat Bubble Components</CardTitle>
+            <div class="space-y-8">
+                <!-- Basic Chat -->
+                <div>
+                    <h3 class="font-semibold mb-2">Basic Chat</h3>
+                    <ChatBubble position="start">
+                        It's over Anakin,<br />I have the high ground.
+                    </ChatBubble>
+                    <ChatBubble position="end">
+                        You underestimate my power!
+                    </ChatBubble>
+                </div>
+
+                <!-- Chat with Avatar -->
+                <div>
+                    <h3 class="font-semibold mb-2">Chat with Avatar</h3>
+                    <ChatBubble position="start" avatar={imgSrc}>
+                        It was said that you would, destroy the Sith, not join them.
+                    </ChatBubble>
+                </div>
+
+                <!-- Chat with Full Details -->
+                <div>
+                    <h3 class="font-semibold mb-2">Chat with Full Details</h3>
+                    <ChatBubble
+                        position="start"
+                        avatar={imgSrc}
+                        author="Obi-Wan Kenobi"
+                        timestamp={new Date()}
+                        footer="Delivered"
+                    >
+                        You were the Chosen One!
+                    </ChatBubble>
+                </div>
+
+                <!-- Chat Colors -->
+                <div>
+                    <h3 class="font-semibold mb-2">Chat Colors</h3>
+                    <ChatBubble position="start" color="primary">What kind of nonsense is this</ChatBubble>
+                    <ChatBubble position="start" color="secondary">Put me on the Council and not make me a Master!??</ChatBubble>
+                    <ChatBubble position="end" color="accent">That's never been done in the history of the Jedi.</ChatBubble>
+                    <ChatBubble position="end" color="info">Calm down, Anakin.</ChatBubble>
                 </div>
             </div>
         </CardBody>
