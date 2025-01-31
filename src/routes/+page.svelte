@@ -6,6 +6,7 @@
 	import Navigation from '$lib/examples/Navigation.svelte';
 	import Layout from '$lib/examples/Layout.svelte';
 	import Feedback from '$lib/examples/Feedback.svelte';
+	import MediaExamples from '$lib/examples/MediaExamples.svelte';
 </script>
 
 <main class="p-4 space-y-8">
@@ -69,7 +70,7 @@
 					<Card>
 						<CardBody>
 							<CardTitle>Display Components</CardTitle>
-							<p class="text-base-content/70">Display and media components coming soon...</p>
+							<MediaExamples />
 						</CardBody>
 					</Card>
 				</TabContent>
