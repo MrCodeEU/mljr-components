@@ -77,7 +77,7 @@
 			'carousel',
 			'relative',
 			'min-h-[100px]', // Add minimum height
-			'overflow-hidden', // Add this to prevent controls from moving
+			// Remove overflow-hidden - this was blocking the natural scroll behavior
 			snap !== 'start' && `carousel-${snap}`,
 			direction === 'vertical' && 'carousel-vertical',
 			rounded && 'rounded-box',
