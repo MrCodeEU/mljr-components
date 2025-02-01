@@ -3,6 +3,12 @@
     import { Carousel, CarouselItem } from '$lib/comps/media/carousel/index.js';
     import { Card, CardBody, CardTitle } from '$lib/comps/layout/card/index.js';
     import ChatBubble from '$lib/comps/media/ChatBubble.svelte';
+    import Diff from '$lib/comps/media/Diff.svelte';
+    import Indicator from '$lib/comps/display/Indicator.svelte';
+    import IndicatorItem from '$lib/comps/display/IndicatorItem.svelte';
+    import Badge from '$lib/comps/feedback/Badge.svelte';
+    import Status from '$lib/comps/feedback/Status.svelte';
+	import Button from '$lib/comps/forms/Button.svelte';
 
     const imgSrc = "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp";
     
@@ -91,6 +97,102 @@
                         <Avatar placeholder="SY" size="12" />
                         <Avatar placeholder="UI" size="8" />
                     </div>
+                </div>
+            </div>
+        </CardBody>
+    </Card>
+
+    <!-- Indicator Examples -->
+    <Card>
+        <CardBody>
+            <CardTitle>Indicator Components</CardTitle>
+            <div class="space-y-8">
+                <!-- Status Indicator -->
+                <div>
+                    <h3 class="font-semibold mb-2">Status Indicator</h3>
+                    <Indicator>
+                        <IndicatorItem>
+                            <Status type="success" />
+                        </IndicatorItem>
+                        <div class="bg-base-300 grid h-32 w-32 place-items-center">content</div>
+                    </Indicator>
+                </div>
+
+                <!-- Badge Indicator -->
+                <div>
+                    <h3 class="font-semibold mb-2">Badge Indicator</h3>
+                    <Indicator>
+                        <IndicatorItem>
+                            <Badge>New</Badge>
+                        </IndicatorItem>
+                        <div class="bg-base-300 grid h-32 w-32 place-items-center">content</div>
+                    </Indicator>
+                </div>
+
+                <!-- Button with Indicator -->
+                <div>
+                    <h3 class="font-semibold mb-2">Button with Indicator</h3>
+                    <Indicator>
+                        <IndicatorItem>
+                            <Badge>99+</Badge>
+                        </IndicatorItem>
+                        <Button>Inbox</Button>
+                    </Indicator>
+                </div>
+
+                <!-- Avatar with Indicator -->
+                <div>
+                    <h3 class="font-semibold mb-2">Avatar with Indicator</h3>
+                    <Indicator>
+                        <IndicatorItem>
+                            <Badge>Online</Badge>
+                        </IndicatorItem>
+                        <Avatar src={imgSrc} size="20" />
+                    </Indicator>
+                </div>
+
+                <!-- Different Positions -->
+                <div>
+                    <h3 class="font-semibold mb-2">Different Positions</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <Indicator>
+                            <IndicatorItem horizontal="start">
+                                <Badge>Start</Badge>
+                            </IndicatorItem>
+                            <div class="bg-base-300 grid h-32 w-32 place-items-center">Top Start</div>
+                        </Indicator>
+
+                        <Indicator>
+                            <IndicatorItem horizontal="center" vertical="middle">
+                                <Badge>Center</Badge>
+                            </IndicatorItem>
+                            <div class="bg-base-300 grid h-32 w-32 place-items-center">Middle Center</div>
+                        </Indicator>
+
+                        <Indicator>
+                            <IndicatorItem vertical="bottom">
+                                <Badge>Bottom</Badge>
+                            </IndicatorItem>
+                            <div class="bg-base-300 grid h-32 w-32 place-items-center">Bottom End</div>
+                        </Indicator>
+                    </div>
+                </div>
+
+                <!-- Multiple Indicators -->
+                <div>
+                    <h3 class="font-semibold mb-2">Multiple Indicators</h3>
+                    <Indicator>
+                        <IndicatorItem horizontal="start" vertical="top">
+                            <Badge>↖︎</Badge>
+                        </IndicatorItem>
+                        <IndicatorItem horizontal="center" vertical="middle">
+                            <Badge>●</Badge>
+                        </IndicatorItem>
+                        <IndicatorItem horizontal="end" vertical="bottom">
+                            <Badge>↘︎</Badge>
+                        </IndicatorItem>
+                        <div class="bg-base-300 grid h-32 w-60 place-items-center">Box</div>
+                    </Indicator>
                 </div>
             </div>
         </CardBody>
@@ -258,6 +360,19 @@
                     <ChatBubble position="end" color="info">Calm down, Anakin.</ChatBubble>
                 </div>
             </div>
+        </CardBody>
+    </Card>
+    <Card>
+        <CardTitle>Diff Component</CardTitle>
+        <CardBody>
+            <Diff aspect="16/9" class="border border-gray-200">
+                {#snippet primary()}
+                    <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
+                {/snippet}
+                {#snippet secondary()}
+                    <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
+                {/snippet}
+            </Diff>
         </CardBody>
     </Card>
 </div>
