@@ -8,6 +8,7 @@
 	import Feedback from '$lib/examples/Feedback.svelte';
 	import MediaExamples from '$lib/examples/MediaExamples.svelte';
 	import MockUpsExamples from '$lib/examples/MockUpsExamples.svelte';
+	import UtilsExamples from '$lib/examples/UtilsExamples.svelte';
 </script>
 
 <main class="p-4 space-y-8">
@@ -91,7 +92,7 @@
 					<Card>
 						<CardBody>
 							<CardTitle>Utility Components</CardTitle>
-							<p class="text-base-content/70">Utility components coming soon...</p>
+							<UtilsExamples />
 						</CardBody>
 					</Card>
 				</TabContent>

@@ -75,8 +75,8 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 
 ## Utilities
 
-- [ ] Countdown - Number transition effects
-- [ ] Filter - Radio button filtering
+- [x] Countdown - Number transition effects
+- [x] Filter - Radio button filtering
 - [ ] Kbd - Keyboard shortcut display
 - [ ] Label - Input field labels
 - [ ] Link - Styled anchor tags
