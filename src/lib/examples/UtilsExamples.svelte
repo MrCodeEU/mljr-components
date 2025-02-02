@@ -4,6 +4,11 @@
     import Filter from '$lib/comps/utils/Filter.svelte';
     import Kbd from '$lib/comps/utils/Kbd.svelte';
     import { onDestroy } from 'svelte';
+    import TextInput from '$lib/comps/forms/input/TextInput.svelte';
+    import Select from '$lib/comps/forms/Select.svelte';
+    import DateTimeInput from '$lib/comps/forms/input/DateTimeInput.svelte';
+    import Label from '$lib/comps/utils/Label.svelte';
+    import FloatingLabel from '$lib/comps/utils/FloatingLabel.svelte';
 
     // Basic countdown from 60
     let basicValue = 60;
@@ -198,6 +203,45 @@
                     <Kbd>{key}</Kbd>
                 {/each}
             </div>
+        </div>
+    </CardBody>
+</Card>
+
+<Card>
+    <CardTitle>Labels</CardTitle>
+    <CardBody class="flex flex-col gap-4">
+        <!-- Basic Labels -->
+        <Label text="https://">
+            <TextInput placeholder="URL" />
+        </Label>
+
+        <Label text=".com" position="end">
+            <TextInput placeholder="domain name" />
+        </Label>
+
+        <Label text="Type">
+            <Select>
+                <option>Personal</option>
+                <option>Business</option>
+            </Select>
+        </Label>
+
+        <Label text="Publish date">
+            <DateTimeInput type="date" />
+        </Label>
+
+        <!-- Floating Labels -->
+        <FloatingLabel text="Your name">
+            <TextInput placeholder="Your name" />
+        </FloatingLabel>
+
+        <!-- Floating Labels with Different Sizes -->
+        <div class="space-y-4">
+            {#each ['xs', 'sm', 'md', 'lg', 'xl'] as size}
+                <FloatingLabel text={size.charAt(0).toUpperCase() + size.slice(1)}>
+                    <TextInput size={size} placeholder="" />
+                </FloatingLabel>
+            {/each}
         </div>
     </CardBody>
 </Card>
