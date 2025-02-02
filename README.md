@@ -83,6 +83,47 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] List - Vertical information rows
 - [x] Theme Controller - Theme switching control (Only works for light and dark mode)
 
+## Prebuilt compount components
+- [ ] Login
+- [ ] Register
+- [ ] Password Reset
+- [ ] Navbar
+- [ ] Footer
+- [ ] Hero Element
+- [ ] Dynamic form generator (from JSON schema)
+- [ ] Cookie consent banner
+- [ ] Account settings panel + place for app specific settings and stats etc.?
+- [ ] ...?
+
+## Advanced Components / non DaisyUI Components
+- [ ] Rich text Editor
+- [ ] Video Player
+- [ ] Custom Date / time picker ?? (e.g. https://svelty-picker.vercel.app/)
+- [ ] Color Picker
+- [ ] Data Graphs ( simple premade graphs for library? )
+- [ ] PIN (like OTP)
+- [ ] Auto Complete
+- [ ] Table of Content
+- [ ] Lazy Loading?
+- [ ] Image Compare (as Diff does not work?)
+- [ ] Map (maplibre, openmap, etc?)
+- [ ] Marquee
+- [ ] Svelte Filepond (advance file upload with preview to replace current one or as advanced version?)
+- [ ] svelte PDF (for bachelor thesis?)
+- [ ] animated headline?
+- [ ] Animations?
+- [ ] mCaptha? else Turnstile
+- [ ] Audio Visualiser
+- [ ] Svelte Origami (3d animations)?
+- [ ] auto animate: https://auto-animate.formkit.com/ ???
+- [ ] ...
+
+## TODO
+- [ ] Navbar mobile verison + Hamburger
+- [ ] check mobile use of every component
+- [ ] Fix missing or slightly broken Components
+- [ ] ...
+
 ## Getting Started
 
 ```bash
