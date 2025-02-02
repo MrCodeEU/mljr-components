@@ -79,9 +79,9 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] Filter - Radio button filtering
 - [x] Kbd - Keyboard shortcut display
 - [x] Label - Input field labels
-- [ ] Link - Styled anchor tags
-- [ ] List - Vertical information rows
-- [ ] Theme Controller - Theme switching control
+- [x] Link - Styled anchor tags
+- [x] List - Vertical information rows
+- [x] Theme Controller - Theme switching control (Only works for light and dark mode)
 
 ## Getting Started
 

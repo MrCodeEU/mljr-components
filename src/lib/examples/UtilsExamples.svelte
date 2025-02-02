@@ -9,6 +9,8 @@
     import DateTimeInput from '$lib/comps/forms/input/DateTimeInput.svelte';
     import Label from '$lib/comps/utils/Label.svelte';
     import FloatingLabel from '$lib/comps/utils/FloatingLabel.svelte';
+    import Link from '$lib/comps/utils/Link.svelte';
+    import { List, ListRow, ListCol } from '$lib/comps/utils/list/index.js';
 
     // Basic countdown from 60
     let basicValue = 60;
@@ -243,5 +245,116 @@
                 </FloatingLabel>
             {/each}
         </div>
+    </CardBody>
+</Card>
+
+<Card>
+    <CardTitle>Links</CardTitle>
+    <CardBody class="flex flex-col gap-4">
+        <!-- Basic -->
+        <div>
+            <Link>Basic Link</Link>
+        </div>
+
+        <!-- Colors -->
+        <div class="flex gap-4">
+            <Link color="primary">Primary</Link>
+            <Link color="secondary">Secondary</Link>
+            <Link color="accent">Accent</Link>
+            <Link color="neutral">Neutral</Link>
+            <Link color="success">Success</Link>
+            <Link color="info">Info</Link>
+            <Link color="warning">Warning</Link>
+            <Link color="error">Error</Link>
+        </div>
+
+        <!-- Hover -->
+        <div>
+            <Link hover>Show underline on hover</Link>
+        </div>
+
+        <!-- In text -->
+        <p>
+            Tailwind CSS resets the style of links by default.
+            <br />
+            Add "link" class to make it look like a
+            <Link>normal link</Link>
+            again.
+        </p>
+    </CardBody>
+</Card>
+
+<Card>
+    <CardTitle>Lists</CardTitle>
+    <CardBody class="flex flex-col gap-4">
+        <!-- Basic List -->
+        <List>
+            <ListRow header>Most played songs this week</ListRow>
+            
+            <ListRow>
+                <ListCol>
+                    <img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp" alt="Profile"/>
+                </ListCol>
+                <ListCol>
+                    <div>Dio Lupa</div>
+                    <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
+                </ListCol>
+                <ListCol>
+                    <button class="btn btn-square btn-ghost" aria-label="Play song">
+                        <svg class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+                                <path d="M6 3L20 12 6 21 6 3z"></path>
+                            </g>
+                        </svg>
+                    </button>
+                </ListCol>
+            </ListRow>
+            
+            <!-- Add more rows as needed -->
+        </List>
+
+        <!-- List with Growing Column -->
+        <List>
+            <ListRow header>Most played songs this week</ListRow>
+            
+            <ListRow>
+                <ListCol class="text-4xl font-thin opacity-30 tabular-nums">01</ListCol>
+                <ListCol>
+                    <img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp" alt="Profile"/>
+                </ListCol>
+                <ListCol grow>
+                    <div>Dio Lupa</div>
+                    <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
+                </ListCol>
+                <ListCol>
+                    <button class="btn btn-square btn-ghost" aria-label="Play song">
+                        <svg class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+                                <path d="M6 3L20 12 6 21 6 3z"></path>
+                            </g>
+                        </svg>
+                    </button>
+                </ListCol>
+            </ListRow>
+        </List>
+
+        <!-- List with Wrapping Column -->
+        <List>
+            <ListRow header>Most played songs this week</ListRow>
+            
+            <ListRow>
+                <ListCol>
+                    <img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp" alt="Profile"/>
+                </ListCol>
+                <ListCol>
+                    <div>Dio Lupa</div>
+                    <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
+                </ListCol>
+                <ListCol wrap class="text-xs">
+                    "Remaining Reason" became an instant hit, praised for its haunting sound and emotional depth. 
+                    A viral performance brought it widespread recognition, making it one of Dio Lupa's most iconic tracks.
+                </ListCol>
+            </ListRow>
+        </List>
     </CardBody>
 </Card>
