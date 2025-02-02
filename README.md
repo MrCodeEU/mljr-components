@@ -68,7 +68,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 
 ## Mockups
 
-- [ ] Browser mockup - Browser window simulation
+- [x] Browser mockup - Browser window simulation
 - [ ] Code mockup - Code editor simulation
 - [ ] Phone mockup - iPhone device simulation
 - [ ] Window mockup - OS window simulation

@@ -113,7 +113,7 @@
                     <h3 class="font-semibold mb-2">Status Indicator</h3>
                     <Indicator>
                         <IndicatorItem>
-                            <Status type="success" />
+                            <Status color="success"/>
                         </IndicatorItem>
                         <div class="bg-base-300 grid h-32 w-32 place-items-center">content</div>
                     </Indicator>
@@ -366,14 +366,14 @@
     <Card>
         <CardTitle>Diff Component</CardTitle>
         <CardBody>
-            <Diff aspect="16/9" class="border border-gray-200">
+            <!--<Diff aspect="16/9" class="border border-gray-200">
                 {#snippet primary()}
                     <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
                 {/snippet}
                 {#snippet secondary()}
                     <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
                 {/snippet}
-            </Diff>
+            </Diff>-->
         </CardBody>
     </Card>
 
@@ -427,7 +427,7 @@
                 <!-- Hamburger Menu in Button -->
                 <div>
                     <h3 class="font-semibold mb-2">Hamburger Menu Button</h3>
-                    <Button circle>
+                    <Button>
                         <Swap style="rotate">
                             {#snippet on()}
                                 <svg class="fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">

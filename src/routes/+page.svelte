@@ -7,6 +7,7 @@
 	import Layout from '$lib/examples/Layout.svelte';
 	import Feedback from '$lib/examples/Feedback.svelte';
 	import MediaExamples from '$lib/examples/MediaExamples.svelte';
+	import MockUpsExamples from '$lib/examples/MockUpsExamples.svelte';
 </script>
 
 <main class="p-4 space-y-8">
@@ -80,7 +81,7 @@
 					<Card>
 						<CardBody>
 							<CardTitle>Mockup Components</CardTitle>
-							<p class="text-base-content/70">Mockup components coming soon...</p>
+							<MockUpsExamples />
 						</CardBody>
 					</Card>
 				</TabContent>

@@ -668,7 +668,6 @@
 				</div>
 			</div>
 		</div>
-
-		<ToastContainer />
 	</CardBody>
 </Card>
+<ToastContainer />
