@@ -15,7 +15,7 @@
         useForm?: boolean;
     }>();
 
-    let selected = '';
+    let selected = $state('');
 
     function handleReset() {
         selected = '';
@@ -28,7 +28,7 @@
             class="btn btn-square" 
             type="reset" 
             value="×" 
-            on:click={handleReset}
+            onclick={handleReset}
         />
         {#each options as option}
             <input 

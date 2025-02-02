@@ -2,6 +2,7 @@
     import { Card, CardBody, CardTitle } from '$lib/comps/layout/card/index.js';
     import Countdown from '$lib/comps/utils/Countdown.svelte';
     import Filter from '$lib/comps/utils/Filter.svelte';
+    import Kbd from '$lib/comps/utils/Kbd.svelte';
     import { onDestroy } from 'svelte';
 
     // Basic countdown from 60
@@ -129,6 +130,74 @@
                 name="metaframeworks"
                 useForm={false}
             />
+        </div>
+    </CardBody>
+</Card>
+
+<Card>
+    <CardTitle>Keyboard</CardTitle>
+    <CardBody class="flex flex-col gap-4">
+        <!-- Basic -->
+        <div>
+            <Kbd>K</Kbd>
+        </div>
+
+        <!-- Sizes -->
+        <div class="flex gap-2">
+            <Kbd size="xs">Xsmall</Kbd>
+            <Kbd size="sm">Small</Kbd>
+            <Kbd size="md">Medium</Kbd>
+            <Kbd size="lg">Large</Kbd>
+            <Kbd size="xl">Xlarge</Kbd>
+        </div>
+
+        <!-- In text -->
+        <div>
+            Press <Kbd size="sm">F</Kbd> to pay respects.
+        </div>
+
+        <!-- Key combination -->
+        <div>
+            <Kbd combination>ctrl</Kbd>
+            <Kbd combination>shift</Kbd>
+            <Kbd>del</Kbd>
+        </div>
+
+        <!-- Function Keys -->
+        <div class="flex gap-2">
+            <Kbd>⌘</Kbd>
+            <Kbd>⌥</Kbd>
+            <Kbd>⇧</Kbd>
+            <Kbd>⌃</Kbd>
+        </div>
+
+        <!-- Arrow Keys -->
+        <div class="flex flex-col items-center gap-2">
+            <Kbd>▲</Kbd>
+            <div class="flex gap-12">
+                <Kbd>◀︎</Kbd>
+                <Kbd>▶︎</Kbd>
+            </div>
+            <Kbd>▼</Kbd>
+        </div>
+
+        <!-- Full Keyboard -->
+        <div class="flex flex-col gap-1">
+            <div class="flex justify-center gap-1">
+                {#each 'qwertyuiop' as key}
+                    <Kbd>{key}</Kbd>
+                {/each}
+            </div>
+            <div class="flex justify-center gap-1">
+                {#each 'asdfghjkl' as key}
+                    <Kbd>{key}</Kbd>
+                {/each}
+            </div>
+            <div class="flex justify-center gap-1">
+                {#each 'zxcvbnm/' as key}
+                    <Kbd>{key}</Kbd>
+                {/each}
+            </div>
         </div>
     </CardBody>
 </Card>
