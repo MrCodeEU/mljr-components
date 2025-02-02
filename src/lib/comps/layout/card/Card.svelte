@@ -13,7 +13,7 @@
 		modifier = undefined,
 		class: className = '',
 		background = 'bg-base-100',
-		shadow = true,
+		shadowSize = 'lg',
 		children,
 		...rest
 	} = $props<{
@@ -22,15 +22,17 @@
 		modifier?: 'side' | 'image-full';
 		class?: string;
 		background?: string;
-		shadow?: boolean;
+		shadowSize?: 'sm' | 'md' | 'lg';
 		children?: () => any;
 	}>();
 
 	let classes = $derived(
 		[
 			'card',
+			'clay',
+			'clay-card',
+			`clay-${shadowSize}`, // Fixed string interpolation
 			background,
-			shadow ? 'shadow-sm' : '',
 			style ? `card-${style}` : '',
 			size ? `card-${size}` : '',
 			modifier ? `card-${modifier}` : '',

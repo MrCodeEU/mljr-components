@@ -12,6 +12,7 @@
 		color = undefined,
 		style = undefined,
 		size = undefined,
+		shadowSize = 'lg',
 		modifier = undefined,
 		active = false,
 		disabled = false,
@@ -34,6 +35,7 @@
 		style?: 'outline' | 'soft' | 'ghost' | 'link' | 'dash';
 		size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 		modifier?: 'wide' | 'block' | 'square' | 'circle';
+		shadowSize?: 'sm' | 'md' | 'lg';
 		active?: boolean;
 		disabled?: boolean;
 		loading?: boolean;
@@ -46,6 +48,8 @@
 	let classes = $derived(
 		[
 			'btn',
+			'clay',
+			`clay-${shadowSize}`, // Fixed string interpolation
 			color ? `btn-${color}` : '',
 			style ? `btn-${style}` : '',
 			size ? `btn-${size}` : '',
