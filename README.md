@@ -63,8 +63,8 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] Chat bubble - Conversation bubbles
 - [x] Diff - Side-by-side comparison (Appears to be create correct html code but not working????)
 - [x] Indicator - Corner element placement
-- [ ] Mask - Shape-based content cropping
-- [ ] Swap - Element toggle visibility
+- [x] Mask - Shape-based content cropping (only CSS Class no Component as it makes no sense)
+- [x] Swap - Element toggle visibility
 
 ## Mockups
 
