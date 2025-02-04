@@ -1,72 +1,56 @@
 @import 'tailwindcss';
 @plugin "daisyui";
 
-/* Calendar styles */
-calendar-date {
-    --cally-border: none;
-    --cally-padding: 1rem;
-}
-
-calendar-month {
-    --cally-cell-size: 2.5rem;
-}
-
 /* Base Variables */
 :root {
-    --clay-shadow-sm: 8px 8px 20px rgba(0, 0, 0, 0.25),
-                      12px 12px 40px rgba(0, 0, 0, 0.15);
-    --clay-shadow-md: 12px 12px 28px rgba(0, 0, 0, 0.25),
-                      16px 16px 48px rgba(0, 0, 0, 0.15);
-    --clay-shadow-lg: 16px 16px 36px rgba(0, 0, 0, 0.25),
-                      24px 24px 64px rgba(0, 0, 0, 0.15);
-    --clay-highlight-sm: -4px -4px 12px rgba(255, 255, 255, 0.95),
-                        -2px -2px 6px rgba(255, 255, 255, 0.8);
-    --clay-highlight-md: -6px -6px 16px rgba(255, 255, 255, 0.95),
-                        -3px -3px 8px rgba(255, 255, 255, 0.8);
-    --clay-highlight-lg: -10px -10px 28px rgba(255, 255, 255, 0.95),
-                        -5px -5px 12px rgba(255, 255, 255, 0.8);
-    --clay-inner-shadow: 
-      inset -3px -3px 8px rgba(0, 0, 0, 0.15),
-      inset 3px 3px 8px rgba(255, 255, 255, 0.15);
-    --clay-radius: 24px;
+    --clay-shadow-sm: 25px 25px 48px 0px rgba(0, 0, 0, 0.25),
+                      inset -8px -8px 12px 0px rgba(0, 0, 0, 0.2),
+                      inset 8px 8px 16px 0px rgba(255, 255, 255, 0.4);
+    --clay-shadow-md: 35px 35px 68px 0px rgba(0, 0, 0, 0.25),
+                      inset -10px -10px 16px 0px rgba(0, 0, 0, 0.2),
+                      inset 8px 8px 20px 0px rgba(255, 255, 255, 0.4);
+    --clay-shadow-lg: 45px 45px 88px 0px rgba(0, 0, 0, 0.25),
+                      inset -12px -12px 20px 0px rgba(0, 0, 0, 0.2),
+                      inset 8px 8px 24px 0px rgba(255, 255, 255, 0.4);
+    --clay-radius: 32px;
     --clay-padding: 16px 32px;
-  }
+    --clay-blur: blur(5px);
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --clay-shadow-sm: 25px 25px 48px 0px rgba(0, 0, 0, 0.5),
+                      inset -8px -8px 12px 0px rgba(0, 0, 0, 0.4),
+                      inset 8px 8px 16px 0px rgba(255, 255, 255, 0.03);
+    --clay-shadow-md: 35px 35px 68px 0px rgba(0, 0, 0, 0.5),
+                      inset -10px -10px 16px 0px rgba(0, 0, 0, 0.4),
+                      inset 8px 8px 20px 0px rgba(255, 255, 255, 0.03);
+    --clay-shadow-lg: 45px 45px 88px 0px rgba(0, 0, 0, 0.5),
+                      inset -12px -12px 20px 0px rgba(0, 0, 0, 0.4),
+                      inset 8px 8px 24px 0px rgba(255, 255, 255, 0.03);
+}
+
+.body{
+    font-family: 'Kode Mono', monospace;
+}
   
-  /* Dark Mode */
-  [data-theme="dark"] {
-    --clay-shadow-sm: 8px 8px 20px rgba(0, 0, 0, 0.5),
-                      12px 12px 40px rgba(0, 0, 0, 0.3);
-    --clay-shadow-md: 12px 12px 28px rgba(0, 0, 0, 0.5),
-                      16px 16px 48px rgba(0, 0, 0, 0.3);
-    --clay-shadow-lg: 16px 16px 36px rgba(0, 0, 0, 0.5),
-                      24px 24px 64px rgba(0, 0, 0, 0.3);
-    --clay-highlight-sm: -4px -4px 12px rgba(255, 255, 255, 0.12),
-                        -2px -2px 6px rgba(255, 255, 255, 0.08);
-    --clay-highlight-md: -6px -6px 16px rgba(255, 255, 255, 0.12),
-                        -3px -3px 8px rgba(255, 255, 255, 0.08);
-    --clay-highlight-lg: -10px -10px 28px rgba(255, 255, 255, 0.12),
-                        -5px -5px 12px rgba(255, 255, 255, 0.08);
-    --clay-inner-shadow: 
-      inset -3px -3px 8px rgba(0, 0, 0, 0.25),
-      inset 3px 3px 8px rgba(255, 255, 255, 0.06);
-  }
-  
-  /* Base Clay Classes */
-  .clay {
+/* Base Clay Classes */
+.clay {
     border-radius: var(--clay-radius);
     border: none;
     position: relative;
     transition: all 0.3s ease;
-  }
+    backdrop-filter: var(--clay-blur);
+}
   
-  .clay-sm {
-    box-shadow: var(--clay-shadow-sm), var(--clay-highlight-sm), var(--clay-inner-shadow);
-  }
+.clay-sm {
+    box-shadow: var(--clay-shadow-sm);
+}
   
-  .clay-md {
-    box-shadow: var(--clay-shadow-md), var(--clay-highlight-md), var(--clay-inner-shadow);
-  }
+.clay-md {
+    box-shadow: var(--clay-shadow-md);
+}
   
-  .clay-lg {
-    box-shadow: var(--clay-shadow-lg), var(--clay-highlight-lg), var(--clay-inner-shadow);
-  }
+.clay-lg {
+    box-shadow: var(--clay-shadow-lg);
+}

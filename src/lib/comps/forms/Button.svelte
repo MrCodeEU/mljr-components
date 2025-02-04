@@ -49,9 +49,10 @@
 		[
 			'btn',
 			'clay',
-			`clay-${shadowSize}`, // Fixed string interpolation
+			`clay-${shadowSize}`,
 			color ? `btn-${color}` : '',
 			style ? `btn-${style}` : '',
+			style === 'link' ? 'text-black' : '',
 			size ? `btn-${size}` : '',
 			modifier ? `btn-${modifier}` : '',
 			active ? 'btn-active' : '',
