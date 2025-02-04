@@ -18,24 +18,24 @@
 	</div>
 
 	<!-- Category Navigation -->
-	<Tabs style="lift" class="mb-8">
-		<TabContent name="categories" aria="Form Controls">
+	<Tabs style="lift" class="mb-8 justify-center" >
+		<TabContent name="categories" aria="Form Controls" background="bg-primary/50">
 			<FormControls />
 		</TabContent>
 
-		<TabContent name="categories" aria="Navigation">
+		<TabContent name="categories" aria="Navigation" background="bg-accent/50">
 			<Navigation />
 		</TabContent>
 
-		<TabContent name="categories" aria="Layout">
+		<TabContent name="categories" aria="Layout" background="bg-info/50">
 			<Layout />
 		</TabContent>
 
-		<TabContent name="categories" aria="Feedback">
+		<TabContent name="categories" aria="Feedback" background="bg-warning/50">
 			<Feedback />
 		</TabContent>
 
-		<TabContent name="categories" aria="Display">
+		<TabContent name="categories" aria="Display" background="bg-success/50">
 			<Card>
 				<CardBody>
 					<CardTitle>Display Components</CardTitle>
@@ -44,7 +44,7 @@
 			</Card>
 		</TabContent>
 
-		<TabContent name="categories" aria="Mockups">
+		<TabContent name="categories" aria="Mockups" background="bg-error/50">
 			<Card>
 				<CardBody>
 					<CardTitle>Mockup Components</CardTitle>
@@ -53,7 +53,7 @@
 			</Card>
 		</TabContent>
 
-		<TabContent name="categories" aria="Utilities">
+		<TabContent name="categories" aria="Utilities" background="bg-cyan-700/50">
 			<Card>
 				<CardBody>
 					<CardTitle>Utility Components</CardTitle>

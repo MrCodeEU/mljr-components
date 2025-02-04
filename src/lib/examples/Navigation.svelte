@@ -34,7 +34,7 @@
 			<CardTitle>Tabs Components</CardTitle>
 			<div class="flex flex-col lg:flex-row gap-4">
 				<div class="flex-1">
-					<Tabs style="box">
+					<Tabs style="box" background="bg-primary" border="border-primary-content">
 						<TabContent name="TabExample" aria="Tab 1">Content 1</TabContent>
 						<TabContent name="TabExample" aria="Tab 2">Content 2</TabContent>
 						<TabContent name="TabExample" aria="Tab 3">Content 3</TabContent>
@@ -42,8 +42,24 @@
 				</div>
 				<div class="flex-1">
 					<Tabs style="lift">
-						<TabContent name="TabExample2" aria="Tab 1">Content 1</TabContent>
-						<TabContent name="TabExample2" aria="Tab 2">Content 2</TabContent>
+						<TabContent 
+							name="TabExample2" 
+							aria="Tab 1" 
+							tabBackground="bg-secondary"
+							tabBorder="border-secondary-content"
+							contentBackground="bg-accent"
+							contentBorder="border-accent-content"
+						>
+							Content 1
+						</TabContent>
+						<TabContent 
+							name="TabExample2" 
+							aria="Tab 2"
+							tabBackground="bg-info"
+							contentBackground="bg-success"
+						>
+							Content 2
+						</TabContent>
 						<TabContent name="TabExample2" aria="Tab 3">Content 3</TabContent>
 					</Tabs>
 				</div>
