@@ -9,6 +9,7 @@
 		color = undefined,
 		size = undefined,
 		disabled = false,
+		shadowSize = 'lg',
 		checked = false,
 		indeterminate = false,
 		value = undefined,
@@ -26,6 +27,7 @@
 			| 'warning'
 			| 'error';
 		size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+		shadowSize?: 'sm' | 'md' | 'lg';
 		disabled?: boolean;
 		checked?: boolean;
 		indeterminate?: boolean;
@@ -35,7 +37,7 @@
 	}>();
 
 	let classes = $derived(
-		['checkbox', color ? `checkbox-${color}` : '', size ? `checkbox-${size}` : '', className]
+		['clay', `clay-${shadowSize}`, 'clay-rounded-sm', 'border-2', disabled === true ? 'bg-gray-400' : '', 'checkbox', color ? `checkbox-${color}` : '', size ? `checkbox-${size}` : '', className]
 			.filter(Boolean)
 			.join(' ')
 	);

@@ -18,85 +18,48 @@
 	</div>
 
 	<!-- Category Navigation -->
-	<Card>
-		<CardBody>
-			<CardTitle>Component Categories</CardTitle>
-			<Tabs style="lift" class="mb-8">
-				<input
-					type="radio"
-					name="categories"
-					role="tab"
-					class="tab"
-					aria-label="Form Controls"
-					checked
-				/>
-				<TabContent>
-					<FormControls />
-				</TabContent>
+	<Tabs style="lift" class="mb-8">
+		<TabContent name="categories" aria="Form Controls">
+			<FormControls />
+		</TabContent>
 
-				<input
-					type="radio"
-					name="categories"
-					role="tab"
-					class="tab"
-					aria-label="Navigation & Structure"
-				/>
-				<TabContent>
-					<Navigation />
-				</TabContent>
+		<TabContent name="categories" aria="Navigation">
+			<Navigation />
+		</TabContent>
 
-				<input
-					type="radio"
-					name="categories"
-					role="tab"
-					class="tab"
-					aria-label="Layout & Containers"
-				/>
-				<TabContent>
-					<Layout />
-				</TabContent>
+		<TabContent name="categories" aria="Layout">
+			<Layout />
+		</TabContent>
 
-				<input
-					type="radio"
-					name="categories"
-					role="tab"
-					class="tab"
-					aria-label="Feedback & Status"
-				/>
-				<TabContent>
-					<Feedback />
-				</TabContent>
+		<TabContent name="categories" aria="Feedback">
+			<Feedback />
+		</TabContent>
 
-				<input type="radio" name="categories" role="tab" class="tab" aria-label="Display & Media" />
-				<TabContent>
-					<Card>
-						<CardBody>
-							<CardTitle>Display Components</CardTitle>
-							<MediaExamples />
-						</CardBody>
-					</Card>
-				</TabContent>
+		<TabContent name="categories" aria="Display">
+			<Card>
+				<CardBody>
+					<CardTitle>Display Components</CardTitle>
+					<MediaExamples />
+				</CardBody>
+			</Card>
+		</TabContent>
 
-				<input type="radio" name="categories" role="tab" class="tab" aria-label="Mockups" />
-				<TabContent>
-					<Card>
-						<CardBody>
-							<CardTitle>Mockup Components</CardTitle>
-							<MockUpsExamples />
-						</CardBody>
-					</Card>
-				</TabContent>
+		<TabContent name="categories" aria="Mockups">
+			<Card>
+				<CardBody>
+					<CardTitle>Mockup Components</CardTitle>
+					<MockUpsExamples />
+				</CardBody>
+			</Card>
+		</TabContent>
 
-				<input type="radio" name="categories" role="tab" class="tab" aria-label="Utilities" />
-				<TabContent>
-					<Card>
-						<CardBody>
-							<CardTitle>Utility Components</CardTitle>
-							<UtilsExamples />
-						</CardBody>
-					</Card>
-				</TabContent>
-			</Tabs>
-		</CardBody>
-	</Card>
+		<TabContent name="categories" aria="Utilities">
+			<Card>
+				<CardBody>
+					<CardTitle>Utility Components</CardTitle>
+					<UtilsExamples />
+				</CardBody>
+			</Card>
+		</TabContent>
+	</Tabs>
 </main>

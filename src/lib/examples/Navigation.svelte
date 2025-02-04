@@ -35,36 +35,16 @@
 			<div class="flex flex-col lg:flex-row gap-4">
 				<div class="flex-1">
 					<Tabs style="box">
-						<input
-							type="radio"
-							name="TabExample"
-							role="tab"
-							class="tab"
-							aria-label="Tab 1"
-							checked
-						/>
-						<TabContent>Content 1</TabContent>
-						<input type="radio" name="TabExample" role="tab" class="tab" aria-label="Tab 2" />
-						<TabContent>Content 2</TabContent>
-						<input type="radio" name="TabExample" role="tab" class="tab" aria-label="Tab 3" />
-						<TabContent>Content 3</TabContent>
+						<TabContent name="TabExample" aria="Tab 1">Content 1</TabContent>
+						<TabContent name="TabExample" aria="Tab 2">Content 2</TabContent>
+						<TabContent name="TabExample" aria="Tab 3">Content 3</TabContent>
 					</Tabs>
 				</div>
 				<div class="flex-1">
 					<Tabs style="lift">
-						<input
-							type="radio"
-							name="TabExample2"
-							role="tab"
-							class="tab"
-							aria-label="Tab 1"
-							checked
-						/>
-						<TabContent>Content 1</TabContent>
-						<input type="radio" name="TabExample2" role="tab" class="tab" aria-label="Tab 2" />
-						<TabContent>Content 2</TabContent>
-						<input type="radio" name="TabExample2" role="tab" class="tab" aria-label="Tab 3" />
-						<TabContent>Content 3</TabContent>
+						<TabContent name="TabExample2" aria="Tab 1">Content 1</TabContent>
+						<TabContent name="TabExample2" aria="Tab 2">Content 2</TabContent>
+						<TabContent name="TabExample2" aria="Tab 3">Content 3</TabContent>
 					</Tabs>
 				</div>
 			</div>

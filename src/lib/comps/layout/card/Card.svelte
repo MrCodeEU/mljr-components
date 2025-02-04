@@ -31,6 +31,7 @@
 			'card',
 			'clay',
 			'clay-card',
+			'clay-rounded-lg',
 			`clay-${shadowSize}`, // Fixed string interpolation
 			background,
 			style ? `card-${style}` : '',
