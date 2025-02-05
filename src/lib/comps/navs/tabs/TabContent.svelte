@@ -35,19 +35,20 @@
         children?: () => any;
     }>();
 
-    // Use specific colors if provided, otherwise fall back to global colors
-    let tabClasses = $derived(
-        [
-            'tab',
-            'clay',
-            'clay-rounded-sm',
-            'clay-sm',
-            'hover:clay-md',
-            'transition-all',
-            tabBackground || background,
-            tabBorder || border
-        ].filter(Boolean).join(' ')
-    );
+	// Use specific colors if provided, otherwise fall back to global colors
+	let tabClasses = $derived(
+		[
+			'tab',
+			'clay',
+			'clay-rounded-sm',
+			'clay-sm',
+			'hover:clay-md',
+			'not-focus:text', // Added focus variant with primary color at 10% opacity
+			'transition-all',
+			tabBackground || background,
+			tabBorder || border
+		].filter(Boolean).join(' ')
+	);
 
     let contentClasses = $derived(
         [
