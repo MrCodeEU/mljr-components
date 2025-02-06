@@ -10,6 +10,7 @@
 		color = undefined,
 		style = undefined,
 		direction = undefined,
+		shadowSize = 'lg',
 		class: className = '',
 		children,
 		...rest
@@ -17,12 +18,16 @@
 		color?: 'info' | 'success' | 'warning' | 'error';
 		style?: 'outline' | 'soft' | 'dash';
 		direction?: 'vertical' | 'horizontal';
+		shadowSize?: 'sm' | 'md' | 'lg';
 		class?: string;
 		children?: () => any;
 	}>();
 
 	let classes = $derived(
 		[
+			'clay',
+			`clay-${shadowSize}`,
+			'clay-rounded-lg',
 			'alert',
 			color ? `alert-${color}` : '',
 			style ? `alert-${style}` : '',

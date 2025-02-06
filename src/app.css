@@ -21,15 +21,15 @@
 
 /* Dark Mode */
 [data-theme="dark"] {
-    --clay-shadow-sm: 25px 25px 48px 0px rgba(0, 0, 0, 0.5),
+    --clay-shadow-sm: 25px 25px 48px 0px rgba(0, 0, 0, 0.4),
                       inset -8px -8px 12px 0px rgba(0, 0, 0, 0.4),
-                      inset 8px 8px 16px 0px rgba(255, 255, 255, 0.03);
-    --clay-shadow-md: 35px 35px 68px 0px rgba(0, 0, 0, 0.5),
+                      inset 8px 8px 16px 0px rgba(255, 255, 255, 0.2);
+    --clay-shadow-md: 35px 35px 68px 0px rgba(0, 0, 0, 0.4),
                       inset -10px -10px 16px 0px rgba(0, 0, 0, 0.4),
-                      inset 8px 8px 20px 0px rgba(255, 255, 255, 0.03);
-    --clay-shadow-lg: 45px 45px 88px 0px rgba(0, 0, 0, 0.5),
+                      inset 8px 8px 20px 0px rgba(255, 255, 255, 0.2);
+    --clay-shadow-lg: 45px 45px 88px 0px rgba(0, 0, 0, 0.4),
                       inset -12px -12px 20px 0px rgba(0, 0, 0, 0.4),
-                      inset 8px 8px 24px 0px rgba(255, 255, 255, 0.03);
+                      inset 8px 8px 24px 0px rgba(255, 255, 255, 0.2);
 }
 
 body{

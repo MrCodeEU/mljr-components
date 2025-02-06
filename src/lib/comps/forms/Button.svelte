@@ -49,11 +49,11 @@
 		[
 			'btn',
 			'clay',
-			'clay-rounded-lg',
+			modifier !== 'square' ? 'clay-rounded-lg' : '',
 			`clay-${shadowSize}`,
 			color ? `btn-${color}` : '',
 			style ? `btn-${style}` : '',
-			style === 'link' ? 'text-black dark:text-white' : '',
+			style === 'link' ? 'text-gray-500' : '',
 			size ? `btn-${size}` : '',
 			modifier ? `btn-${modifier}` : '',
 			active ? 'btn-active' : '',

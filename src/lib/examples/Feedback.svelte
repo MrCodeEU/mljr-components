@@ -17,8 +17,7 @@
 	import Zap from 'lucide-svelte/icons/zap';
 	import Settings from 'lucide-svelte/icons/settings';
 	import { toast } from '$lib/comps/feedback/toast/toast.service.js';
-	import ToastContainer from '$lib/comps/feedback/toast/ToastContainer.svelte';
-
+	
 	let basicModalOpen = $state(false);
 	let cornerCloseModalOpen = $state(false);
 	let wideModalOpen = $state(false);
@@ -670,4 +669,3 @@
 		</div>
 	</CardBody>
 </Card>
-<ToastContainer />

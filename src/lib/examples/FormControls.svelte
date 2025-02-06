@@ -16,6 +16,8 @@
 	import Sun from 'lucide-svelte/icons/sun';
 	import Wifi from 'lucide-svelte/icons/wifi';
 	import WifiOff from 'lucide-svelte/icons/wifi-off';
+	import Circle from 'lucide-svelte/icons/circle';
+	import Square from 'lucide-svelte/icons/square';
 
 	// Color selections state
 	let colorSelections = $state({
@@ -183,8 +185,8 @@
 					<h3 class="font-semibold mb-2">Modifiers</h3>
 					<div class="flex flex-wrap gap-2">
 						<Button color="primary" modifier="wide">Wide</Button>
-						<Button color="primary" modifier="square">□</Button>
-						<Button color="primary" modifier="circle">●</Button>
+						<Button color="primary" modifier="square"><Square /></Button>
+						<Button color="primary" modifier="circle"><Circle /></Button>
 					</div>
 					<div class="mt-2">
 						<Button color="primary" modifier="block">Block</Button>

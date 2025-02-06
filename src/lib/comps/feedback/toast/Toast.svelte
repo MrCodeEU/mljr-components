@@ -30,7 +30,7 @@
     <Alert color={toast.type === 'custom' ? 'info' : toast.type}  >
 		<!-- Progress bar moved outside the flex container -->
 		{#if toast.showProgress && toast.duration !== Infinity}
-			<div class="absolute bottom-0 left-0 right-0 px-2">
+			<div class="absolute bottom-0 left-0 right-0 px-3">
 				<Progress 
 					value={progressValue} 
 					size="xs" 

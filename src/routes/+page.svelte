@@ -9,7 +9,12 @@
 	import MediaExamples from '$lib/examples/MediaExamples.svelte';
 	import MockUpsExamples from '$lib/examples/MockUpsExamples.svelte';
 	import UtilsExamples from '$lib/examples/UtilsExamples.svelte';
+	import Toast from '$lib/comps/feedback/toast/Toast.svelte';
+	import ToastContainer from '$lib/comps/feedback/toast/ToastContainer.svelte';
 </script>
+
+
+<ToastContainer />
 
 <main class="p-4 space-y-8">
 	<div class="flex justify-between items-center">
