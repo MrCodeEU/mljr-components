@@ -19,6 +19,9 @@
 	let classes = $derived(
 		[
 			'stats',
+			'clay',
+			'clay-rounded-lg',
+			'clay-lg',
 			direction === 'vertical' && !responsive ? 'stats-vertical' : '',
 			responsive ? 'stats-vertical lg:stats-horizontal' : '',
 			shadow ? 'shadow' : '',
