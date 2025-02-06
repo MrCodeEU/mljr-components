@@ -32,6 +32,9 @@
 	let classes = $derived(
 		[
 			'badge',
+			'clay',
+			'clay-rounded-lg',
+			'clay-lg',
 			color ? `badge-${color}` : '',
 			style ? `badge-${style}` : '',
 			size ? `badge-${size}` : '',

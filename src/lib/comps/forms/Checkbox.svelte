@@ -37,7 +37,7 @@
 	}>();
 
 	let classes = $derived(
-		['clay', `clay-${shadowSize}`, 'clay-rounded-sm', 'border-2', disabled === true ? 'bg-gray-400' : '', 'checkbox', color ? `checkbox-${color}` : '', size ? `checkbox-${size}` : '', className]
+		['clay', `clay-${shadowSize}`, '!border-2', 'clay-rounded-sm', disabled === true ? 'bg-gray-400' : '', 'checkbox', color ? `checkbox-${color}` : '', size ? `checkbox-${size}` : '', className]
 			.filter(Boolean)
 			.join(' ')
 	);
