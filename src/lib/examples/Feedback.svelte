@@ -239,14 +239,7 @@
 			<div>
 				<h3 class="font-bold mb-2">Modal with Corner Close Button</h3>
 				<Button onclick={() => cornerCloseModalOpen = true}>Open Modal</Button>
-				<Modal id="corner-close-modal" bind:open={cornerCloseModalOpen}>
-					<Button 
-						style="ghost" 
-						modifier="circle" 
-						size="sm" 
-						class="absolute right-2 top-2"
-						onclick={() => cornerCloseModalOpen = false}
-					>✕</Button>
+				<Modal id="corner-close-modal" bind:open={cornerCloseModalOpen} cornerButton>
 					<h3 class="text-lg font-bold">Hello!</h3>
 					<p class="py-4">Press ESC key or click on ✕ button to close</p>
 				</Modal>

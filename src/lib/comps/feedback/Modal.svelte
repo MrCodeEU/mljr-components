@@ -1,9 +1,7 @@
 <script lang="ts">
+	import Button from '../forms/Button.svelte';
 	// Keep-alive constant for Tailwind purge - DO NOT REMOVE
-	const _ = [
-		'modal-top modal-middle modal-bottom modal-start modal-end',
-		'modal-open'
-	].join(' ');
+	const _ = ['modal-top modal-middle modal-bottom modal-start modal-end', 'modal-open'].join(' ');
 
 	let {
 		id,
@@ -11,6 +9,7 @@
 		placement = undefined,
 		width = undefined,
 		closeOnClickOutside = true,
+		cornerButton = false,
 		class: className = '',
 		children,
 		...rest
@@ -20,18 +19,14 @@
 		placement?: 'top' | 'middle' | 'bottom' | 'start' | 'end';
 		width?: string;
 		closeOnClickOutside?: boolean;
+		cornerButton?: boolean;
 		class?: string;
 		children?: () => any;
 	}>();
 
 	let dialogRef: HTMLDialogElement;
 	let classes = $derived(
-		[
-			'modal',
-			placement ? `modal-${placement}` : '',
-			open ? 'modal-open' : '',
-			className
-		]
+		['modal', placement ? `modal-${placement}` : '', open ? 'modal-open' : '', className]
 			.filter(Boolean)
 			.join(' ')
 	);
@@ -44,20 +39,23 @@
 		}
 	});
 
-	function handleFormSubmit(e: SubmitEvent) {
+	function handleFormSubmit(e: Event) {
 		e.preventDefault();
 		open = false;
 	}
 </script>
 
-<dialog
-	bind:this={dialogRef}
-	{id}
-	class={classes}
-	onclose={() => (open = false)}
-	{...rest}
->
-	<div class="modal-box" class:w-full={width} style={width ? `max-width: ${width}` : ''}>
+<dialog bind:this={dialogRef} {id} class={classes} onclose={() => (open = false)} {...rest}>
+	<div
+		class="modal-box clay clay-lg clay-rounded-lg !relative"
+		class:w-full={width}
+		style={width ? `max-width: ${width}` : ''}
+	>
+		{#if cornerButton}
+			<Button style="ghost" modifier="circle" size="sm" class="float-end" onclick={handleFormSubmit}
+				>✕</Button
+			>
+		{/if}
 		<div class="modal-content">
 			{@render children?.()}
 		</div>
@@ -70,7 +68,7 @@
 </dialog>
 
 <svelte:window
-	on:keydown={(e) => {
+	onkeydown={(e) => {
 		if (e.key === 'Escape' && open) {
 			open = false;
 		}
