@@ -30,14 +30,14 @@
 
 <div class="toast fixed top-0 right-0 left-0 z-50 pointer-events-none">
 	{#each positions as position}
-	{#if $toasts[position].length > 0}
-		<div class={positionClasses[position]}>
-			{#each $toasts[position] as toast (toast.id)}
-				<div transition:fade class="space-y-2 pointer-events-auto">
-					<Toast {toast} onClose={() => toasts.remove(toast.id, position)} />
-				</div>
-			{/each}
-		</div>
-	{/if}
-{/each}
+		{#if $toasts[position].length > 0}
+			<div class={positionClasses[position]}>
+				{#each $toasts[position] as toast (toast.id)}
+					<div transition:fade class="space-y-2 pointer-events-auto">
+						<Toast {toast} onClose={() => toasts.remove(toast.id, position)} />
+					</div>
+				{/each}
+			</div>
+		{/if}
+	{/each}
 </div>

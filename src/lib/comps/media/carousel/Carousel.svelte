@@ -101,11 +101,13 @@
 			<Button
 				modifier="circle"
 				onclick={() => previousSlide()}
-				class="bg-black/40 hover:bg-black/60 border-0">❮</Button>
+				class="bg-black/40 hover:bg-black/60 border-0">❮</Button
+			>
 			<Button
 				modifier="circle"
 				onclick={() => nextSlide()}
-				class="bg-black/40 hover:bg-black/60 border-0">❯</Button>
+				class="bg-black/40 hover:bg-black/60 border-0">❯</Button
+			>
 		</div>
 	{/if}
 

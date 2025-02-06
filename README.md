@@ -84,6 +84,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [x] Theme Controller - Theme switching control (Only works for light and dark mode)
 
 ## Prebuilt compount components
+
 - [ ] Login
 - [ ] Register
 - [ ] Password Reset
@@ -96,6 +97,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [ ] ...?
 
 ## Advanced Components / non DaisyUI Components
+
 - [ ] Rich text Editor
 - [ ] Video Player
 - [ ] Custom Date / time picker ?? (e.g. https://svelty-picker.vercel.app/)
@@ -119,6 +121,7 @@ A collection of Svelte components based on DaisyUI, organized for easy reference
 - [ ] ...
 
 ## TODO
+
 - [ ] Navbar mobile verison + Hamburger
 - [ ] check mobile use of every component
 - [ ] Fix missing or slightly broken Components

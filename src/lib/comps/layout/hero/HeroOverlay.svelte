@@ -1,11 +1,15 @@
 <script lang="ts">
-    let { class: className = '', children, ...rest } = $props<{
-        class?: string;
-    }>();
+	let {
+		class: className = '',
+		children,
+		...rest
+	} = $props<{
+		class?: string;
+	}>();
 
-    let classes = $derived(['hero-overlay', className].filter(Boolean).join(' '));
+	let classes = $derived(['hero-overlay', className].filter(Boolean).join(' '));
 </script>
 
 <div class={classes} {...rest}>
-    {@render children?.()}
+	{@render children?.()}
 </div>

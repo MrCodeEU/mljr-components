@@ -20,41 +20,43 @@
 		icon?: typeof Icon;
 		iconColor?: 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error';
 		valueColor?: 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error';
-		descriptionColor?: 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error';
+		descriptionColor?:
+			| 'primary'
+			| 'secondary'
+			| 'accent'
+			| 'info'
+			| 'success'
+			| 'warning'
+			| 'error';
 		centered?: boolean;
 		class?: string;
 		children?: () => any;
 	}>();
 
-	let classes = $derived([
-		'stat',
-		centered ? 'place-items-center' : '',
-		className
-	].filter(Boolean).join(' '));
+	let classes = $derived(
+		['stat', centered ? 'place-items-center' : '', className].filter(Boolean).join(' ')
+	);
 
-	let iconClasses = $derived([
-		'stat-figure',
-		iconColor ? `text-${iconColor}` : ''
-	].filter(Boolean).join(' '));
+	let iconClasses = $derived(
+		['stat-figure', iconColor ? `text-${iconColor}` : ''].filter(Boolean).join(' ')
+	);
 
-	let valueClasses = $derived([
-		'stat-value',
-		valueColor ? `text-${valueColor}` : ''
-	].filter(Boolean).join(' '));
+	let valueClasses = $derived(
+		['stat-value', valueColor ? `text-${valueColor}` : ''].filter(Boolean).join(' ')
+	);
 
-	let descriptionClasses = $derived([
-		'stat-desc',
-		descriptionColor ? `text-${descriptionColor}` : ''
-	].filter(Boolean).join(' '));
+	let descriptionClasses = $derived(
+		['stat-desc', descriptionColor ? `text-${descriptionColor}` : ''].filter(Boolean).join(' ')
+	);
 </script>
 
 <div class={classes} {...rest}>
 	{#if icon}
 		<div class={iconClasses}>
-            {#if icon}
-                {@const Icon = icon}
-                <Icon class="inline-block h-8 w-8 stroke-current" />
-            {/if}
+			{#if icon}
+				{@const Icon = icon}
+				<Icon class="inline-block h-8 w-8 stroke-current" />
+			{/if}
 		</div>
 	{/if}
 	{#if title}

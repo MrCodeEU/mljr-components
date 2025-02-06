@@ -42,9 +42,9 @@
 				</div>
 				<div class="flex-1">
 					<Tabs style="lift">
-						<TabContent 
-							name="TabExample2" 
-							aria="Tab 1" 
+						<TabContent
+							name="TabExample2"
+							aria="Tab 1"
 							tabBackground="bg-secondary"
 							tabBorder="border-secondary-content"
 							contentBackground="bg-accent"
@@ -52,8 +52,8 @@
 						>
 							Content 1
 						</TabContent>
-						<TabContent 
-							name="TabExample2" 
+						<TabContent
+							name="TabExample2"
 							aria="Tab 2"
 							tabBackground="bg-info"
 							contentBackground="bg-success"

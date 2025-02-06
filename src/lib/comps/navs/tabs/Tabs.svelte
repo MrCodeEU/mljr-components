@@ -35,8 +35,8 @@
 		[
 			'tabs',
 			'clay',
-            'clay-rounded-lg',
-            'p-2',
+			'clay-rounded-lg',
+			'p-2',
 			style ? `tabs-${style}` : '',
 			size ? `tabs-${size}` : '',
 			placement !== 'top' ? `tabs-${placement}` : '',

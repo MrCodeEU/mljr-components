@@ -27,21 +27,18 @@
 </script>
 
 <div class="relative">
-    <Alert color={toast.type === 'custom' ? 'info' : toast.type}  >
+	<Alert color={toast.type === 'custom' ? 'info' : toast.type}>
 		<!-- Progress bar moved outside the flex container -->
 		{#if toast.showProgress && toast.duration !== Infinity}
 			<div class="absolute bottom-0 left-0 right-0 px-3">
-				<Progress 
-					value={progressValue} 
-					size="xs" 
-				/>
+				<Progress value={progressValue} size="xs" />
 			</div>
 		{/if}
 		<div class="flex justify-between items-center gap-2 -me-6">
 			{#if toast.icon}
 				{@const Icon = toast.icon}
 				<Icon class="h-6 w-6 shrink-0" />
-			{/if}			
+			{/if}
 			<div class="flex-1">
 				{#if toast.title}
 					<h4 class="font-bold">{toast.title}</h4>
@@ -58,5 +55,5 @@
 				<X class="h-4 w-4" />
 			</Button>
 		</div>
-    </Alert>
+	</Alert>
 </div>

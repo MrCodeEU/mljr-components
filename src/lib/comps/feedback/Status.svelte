@@ -14,20 +14,32 @@
 		class: className = '',
 		...rest
 	} = $props<{
-		color?: 'neutral' | 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error';
+		color?:
+			| 'neutral'
+			| 'primary'
+			| 'secondary'
+			| 'accent'
+			| 'info'
+			| 'success'
+			| 'warning'
+			| 'error';
 		size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 		animation?: 'ping' | 'bounce';
 		label?: string;
 		class?: string;
 	}>();
 
-	let classes = $derived([
-		'status',
-		color ? `status-${color}` : '',
-		size ? `status-${size}` : '',
-		animation ? `animate-${animation}` : '',
-		className
-	].filter(Boolean).join(' '));
+	let classes = $derived(
+		[
+			'status',
+			color ? `status-${color}` : '',
+			size ? `status-${size}` : '',
+			animation ? `animate-${animation}` : '',
+			className
+		]
+			.filter(Boolean)
+			.join(' ')
+	);
 </script>
 
 {#if animation === 'ping'}

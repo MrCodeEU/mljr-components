@@ -15,7 +15,15 @@
 	} = $props<{
 		style?: 'spinner' | 'dots' | 'ring' | 'ball' | 'bars' | 'infinity';
 		size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-		color?: 'primary' | 'secondary' | 'accent' | 'neutral' | 'info' | 'success' | 'warning' | 'error';
+		color?:
+			| 'primary'
+			| 'secondary'
+			| 'accent'
+			| 'neutral'
+			| 'info'
+			| 'success'
+			| 'warning'
+			| 'error';
 		class?: string;
 	}>();
 
@@ -32,6 +40,4 @@
 	);
 </script>
 
-<span class={classes} {...rest} >
-
-</span>
+<span class={classes} {...rest}> </span>

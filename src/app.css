@@ -3,71 +3,87 @@
 
 /* Base Variables */
 :root {
-    --clay-shadow-sm: 25px 25px 48px 0px rgba(0, 0, 0, 0.25),
-                      inset -8px -8px 12px 0px rgba(0, 0, 0, 0.2),
-                      inset 8px 8px 16px 0px rgba(255, 255, 255, 0.4);
-    --clay-shadow-md: 35px 35px 68px 0px rgba(0, 0, 0, 0.25),
-                      inset -10px -10px 16px 0px rgba(0, 0, 0, 0.2),
-                      inset 8px 8px 20px 0px rgba(255, 255, 255, 0.4);
-    --clay-shadow-lg: 45px 45px 88px 0px rgba(0, 0, 0, 0.25),
-                      inset -12px -12px 20px 0px rgba(0, 0, 0, 0.2),
-                      inset 8px 8px 24px 0px rgba(255, 255, 255, 0.4);
-    --clay-radius-sm: 8px;
-    --clay-radius-md: 24px;
-    --clay-radius-lg: 32px;
-    --clay-padding: 16px 32px;
-    --clay-blur: blur(5px);
+	--clay-shadow-sm: 25px 25px 48px 0px rgba(0, 0, 0, 0.25),
+		inset -8px -8px 12px 0px rgba(0, 0, 0, 0.2), inset 8px 8px 16px 0px rgba(255, 255, 255, 0.4);
+	--clay-shadow-md: 35px 35px 68px 0px rgba(0, 0, 0, 0.25),
+		inset -10px -10px 16px 0px rgba(0, 0, 0, 0.2), inset 8px 8px 20px 0px rgba(255, 255, 255, 0.4);
+	--clay-shadow-lg: 45px 45px 88px 0px rgba(0, 0, 0, 0.25),
+		inset -12px -12px 20px 0px rgba(0, 0, 0, 0.2), inset 8px 8px 24px 0px rgba(255, 255, 255, 0.4);
+	--clay-radius-sm: 8px;
+	--clay-radius-md: 24px;
+	--clay-radius-lg: 32px;
+	--clay-padding: 16px 32px;
+	--clay-blur: blur(5px);
 }
 
 /* Dark Mode */
-[data-theme="dark"] {
-    --clay-shadow-sm: 25px 25px 48px 0px rgba(0, 0, 0, 0.4),
-                      inset -8px -8px 12px 0px rgba(0, 0, 0, 0.4),
-                      inset 8px 8px 16px 0px rgba(255, 255, 255, 0.2);
-    --clay-shadow-md: 35px 35px 68px 0px rgba(0, 0, 0, 0.4),
-                      inset -10px -10px 16px 0px rgba(0, 0, 0, 0.4),
-                      inset 8px 8px 20px 0px rgba(255, 255, 255, 0.2);
-    --clay-shadow-lg: 45px 45px 88px 0px rgba(0, 0, 0, 0.4),
-                      inset -12px -12px 20px 0px rgba(0, 0, 0, 0.4),
-                      inset 8px 8px 24px 0px rgba(255, 255, 255, 0.2);
+[data-theme='dark'] {
+	--clay-shadow-sm: 25px 25px 48px 0px rgba(0, 0, 0, 0.4),
+		inset -8px -8px 12px 0px rgba(0, 0, 0, 0.4), inset 8px 8px 16px 0px rgba(255, 255, 255, 0.2);
+	--clay-shadow-md: 35px 35px 68px 0px rgba(0, 0, 0, 0.4),
+		inset -10px -10px 16px 0px rgba(0, 0, 0, 0.4), inset 8px 8px 20px 0px rgba(255, 255, 255, 0.2);
+	--clay-shadow-lg: 45px 45px 88px 0px rgba(0, 0, 0, 0.4),
+		inset -12px -12px 20px 0px rgba(0, 0, 0, 0.4), inset 8px 8px 24px 0px rgba(255, 255, 255, 0.2);
 }
 
-body{
-    font-family: "Space Grotesk", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
+body {
+	font-family: 'Space Grotesk', serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
 }
-  
+
 /* Base Clay Classes */
-.clay {
-    position: relative;
-    transition: all 0.3s ease;
-    backdrop-filter: var(--clay-blur);
-    border: none;
+@utility clay {
+	position: relative;
+	transition: all 0.3s ease;
+	backdrop-filter: var(--clay-blur);
+	border: none;
 }
-  
-.clay-sm {
-    box-shadow: var(--clay-shadow-sm);
+
+@utility clay-sm {
+	box-shadow: var(--clay-shadow-sm);
 }
-  
-.clay-md {
-    box-shadow: var(--clay-shadow-md);
+
+@utility clay-md {
+	box-shadow: var(--clay-shadow-md);
 }
-  
-.clay-lg {
-    box-shadow: var(--clay-shadow-lg);
+
+@utility clay-lg {
+	box-shadow: var(--clay-shadow-lg);
 }
 
 /* Clay Radius Classes */
-.clay-rounded-sm {
-    border-radius: var(--clay-radius-sm);
+@utility clay-rounded-sm {
+	border-radius: var(--clay-radius-sm);
 }
 
-.clay-rounded-md {
-    border-radius: var(--clay-radius-md);
+@utility clay-rounded-md {
+	border-radius: var(--clay-radius-md);
 }
 
-.clay-rounded-lg {
-    border-radius: var(--clay-radius-lg);
+@utility clay-rounded-lg {
+	border-radius: var(--clay-radius-lg);
+}
+
+
+/* Style the progress bar container */
+progress::-webkit-progress-bar {
+	@apply clay clay-rounded-lg clay-lg;
+}
+
+/* Style the progress value/filled part */
+progress::-webkit-progress-value {
+	@apply clay clay-rounded-lg clay-lg;
+	transition: width 0.3s ease;
+}
+
+/* For Firefox */
+progress {
+	@apply clay clay-rounded-lg clay-lg;
+}
+
+progress::-moz-progress-bar {
+	@apply clay clay-rounded-lg clay-lg;
+	transition: width 0.3s ease;
 }

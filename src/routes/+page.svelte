@@ -13,7 +13,6 @@
 	import ToastContainer from '$lib/comps/feedback/toast/ToastContainer.svelte';
 </script>
 
-
 <ToastContainer />
 
 <main class="p-4 space-y-8">
@@ -23,7 +22,7 @@
 	</div>
 
 	<!-- Category Navigation -->
-	<Tabs style="lift" class="mb-8 justify-center" >
+	<Tabs style="lift" class="mb-8 justify-center">
 		<TabContent name="categories" aria="Form Controls" background="bg-primary/50">
 			<FormControls />
 		</TabContent>
