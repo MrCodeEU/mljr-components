@@ -35,14 +35,26 @@
 
 	// Calculate button size class
 	let btnSize = $derived(size ? `btn-${size}` : '');
+
+	function handlePrevious() {
+		if (currentPage > 1) {
+			currentPage = currentPage - 1;
+		}
+	}
+
+	function handleNext() {
+		if (currentPage < totalPages) {
+			currentPage = currentPage + 1;
+		}
+	}
 </script>
 
-<div class="join" {...rest}>
+<div class="pagination-group" {...rest}>
 	{#if showNextPrev}
 		<button
-			class="join-item btn {btnSize}"
+			class="pagination-btn btn clay clay-lg {btnSize}"
 			disabled={currentPage === 1}
-			onclick={() => (currentPage = -1)}
+			onclick={handlePrevious}
 		>
 			«
 		</button>
@@ -50,7 +62,7 @@
 
 	{#each pages as page}
 		<button
-			class="join-item btn {btnSize} {page === currentPage ? 'btn-active' : ''}"
+			class="pagination-btn btn clay clay-lg {btnSize} {page === currentPage ? 'active' : ''}"
 			onclick={() => (currentPage = page)}
 		>
 			{page}
@@ -59,9 +71,9 @@
 
 	{#if showNextPrev}
 		<button
-			class="join-item btn {btnSize}"
+			class="pagination-btn btn clay clay-lg {btnSize}"
 			disabled={currentPage === totalPages}
-			onclick={() => (currentPage = +1)}
+			onclick={handleNext}
 		>
 			»
 		</button>

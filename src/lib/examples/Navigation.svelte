@@ -493,9 +493,9 @@
 					<h3 class="font-semibold mb-2">Basic Timeline</h3>
 					<Timeline>
 						<TimelineItem>
-							<TimelineSlot position="start">1984</TimelineSlot>
+							<TimelineSlot position="end">1984</TimelineSlot>
 							<TimelineSlot position="middle" icon={check} color="primary" />
-							<TimelineSlot position="end" box>First Macintosh computer</TimelineSlot>
+							<TimelineSlot position="start" box>First Macintosh computer</TimelineSlot>
 						</TimelineItem>
 						<TimelineItem>
 							<TimelineSlot position="start">1998</TimelineSlot>
@@ -603,7 +603,7 @@
 					<Timeline snapIconToStart>
 						<TimelineItem>
 							<TimelineSlot position="middle" icon={check} color="success" />
-							<TimelineSlot position="end" box>
+							<TimelineSlot position="start" box>
 								<time class="font-mono">2024</time>
 								<div class="text-lg font-bold">Project Launch</div>
 								<p class="text-sm opacity-70">Successfully launched the new platform</p>

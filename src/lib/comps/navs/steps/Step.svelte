@@ -26,7 +26,7 @@
 	}>();
 
 	let classes = $derived(
-		['step', color ? `step-${color}` : '', className].filter(Boolean).join(' ')
+		['step', color ? `step-${color}` : '',  className].filter(Boolean).join(' ')
 	);
 </script>
 

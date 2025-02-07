@@ -69,5 +69,7 @@
 	{#if loading}
 		<span class="loading loading-spinner"></span>
 	{/if}
-	{@render children?.()}
+	{#if children}
+		{@render children()}
+	{/if}
 </button>

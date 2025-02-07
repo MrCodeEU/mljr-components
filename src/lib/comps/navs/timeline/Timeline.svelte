@@ -25,6 +25,7 @@
 	let classes = $derived(
 		[
 			'timeline',
+			'clay', 'clay-lg', 'clay-rounded-lg', 'p-5', 'w-fit', 'h-fit',
 			direction === 'vertical' ? 'timeline-vertical' : 'timeline-horizontal',
 			snapIconToStart ? 'timeline-snap-icon' : '',
 			compact ? 'timeline-compact' : '',

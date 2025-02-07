@@ -10,7 +10,7 @@
 		children?: () => any;
 	}>();
 
-	let classes = $derived([`navbar-${position}`, className].filter(Boolean).join(' '));
+	let classes = $derived([`navbar-${position}`,  className].filter(Boolean).join(' '));
 </script>
 
 <div class={classes} {...rest}>

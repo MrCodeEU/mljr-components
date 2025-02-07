@@ -115,3 +115,44 @@ progress::-moz-progress-bar {
 	@apply clay clay-rounded-lg clay-lg;
 	transition: width 0.3s ease;
 }
+
+/* Custom Pagination Styles */
+.pagination-group {
+    display: flex;
+    gap: 1px;
+}
+
+.pagination-btn {
+    border-radius: 0;
+    position: relative;
+}
+
+.pagination-btn:first-child {
+    border-top-left-radius: var(--clay-radius-lg);
+    border-bottom-left-radius: var(--clay-radius-lg);
+}
+
+.pagination-btn:last-child {
+    border-top-right-radius: var(--clay-radius-lg);
+    border-bottom-right-radius: var(--clay-radius-lg);
+}
+
+.pagination-btn.active {
+    box-shadow: var(--clay-shadow-inset-lg);
+    background-color: hsl(var(--p) / 0.15);
+    border: 2px solid hsl(var(--p));
+    color: hsl(var(--p));
+    font-weight: bold;
+    transform: scale(0.95);
+}
+
+/* Optional hover effect for non-active buttons */
+.pagination-btn:not(.active):hover {
+    background-color: hsl(var(--b2) / 0.1);
+    transform: scale(1.05);
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
