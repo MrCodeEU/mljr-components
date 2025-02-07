@@ -12,7 +12,7 @@
 	}>();
 </script>
 
-<div class="mockup-window border {borderClass} w-full {bgClass}" {...rest}>
+<div class="mockup-window border clay clay-lg clay-rounded-lg {borderClass} w-full {bgClass}" {...rest}>
 	<div class="grid place-content-center border-t {borderClass} h-80">
 		{#if children}
 			{@render children?.()}

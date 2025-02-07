@@ -10,7 +10,7 @@
 	}>();
 </script>
 
-<div class="mockup-browser border border-base-300 w-full">
+<div class="mockup-browser border border-base-300 w-full clay clay-lg clay-rounded-lg">
 	<div class="mockup-browser-toolbar mb-10">
 		<div class="input">{url}</div>
 	</div>

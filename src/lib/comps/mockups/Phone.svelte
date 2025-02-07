@@ -12,7 +12,7 @@
 	}>();
 </script>
 
-<div class="mockup-phone {borderClass}" {...rest}>
+<div class="mockup-phone  {borderClass}" {...rest}>
 	<div class="mockup-phone-camera"></div>
 	<div class="mockup-phone-display">
 		{#if bgImage}

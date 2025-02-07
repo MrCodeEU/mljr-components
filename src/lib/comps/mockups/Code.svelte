@@ -15,7 +15,7 @@
 	}>();
 </script>
 
-<div class="mockup-code w-full {className}" {...rest}>
+<div class="mockup-code w-full clay clay-sm clay-rounded-lg {className}" {...rest}>
 	{#each lines as line}
 		<pre class={line.className || ''} data-prefix={line.prefix || ''}><code>{line.content}</code
 			></pre>
