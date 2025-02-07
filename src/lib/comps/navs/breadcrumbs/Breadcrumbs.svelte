@@ -11,7 +11,7 @@
 	}>();
 
 	let classes = $derived(
-		['breadcrumbs', 'text-sm', maxWidth ? 'max-w-xs' : '', className].filter(Boolean).join(' ')
+		['breadcrumbs',  'clay', 'clay-lg', 'clay-rounded-lg', 'px-3', 'w-fit', 'text-sm', maxWidth ? 'max-w-xs' : '', className].filter(Boolean).join(' ')
 	);
 </script>
 

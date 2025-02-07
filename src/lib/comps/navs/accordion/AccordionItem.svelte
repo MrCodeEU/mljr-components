@@ -23,6 +23,7 @@
 	let classes = $derived(
 		[
 			'collapse',
+			'clay', 'clay-lg', 'clay-rounded-lg', 'p-2',
 			variant ? `collapse-${variant}` : '',
 			'bg-base-100 border border-base-300',
 			className
