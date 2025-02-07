@@ -16,7 +16,7 @@
 	const inputClasses = 'focus:outline-none border-none';
 </script>
 
-<label class="input {className}" {...rest}>
+<label class="input clay clay-lg clay-rounded-lg py-5 px-3 {className}" {...rest}>
 	{#if position === 'start'}
 		<span class="label">{text}</span>
 	{/if}

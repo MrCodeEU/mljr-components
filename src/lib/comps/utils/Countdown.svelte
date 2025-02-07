@@ -22,7 +22,7 @@
 </script>
 
 {#if boxed}
-	<div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2 {wrapper}">
+	<div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2 clay clay-lg clay-rounded-lg {wrapper}">
 		<span class="countdown {font} {size}">
 			<span style="--value:{clampedValue};">{clampedValue}</span>
 		</span>

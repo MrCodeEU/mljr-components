@@ -7,8 +7,8 @@
 </script>
 
 <Card>
-	<CardTitle>Browser</CardTitle>
 	<CardBody>
+	<CardTitle>Browser</CardTitle>
 		<Browser url="https://www.google.com">
 			<div class="flex flex-col gap-4 p-6 border-t border-base-300">
 				<div class="flex justify-center">
@@ -40,8 +40,9 @@
 </Card>
 
 <Card>
-	<CardTitle>Code</CardTitle>
 	<CardBody class="flex flex-col gap-4">
+	<CardTitle>Code</CardTitle>
+
 		<Code lines={[{ prefix: '$', content: 'npm i daisyui' }]} />
 
 		<Code
@@ -65,8 +66,8 @@
 </Card>
 
 <Card>
-	<CardTitle>Phone</CardTitle>
 	<CardBody class="flex flex-col gap-4">
+		<CardTitle>Phone</CardTitle>
 		<div class="flex justify-around">
 			<Phone>
 				<div class="text-white grid place-content-center h-full">It's Glowtime.</div>
@@ -81,8 +82,8 @@
 </Card>
 
 <Card>
-	<CardTitle>Window</CardTitle>
 	<CardBody class="flex flex-col gap-4">
+		<CardTitle>Window</CardTitle>
 		<Window>Hello!</Window>
 
 		<Window bgClass="bg-base-100">Hello with background!</Window>

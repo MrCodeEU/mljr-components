@@ -88,8 +88,8 @@
 </script>
 
 <Card>
-	<CardTitle>Countdown</CardTitle>
 	<CardBody class="flex flex-col gap-4">
+		<CardTitle>Countdown</CardTitle>
 		<!-- Basic -->
 		<Countdown value={basicValue} />
 
@@ -122,8 +122,8 @@
 </Card>
 
 <Card>
-	<CardTitle>Filter</CardTitle>
 	<CardBody class="flex flex-col gap-4">
+		<CardTitle>Filter</CardTitle>
 		<div class="space-y-4">
 			<h3 class="font-bold">Form-based Filter</h3>
 			<Filter options={frameworks} name="frameworks" />
@@ -135,8 +135,8 @@
 </Card>
 
 <Card>
-	<CardTitle>Keyboard</CardTitle>
 	<CardBody class="flex flex-col gap-4">
+		<CardTitle>Keyboard</CardTitle>
 		<!-- Basic -->
 		<div>
 			<Kbd>K</Kbd>
@@ -203,8 +203,8 @@
 </Card>
 
 <Card>
-	<CardTitle>Labels</CardTitle>
 	<CardBody class="flex flex-col gap-4">
+		<CardTitle>Labels</CardTitle>
 		<!-- Basic Labels -->
 		<Label text="https://">
 			<TextInput placeholder="URL" />
@@ -215,7 +215,7 @@
 		</Label>
 
 		<Label text="Type">
-			<Select>
+			<Select size="sm">
 				<option>Personal</option>
 				<option>Business</option>
 			</Select>
@@ -242,8 +242,8 @@
 </Card>
 
 <Card>
-	<CardTitle>Links</CardTitle>
 	<CardBody class="flex flex-col gap-4">
+		<CardTitle>Links</CardTitle>
 		<!-- Basic -->
 		<div>
 			<Link>Basic Link</Link>
@@ -278,8 +278,8 @@
 </Card>
 
 <Card>
-	<CardTitle>Lists</CardTitle>
 	<CardBody class="flex flex-col gap-4">
+		<CardTitle>Lists</CardTitle>
 		<!-- Basic List -->
 		<List>
 			<ListRow header>Most played songs this week</ListRow>

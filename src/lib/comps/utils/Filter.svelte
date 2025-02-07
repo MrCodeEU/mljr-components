@@ -27,7 +27,7 @@
 		<input class="btn btn-square" type="reset" value="×" onclick={handleReset} />
 		{#each options as option}
 			<input
-				class="btn"
+				class="btn clay clay-lg clay-rounded-lg"
 				type="radio"
 				{name}
 				value={option.value}
@@ -39,7 +39,7 @@
 {:else}
 	<div class="filter" {...rest}>
 		<input
-			class="btn filter-reset"
+			class="btn filter-reset clay clay-lg clay-rounded-lg"
 			type="radio"
 			{name}
 			value=""
@@ -48,7 +48,7 @@
 		/>
 		{#each options as option}
 			<input
-				class="btn"
+				class="btn clay clay-lg clay-rounded-lg"
 				type="radio"
 				{name}
 				value={option.value}
