@@ -14,7 +14,7 @@
 		disabled = false,
 		class: className = '',
 		placeholder = '',
-		value = '',
+		value = $bindable(""),
 		required = false,
 		maxLength = undefined,
 		minLength = undefined,
@@ -73,7 +73,7 @@
 			{disabled}
 			{placeholder}
 			{required}
-			{value}
+			bind:value={value}
 			{maxLength}
 			{minLength}
 			{pattern}
@@ -92,7 +92,7 @@
 		{disabled}
 		{placeholder}
 		{required}
-		{value}
+		bind:value={value}
 		{maxLength}
 		{minLength}
 		{pattern}
