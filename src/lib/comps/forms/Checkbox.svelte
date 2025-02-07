@@ -40,7 +40,7 @@
 		[
 			'clay',
 			`clay-${shadowSize}`,
-			'!border-2',
+			'!border-3',
 			'clay-rounded-sm',
 			disabled === true ? 'bg-gray-400' : '',
 			'checkbox',

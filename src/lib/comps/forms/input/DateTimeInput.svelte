@@ -51,6 +51,7 @@
 	let classes = $derived(
 		[
 			'input',
+			'clay', 'clay-inset-lg', 'clay-rounded-lg',
 			color ? `input-${color}` : '',
 			size ? `input-${size}` : '',
 			ghost ? 'input-ghost' : '',

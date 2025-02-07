@@ -9,7 +9,15 @@
 		inset -10px -10px 16px 0px rgba(0, 0, 0, 0.2), inset 8px 8px 20px 0px rgba(255, 255, 255, 0.4);
 	--clay-shadow-lg: 45px 45px 88px 0px rgba(0, 0, 0, 0.25),
 		inset -12px -12px 20px 0px rgba(0, 0, 0, 0.2), inset 8px 8px 24px 0px rgba(255, 255, 255, 0.4);
-	--clay-radius-sm: 8px;
+
+	--clay-shadow-inset-sm: inset 25px 25px 48px 0px rgba(0, 0, 0, 0.25),
+        inset -8px -8px 16px 0px rgba(255, 255, 255, 0.5), 8px 8px 12px 0px rgba(0, 0, 0, 0.2);
+    --clay-shadow-inset-md: inset 35px 35px 68px 0px rgba(0, 0, 0, 0.25),
+        inset -8px -8px 20px 0px rgba(255, 255, 255, 0.5), 10px 10px 16px 0px rgba(0, 0, 0, 0.2);
+    --clay-shadow-inset-lg: inset 45px 45px 88px 0px rgba(0, 0, 0, 0.25),
+        inset -8px -8px 24px 0px rgba(255, 255, 255, 0.5), 12px 12px 20px 0px rgba(0, 0, 0, 0.2);
+
+	--clay-radius-sm: 11px;
 	--clay-radius-md: 24px;
 	--clay-radius-lg: 32px;
 	--clay-padding: 16px 32px;
@@ -24,6 +32,13 @@
 		inset -10px -10px 16px 0px rgba(0, 0, 0, 0.4), inset 8px 8px 20px 0px rgba(255, 255, 255, 0.2);
 	--clay-shadow-lg: 45px 45px 88px 0px rgba(0, 0, 0, 0.4),
 		inset -12px -12px 20px 0px rgba(0, 0, 0, 0.4), inset 8px 8px 24px 0px rgba(255, 255, 255, 0.2);
+
+	--clay-shadow-inset-sm: inset 25px 25px 48px 0px rgba(0, 0, 0, 0.4),
+        inset -8px -8px 16px 0px rgba(255, 255, 255, 0.3), 8px 8px 12px 0px rgba(0, 0, 0, 0.4);
+    --clay-shadow-inset-md: inset 35px 35px 68px 0px rgba(0, 0, 0, 0.4),
+        inset -8px -8px 20px 0px rgba(255, 255, 255, 0.3), 10px 10px 16px 0px rgba(0, 0, 0, 0.4);
+    --clay-shadow-inset-lg: inset 45px 45px 88px 0px rgba(0, 0, 0, 0.4),
+        inset -8px -8px 24px 0px rgba(255, 255, 255, 0.3), 12px 12px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 body {
@@ -51,6 +66,19 @@ body {
 
 @utility clay-lg {
 	box-shadow: var(--clay-shadow-lg);
+}
+
+/* Inset Clay Classes */
+@utility clay-inset-sm {
+    box-shadow: var(--clay-shadow-inset-sm);
+}
+
+@utility clay-inset-md {
+    box-shadow: var(--clay-shadow-inset-md);
+}
+
+@utility clay-inset-lg {
+    box-shadow: var(--clay-shadow-inset-lg);
 }
 
 /* Clay Radius Classes */
