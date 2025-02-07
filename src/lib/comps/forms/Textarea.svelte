@@ -38,6 +38,7 @@
 	let classes = $derived(
 		[
 			'textarea',
+			'clay', 'clay-inset-sm', 'clay-rounded-lg', 'border-3',
 			color ? `textarea-${color}` : '',
 			size ? `textarea-${size}` : '',
 			ghost ? 'textarea-ghost' : '',

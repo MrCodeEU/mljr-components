@@ -41,13 +41,13 @@
 	}>();
 
 	let classes = $derived(
-		['toggle', color ? `toggle-${color}` : '', size ? `toggle-${size}` : '', className]
+		['toggle', 'clay', 'clay-lg', 'clay-rounded-lg', 'border-3', color ? `toggle-${color}` : '', size ? `toggle-${size}` : '', className]
 			.filter(Boolean)
 			.join(' ')
 	);
 
 	let containerClasses = $derived(
-		['toggle', 'text-base-content', disabled ? 'cursor-not-allowed opacity-50' : '', className]
+		['toggle', 'clay', 'clay-lg', 'clay-rounded-lg', 'border-3', 'text-base-content', 'h-7', 'w-12', disabled ? 'cursor-not-allowed opacity-50' : '', className]
 			.filter(Boolean)
 			.join(' ')
 	);
@@ -64,11 +64,11 @@
 		<input type="checkbox" bind:checked {disabled} {...rest} />
 		{#if iconOn}
 			{@const IconOn = iconOn}
-			<IconOn aria-label="enabled" class="h-4 w-4 shrink-0" />
+			<IconOn aria-label="enabled" class="h-5 w-5 shrink-0" />
 		{/if}
 		{#if iconOff}
 			{@const IconOff = iconOff}
-			<IconOff aria-label="disabled" class="h-4 w-4 shrink-0" />
+			<IconOff aria-label="disabled" class="h-5 w-5 shrink-0" />
 		{/if}
 	</label>
 {:else}
