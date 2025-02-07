@@ -12,7 +12,7 @@
 		class?: string;
 	}>();
 
-	let classes = $derived(['grid-flow-col items-center', className].filter(Boolean).join(' '));
+	let classes = $derived(['grid-flow-col items-center', 'clay', 'clay-lg', 'clay-rounded-lg', 'p-5', className].filter(Boolean).join(' '));
 </script>
 
 <aside class={classes} {...rest}>
