@@ -75,6 +75,7 @@
 	let classes = $derived(
 		[
 			'carousel',
+			'clay', 'clay-lg', 'clay-rounded-lg',
 			'relative',
 			'min-h-[100px]', // Add minimum height
 			// Remove overflow-hidden - this was blocking the natural scroll behavior

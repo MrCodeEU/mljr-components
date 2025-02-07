@@ -41,7 +41,7 @@
 	}>();
 
 	let containerClass = $derived(
-		['avatar', status && `avatar-${status}`, placeholder && 'avatar-placeholder', className]
+		['avatar',  status && `avatar-${status}`, placeholder && 'avatar-placeholder', className]
 			.filter(Boolean)
 			.join(' ')
 	);
