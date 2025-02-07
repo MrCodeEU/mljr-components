@@ -110,6 +110,14 @@
 
 <style>
 	input[type='range'] {
+		/* removing default appearance */
+		-webkit-appearance: none;
+		appearance: none;
+		/* creating a custom design */
 		width: 100%;
+		cursor: pointer;
+		outline: none;
+		/*  slider progress trick  */
+		overflow: hidden;
 	}
 </style>
