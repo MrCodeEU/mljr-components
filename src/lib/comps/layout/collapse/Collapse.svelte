@@ -28,7 +28,10 @@
 	let classes = $derived(
 		[
 			'collapse',
-			'clay', 'clay-lg', 'clay-rounded-lg', 'p-3',
+			'clay',
+			'clay-lg',
+			'clay-rounded-lg',
+			'p-3',
 			icon ? `collapse-${icon}` : '',
 			open === true ? 'collapse-open' : '',
 			open === false ? 'collapse-close' : '',

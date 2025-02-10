@@ -14,7 +14,7 @@
 	}>();
 
 	let classes = $derived(
-		['stack',  align !== 'bottom' ? `stack-${align}` : '', className].filter(Boolean).join(' ')
+		['stack', align !== 'bottom' ? `stack-${align}` : '', className].filter(Boolean).join(' ')
 	);
 </script>
 

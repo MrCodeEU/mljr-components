@@ -38,7 +38,9 @@
 	let classes = $derived(
 		[
 			'footer',
-			'clay', 'clay-lg', 'clay-rounded-lg',
+			'clay',
+			'clay-lg',
+			'clay-rounded-lg',
 			'sm:footer-horizontal',
 			center ? 'footer-center' : '',
 			direction ? `footer-${direction}` : '',

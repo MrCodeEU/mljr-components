@@ -44,7 +44,9 @@
 	let classes = $derived(['chat', `chat-${position}`, className].filter(Boolean).join(' '));
 
 	let bubbleClasses = $derived(
-		['chat-bubble', 'clay', 'clay-lg', 'clay-rounded-lg', color && `chat-bubble-${color}`].filter(Boolean).join(' ')
+		['chat-bubble', 'clay', 'clay-lg', 'clay-rounded-lg', color && `chat-bubble-${color}`]
+			.filter(Boolean)
+			.join(' ')
 	);
 
 	let formattedTime: string = $derived.by(() => {

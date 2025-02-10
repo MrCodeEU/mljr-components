@@ -54,7 +54,9 @@
 	let classes = $derived(
 		[
 			'select',
-			'clay', 'clay-inset-lg', 'clay-rounded-lg',
+			'clay',
+			'clay-inset-lg',
+			'clay-rounded-lg',
 			color ? `select-${color}` : '',
 			size ? `select-${size}` : '',
 			ghost ? 'select-ghost' : '',

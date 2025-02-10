@@ -17,7 +17,10 @@
 	let classes = $derived(
 		[
 			'hero-content',
-			'clay', 'clay-lg', 'clay-rounded-lg', 'p-10',
+			'clay',
+			'clay-lg',
+			'clay-rounded-lg',
+			'p-10',
 			center ? 'text-center' : '',
 			layout === 'col' ? 'flex-col' : '',
 			layout === 'row' && reverse ? 'lg:flex-row-reverse' : layout === 'row' ? 'lg:flex-row' : '',

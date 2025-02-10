@@ -22,7 +22,10 @@
 	let classes = $derived(
 		[
 			'steps',
-			'clay', 'clay-lg', 'clay-rounded-lg', 'p-5',
+			'clay',
+			'clay-lg',
+			'clay-rounded-lg',
+			'p-5',
 			responsive
 				? 'steps-vertical lg:steps-horizontal'
 				: direction === 'vertical'

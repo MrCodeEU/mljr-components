@@ -11,10 +11,10 @@
 	<CardBody>
 		<CardTitle>Advanced Components</CardTitle>
 		<div class="w-1/2">
-			<FloatingLabel text="Password" >
-				<TextInput bind:value={password} class="mb-5"/>
+			<FloatingLabel text="Password">
+				<TextInput bind:value={password} class="mb-5" />
 			</FloatingLabel>
-			<PasswordStrength password={password} />
+			<PasswordStrength {password} />
 		</div>
 	</CardBody>
 </Card>

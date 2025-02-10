@@ -12,7 +12,11 @@
 		children?: () => any;
 	}>();
 
-	let classes = $derived(['kbd',  'clay', 'clay-lg', 'clay-rounded-lg', size ? `kbd-${size}` : '', className].filter(Boolean).join(' '));
+	let classes = $derived(
+		['kbd', 'clay', 'clay-lg', 'clay-rounded-lg', size ? `kbd-${size}` : '', className]
+			.filter(Boolean)
+			.join(' ')
+	);
 </script>
 
 <kbd class={classes} {...rest}>

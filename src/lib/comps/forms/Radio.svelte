@@ -35,7 +35,16 @@
 	}>();
 
 	let classes = $derived(
-		['radio', 'clay', 'clay-lg', 'clay-rounded-lg', 'border-3', color ? `radio-${color}` : '', size ? `radio-${size}` : '', className]
+		[
+			'radio',
+			'clay',
+			'clay-lg',
+			'clay-rounded-lg',
+			'border-3',
+			color ? `radio-${color}` : '',
+			size ? `radio-${size}` : '',
+			className
+		]
 			.filter(Boolean)
 			.join(' ')
 	);

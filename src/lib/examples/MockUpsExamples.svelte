@@ -8,7 +8,7 @@
 
 <Card>
 	<CardBody>
-	<CardTitle>Browser</CardTitle>
+		<CardTitle>Browser</CardTitle>
 		<Browser url="https://www.google.com">
 			<div class="flex flex-col gap-4 p-6 border-t border-base-300">
 				<div class="flex justify-center">
@@ -41,7 +41,7 @@
 
 <Card>
 	<CardBody class="flex flex-col gap-4">
-	<CardTitle>Code</CardTitle>
+		<CardTitle>Code</CardTitle>
 
 		<Code lines={[{ prefix: '$', content: 'npm i daisyui' }]} />
 

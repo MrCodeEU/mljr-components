@@ -41,13 +41,33 @@
 	}>();
 
 	let classes = $derived(
-		['toggle', 'clay', 'clay-lg', 'clay-rounded-lg', 'border-3', color ? `toggle-${color}` : '', size ? `toggle-${size}` : '', className]
+		[
+			'toggle',
+			'clay',
+			'clay-lg',
+			'clay-rounded-lg',
+			'border-3',
+			color ? `toggle-${color}` : '',
+			size ? `toggle-${size}` : '',
+			className
+		]
 			.filter(Boolean)
 			.join(' ')
 	);
 
 	let containerClasses = $derived(
-		['toggle', 'clay', 'clay-lg', 'clay-rounded-lg', 'border-3', 'text-base-content', 'h-7', 'w-12', disabled ? 'cursor-not-allowed opacity-50' : '', className]
+		[
+			'toggle',
+			'clay',
+			'clay-lg',
+			'clay-rounded-lg',
+			'border-3',
+			'text-base-content',
+			'h-7',
+			'w-12',
+			disabled ? 'cursor-not-allowed opacity-50' : '',
+			className
+		]
 			.filter(Boolean)
 			.join(' ')
 	);

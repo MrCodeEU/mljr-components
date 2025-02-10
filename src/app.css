@@ -11,11 +11,11 @@
 		inset -12px -12px 20px 0px rgba(0, 0, 0, 0.2), inset 8px 8px 24px 0px rgba(255, 255, 255, 0.4);
 
 	--clay-shadow-inset-sm: inset 25px 25px 48px 0px rgba(0, 0, 0, 0.25),
-        inset -8px -8px 16px 0px rgba(255, 255, 255, 0.5), 8px 8px 12px 0px rgba(0, 0, 0, 0.2);
-    --clay-shadow-inset-md: inset 35px 35px 68px 0px rgba(0, 0, 0, 0.25),
-        inset -8px -8px 20px 0px rgba(255, 255, 255, 0.5), 10px 10px 16px 0px rgba(0, 0, 0, 0.2);
-    --clay-shadow-inset-lg: inset 45px 45px 88px 0px rgba(0, 0, 0, 0.25),
-        inset -8px -8px 24px 0px rgba(255, 255, 255, 0.5), 12px 12px 20px 0px rgba(0, 0, 0, 0.2);
+		inset -8px -8px 16px 0px rgba(255, 255, 255, 0.5), 8px 8px 12px 0px rgba(0, 0, 0, 0.2);
+	--clay-shadow-inset-md: inset 35px 35px 68px 0px rgba(0, 0, 0, 0.25),
+		inset -8px -8px 20px 0px rgba(255, 255, 255, 0.5), 10px 10px 16px 0px rgba(0, 0, 0, 0.2);
+	--clay-shadow-inset-lg: inset 45px 45px 88px 0px rgba(0, 0, 0, 0.25),
+		inset -8px -8px 24px 0px rgba(255, 255, 255, 0.5), 12px 12px 20px 0px rgba(0, 0, 0, 0.2);
 
 	--clay-radius-sm: 11px;
 	--clay-radius-md: 24px;
@@ -34,11 +34,11 @@
 		inset -12px -12px 20px 0px rgba(0, 0, 0, 0.4), inset 8px 8px 24px 0px rgba(255, 255, 255, 0.2);
 
 	--clay-shadow-inset-sm: inset 25px 25px 48px 0px rgba(0, 0, 0, 0.4),
-        inset -8px -8px 16px 0px rgba(255, 255, 255, 0.3), 8px 8px 12px 0px rgba(0, 0, 0, 0.4);
-    --clay-shadow-inset-md: inset 35px 35px 68px 0px rgba(0, 0, 0, 0.4),
-        inset -8px -8px 20px 0px rgba(255, 255, 255, 0.3), 10px 10px 16px 0px rgba(0, 0, 0, 0.4);
-    --clay-shadow-inset-lg: inset 45px 45px 88px 0px rgba(0, 0, 0, 0.4),
-        inset -8px -8px 24px 0px rgba(255, 255, 255, 0.3), 12px 12px 20px 0px rgba(0, 0, 0, 0.4);
+		inset -8px -8px 16px 0px rgba(255, 255, 255, 0.3), 8px 8px 12px 0px rgba(0, 0, 0, 0.4);
+	--clay-shadow-inset-md: inset 35px 35px 68px 0px rgba(0, 0, 0, 0.4),
+		inset -8px -8px 20px 0px rgba(255, 255, 255, 0.3), 10px 10px 16px 0px rgba(0, 0, 0, 0.4);
+	--clay-shadow-inset-lg: inset 45px 45px 88px 0px rgba(0, 0, 0, 0.4),
+		inset -8px -8px 24px 0px rgba(255, 255, 255, 0.3), 12px 12px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 body {
@@ -70,15 +70,15 @@ body {
 
 /* Inset Clay Classes */
 @utility clay-inset-sm {
-    box-shadow: var(--clay-shadow-inset-sm);
+	box-shadow: var(--clay-shadow-inset-sm);
 }
 
 @utility clay-inset-md {
-    box-shadow: var(--clay-shadow-inset-md);
+	box-shadow: var(--clay-shadow-inset-md);
 }
 
 @utility clay-inset-lg {
-    box-shadow: var(--clay-shadow-inset-lg);
+	box-shadow: var(--clay-shadow-inset-lg);
 }
 
 /* Clay Radius Classes */
@@ -93,7 +93,6 @@ body {
 @utility clay-rounded-lg {
 	border-radius: var(--clay-radius-lg);
 }
-
 
 /* Style the progress bar container */
 progress::-webkit-progress-bar {
@@ -118,41 +117,41 @@ progress::-moz-progress-bar {
 
 /* Custom Pagination Styles */
 .pagination-group {
-    display: flex;
-    gap: 1px;
+	display: flex;
+	gap: 1px;
 }
 
 .pagination-btn {
-    border-radius: 0;
-    position: relative;
+	border-radius: 0;
+	position: relative;
 }
 
 .pagination-btn:first-child {
-    border-top-left-radius: var(--clay-radius-lg);
-    border-bottom-left-radius: var(--clay-radius-lg);
+	border-top-left-radius: var(--clay-radius-lg);
+	border-bottom-left-radius: var(--clay-radius-lg);
 }
 
 .pagination-btn:last-child {
-    border-top-right-radius: var(--clay-radius-lg);
-    border-bottom-right-radius: var(--clay-radius-lg);
+	border-top-right-radius: var(--clay-radius-lg);
+	border-bottom-right-radius: var(--clay-radius-lg);
 }
 
 .pagination-btn.active {
-    box-shadow: var(--clay-shadow-inset-lg);
-    background-color: hsl(var(--p) / 0.15);
-    border: 2px solid hsl(var(--p));
-    color: hsl(var(--p));
-    font-weight: bold;
-    transform: scale(0.95);
+	box-shadow: var(--clay-shadow-inset-lg);
+	background-color: hsl(var(--p) / 0.15);
+	border: 2px solid hsl(var(--p));
+	color: hsl(var(--p));
+	font-weight: bold;
+	transform: scale(0.95);
 }
 
 /* Optional hover effect for non-active buttons */
 .pagination-btn:not(.active):hover {
-    background-color: hsl(var(--b2) / 0.1);
-    transform: scale(1.05);
+	background-color: hsl(var(--b2) / 0.1);
+	transform: scale(1.05);
 }
 
 .pagination-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+	opacity: 0.5;
+	cursor: not-allowed;
 }

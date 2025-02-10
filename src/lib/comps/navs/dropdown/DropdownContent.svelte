@@ -8,7 +8,9 @@
 		children?: () => any;
 	}>();
 
-	let classes = $derived(['dropdown-content', 'clay', 'clay-lg', 'clay-rounded-lg', className].filter(Boolean).join(' '));
+	let classes = $derived(
+		['dropdown-content', 'clay', 'clay-lg', 'clay-rounded-lg', className].filter(Boolean).join(' ')
+	);
 </script>
 
 <div class={classes} {...rest}>

@@ -60,7 +60,9 @@
 		[
 			'input',
 			'validator',
-			'clay', 'clay-inset-lg', 'clay-rounded-lg',
+			'clay',
+			'clay-inset-lg',
+			'clay-rounded-lg',
 			color ? `input-${color}` : '',
 			size ? `input-${size}` : '',
 			ghost ? 'input-ghost' : '',

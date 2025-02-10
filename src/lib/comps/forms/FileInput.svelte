@@ -46,7 +46,9 @@
 	let classes = $derived(
 		[
 			'file-input',
-			'clay', 'clay-inset-lg', 'clay-rounded-lg',
+			'clay',
+			'clay-inset-lg',
+			'clay-rounded-lg',
 			color ? `file-input-${color}` : '',
 			size ? `file-input-${size}` : '',
 			ghost ? 'file-input-ghost' : '',

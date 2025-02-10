@@ -14,7 +14,7 @@
 		disabled = false,
 		class: className = '',
 		placeholder = '',
-		value = $bindable(""),
+		value = $bindable(''),
 		required = false,
 		maxLength = undefined,
 		minLength = undefined,
@@ -51,7 +51,9 @@
 	let classes = $derived(
 		[
 			'input',
-			'clay', 'clay-inset-lg', 'clay-rounded-lg',
+			'clay',
+			'clay-inset-lg',
+			'clay-rounded-lg',
 			color ? `input-${color}` : '',
 			size ? `input-${size}` : '',
 			ghost ? 'input-ghost' : '',
@@ -73,7 +75,7 @@
 			{disabled}
 			{placeholder}
 			{required}
-			bind:value={value}
+			bind:value
 			{maxLength}
 			{minLength}
 			{pattern}
@@ -92,7 +94,7 @@
 		{disabled}
 		{placeholder}
 		{required}
-		bind:value={value}
+		bind:value
 		{maxLength}
 		{minLength}
 		{pattern}

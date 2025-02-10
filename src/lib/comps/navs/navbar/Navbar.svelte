@@ -21,7 +21,12 @@
 		[
 			'navbar',
 			'shadow-sm',
-			'clay', 'clay-lg', 'clay-rounded-lg', 'ps-2', 'pe-8', 'py-3',
+			'clay',
+			'clay-lg',
+			'clay-rounded-lg',
+			'ps-2',
+			'pe-8',
+			'py-3',
 			background ? `bg-${background}` : 'bg-base-100',
 			background === 'primary' ? 'text-primary-content' : '',
 			background === 'neutral' ? 'text-neutral-content' : '',
